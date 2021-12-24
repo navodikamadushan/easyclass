@@ -13,7 +13,7 @@ class _LessonList extends State<LessonList> {
   @override
   Widget build(BuildContext context) {
     return StreamBuilder<QuerySnapshot>(
-      stream: databaseService.onlineclass.where('teacher_id', '==', 'Pq54s0SeUbg6EQCkgkWNCuTNxmJ2').snapshots(),
+      stream: databaseService.onlineclass.where('teacher_id == Pq54s0SeUbg6EQCkgkWNCuTNxmJ2').snapshots(),
       builder: (context, snapshot) {
         if (!snapshot.hasData) return LinearProgressIndicator();
         return _buildList(context, snapshot.data.docs);
