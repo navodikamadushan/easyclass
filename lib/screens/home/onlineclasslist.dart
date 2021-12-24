@@ -53,7 +53,7 @@ class _LessonList extends State<LessonList> {
             children: <Widget>[
               Column(
                 mainAxisAlignment: MainAxisAlignment.end,
-                crossAxisAlignment: CrossAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: record.timeslot.map((onValue) {
                   return Container(
                     child: Text(
