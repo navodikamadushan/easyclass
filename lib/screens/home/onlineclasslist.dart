@@ -43,14 +43,14 @@ class _LessonList extends State<LessonList> {
             border: Border.all(color: Colors.grey),
             borderRadius: BorderRadius.circular(5.0),
           ),
-          child: ListTile(
+          child: ExpansionTile(
             leading: FlutterLogo(),
             title: Text(
               record.class_name,
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
             subtitle: Text(record.subject),
-            trailing: Column(
+            children: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: record.timeslot.map((onValue) {
@@ -64,9 +64,9 @@ class _LessonList extends State<LessonList> {
                 );
               }).toList(),
             ),
-            onTap: () {
+            /*onTap: () {
               print(record.timeslot.length.toString());
-            },
+            },*/
           ),
         ));
   }
