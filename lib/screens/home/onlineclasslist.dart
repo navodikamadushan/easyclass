@@ -13,7 +13,7 @@ class _LessonList extends State<LessonList> {
   @override
   Widget build(BuildContext context) {
     return StreamBuilder<QuerySnapshot>(
-      stream: databaseService.onlineclass.snapshots(),
+      stream: databaseService.onlineclass.where('teacher_id', '==', 'Pq54s0SeUbg6EQCkgkWNCuTNxmJ2').snapshots(),
       builder: (context, snapshot) {
         if (!snapshot.hasData) return LinearProgressIndicator();
         return _buildList(context, snapshot.data.docs);
@@ -30,11 +30,6 @@ class _LessonList extends State<LessonList> {
 
   Widget _buildListItem(BuildContext context, DocumentSnapshot data) {
     final record = Record.fromSnapshot(data);
-    final List<String> entries = <String>[
-      'A',
-      'B',
-      'C'
-    ];
     return Padding(
         key: ValueKey(record.class_name),
         padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
