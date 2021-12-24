@@ -51,7 +51,20 @@ class _LessonList extends State<LessonList> {
             ),
             subtitle: Text(record.subject),
             children: <Widget>[
-              ListTile(title: Text('This is tile number 1')),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: record.timeslot.map((onValue) {
+                  return Container(
+                    child: Text(
+                      onValue,
+                      style: TextStyle(
+                        fontSize: 10,
+                      ),
+                    ),
+                  );
+                }).toList(),
+              ),
             ],
             /*Column(
               mainAxisAlignment: MainAxisAlignment.center,
