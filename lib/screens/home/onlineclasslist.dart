@@ -50,7 +50,10 @@ class _LessonList extends State<LessonList> {
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
             subtitle: Text(record.subject),
-            children: Column(
+            children: <Widget>[
+              ListTile(title: Text('This is tile number 1')),
+            ],
+            /*Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: record.timeslot.map((onValue) {
@@ -63,7 +66,7 @@ class _LessonList extends State<LessonList> {
                   ),
                 );
               }).toList(),
-            ),
+            ),*/
             /*onTap: () {
               print(record.timeslot.length.toString());
             },*/
