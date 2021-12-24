@@ -3,6 +3,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import "package:easyclass/services/database.dart";
 import "package:easyclass/models/record.dart";
 import 'package:provider/provider.dart';
+import "package:easyclass/models/user.dart";
 
 class LessonList extends StatefulWidget {
   @override
