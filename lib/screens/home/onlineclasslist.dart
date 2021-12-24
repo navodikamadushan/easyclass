@@ -52,7 +52,7 @@ class _LessonList extends State<LessonList> {
             subtitle: Text(record.subject),
             children: <Widget>[
               Column(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: record.timeslot.map((onValue) {
                   return Container(
