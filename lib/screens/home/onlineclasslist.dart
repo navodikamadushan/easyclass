@@ -59,8 +59,8 @@ class _LessonList extends State<LessonList> {
                     child: Text(
                       onValue,
                       style: TextStyle(
-                        fontSize: 10,
-                      ),
+                          //fontSize: 10,
+                          ),
                     ),
                   );
                 }).toList(),
