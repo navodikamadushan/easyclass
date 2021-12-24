@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import "package:easyclass/services/database.dart";
 import "package:easyclass/models/record.dart";
+import 'package:provider/provider.dart';
 
 class LessonList extends StatefulWidget {
   @override
@@ -12,9 +13,10 @@ class _LessonList extends State<LessonList> {
   final DatabaseService databaseService = DatabaseService();
   @override
   Widget build(BuildContext context) {
+    final userforid = Provider.of<MyUser>(context);
     return StreamBuilder<QuerySnapshot>(
       stream: databaseService.onlineclass.where('teacher_id', whereIn: [
-        '83Ct4xv8X1ZiSgrOjjAUMdDfKo03'
+        userforid.uid
       ]).snapshots(),
       builder: (context, snapshot) {
         if (!snapshot.hasData) return LinearProgressIndicator();
