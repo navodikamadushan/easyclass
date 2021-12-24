@@ -19,5 +19,5 @@ class Record {
         timeslot = map['timeslot'];
   Record.fromSnapshot(DocumentSnapshot snapshot) : this.fromMap(snapshot.data(), reference: snapshot.reference);
   @override
-  String toString() => "Record<$class_name:$subject:$teacher:$timeslot>";
+  String toString() => "Record<$class_name:$subject:$teacher_id:$timeslot>";
 }
