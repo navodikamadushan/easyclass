@@ -28,9 +28,7 @@ class _LessonList extends State<LessonList> {
 
   Widget _buildList(BuildContext context, List<DocumentSnapshot> snapshot) {
     return ListView(
-      // controller: fixedExtentScrollController,
-      physics: FixedExtentScrollPhysics(),
-      itemExtent: 100,
+      physics: const AlwaysScrollableScrollPhysics(),
       scrollDirection: Axis.vertical,
       shrinkWrap: true,
       padding: const EdgeInsets.only(top: 5.0),
