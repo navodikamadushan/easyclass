@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         ),
         home: AnimatedSplashScreen(
           splash: Container(
-            child: Text('HI');
+            child: Text('HI'),
           ), //Splash(),
           duration: 3000,
           splashTransition: SplashTransition.scaleTransition,
