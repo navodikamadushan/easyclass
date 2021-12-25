@@ -10,22 +10,24 @@ class Splash extends StatelessWidget {
       body: Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Container(
-              child: Transform.scale(
-                scale: 7.5,
-                child: IconButton(
-                  onPressed: () {},
-                  icon: new Image.asset("assets/eassyclass_icon.png"),
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Container(
+                child: Transform.scale(
+                  scale: 7.5,
+                  child: IconButton(
+                    onPressed: () {},
+                    icon: new Image.asset("assets/eassyclass_icon.png"),
+                  ),
                 ),
               ),
-            ),
-            SizedBox(height: 30.0),
-            Text('From'),
-            //Text('Navodika Karunasingha'),
-          ],
+              SizedBox(height: 30.0),
+              Text('From'),
+              //Text('Navodika Karunasingha'),
+            ],
+          ),
         ), /**/
       ),
     );
