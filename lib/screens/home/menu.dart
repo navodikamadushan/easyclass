@@ -5,7 +5,7 @@ class MenuPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('මෙනුවව'),
+        title: Text('මෙනුව'),
         centerTitle: true,
       ),
     );
