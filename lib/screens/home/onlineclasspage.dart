@@ -52,7 +52,11 @@ class MyHomePage extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 10,
       ),
-      body: LessonList(),
+      body: Column(
+        children: <Widget>[
+          LessonList(),
+        ],
+      ),
     );
   }
 }
