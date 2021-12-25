@@ -57,6 +57,7 @@ class MyHomePage extends StatelessWidget {
         padding: const EdgeInsets.all(8),
         children: <Widget>[
           Card(
+            color: Colors.transparent,
             child: ListTile(
               trailing: buildAddNewClassButton(),
             ),
