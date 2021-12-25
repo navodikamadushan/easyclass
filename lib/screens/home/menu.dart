@@ -20,6 +20,7 @@ class MenuPage extends StatelessWidget {
           ),
         ),
         Padding(
+          padding: const EdgeInsets.all(5.0),
           child: Card(
             child: ListTile(
               //tileColor: Colors.red,
