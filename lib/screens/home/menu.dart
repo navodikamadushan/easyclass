@@ -28,7 +28,7 @@ class MenuPage extends StatelessWidget {
           ),
           leading: Icon(
             Icons.add,
-            size: 20,
+            size: 20.0,
           ),
         ),
       ],
