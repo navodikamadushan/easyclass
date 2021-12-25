@@ -11,26 +11,14 @@ import "package:easyclass/screens/home/profileimagewidget.dart";
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:top_modal_sheet/top_modal_sheet.dart';
 //import "package:easyclass/screens/home/menu.dart";
+import 'package:top_modal_sheet/top_modal_sheet.dart';
 
 class MyHomePage extends StatelessWidget {
   final AuthService _auth = AuthService();
   @override
   Widget build(BuildContext context) {
     void _showUserPannel() {
-      MaterialButton(
-        color: Colors.white,
-        elevation: 5,
-        child: const Text("Show TopModal"),
-        onPressed: () async {
-          var value = await showTopModalSheet<String>(context: context, child: Container());
-
-          if (value != null) {
-            setState(() {
-              _topModalData = value;
-            });
-          }
-        },
-      );
+      showTopModalSheet<String>(context: context, child: DumyModal());
 
       /*showModalBottomSheet(
         isScrollControlled: true,
