@@ -8,8 +8,8 @@ class Splash extends StatelessWidget {
       backgroundColor: Colors.transparent,
       extendBody: true,
       body: Container(
-        width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height,
+        //width: MediaQuery.of(context).size.width,
+        //height: MediaQuery.of(context).size.height,
         child: SingleChildScrollView(
           child: Column(
             mainAxisSize: MainAxisSize.min,
