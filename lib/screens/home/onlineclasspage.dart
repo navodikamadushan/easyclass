@@ -46,7 +46,7 @@ class MyHomePage extends StatelessWidget {
             DrawerHeader(
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage('assets/eassyclass_icon.png'),
+                  image: AssetImage('assets/school_icon.png'),
                 ),
               ),
               child: Text(
