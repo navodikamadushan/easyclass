@@ -9,7 +9,7 @@ import "package:easyclass/screens/profile/profilepage.dart";
 import "package:easyclass/screens/profile/editprofilepage.dart";
 import "package:easyclass/screens/home/profileimagewidget.dart";
 import 'package:cached_network_image/cached_network_image.dart';
-import "package:easyclass/screens/home/menu.dart";
+//import "package:easyclass/screens/home/menu.dart";
 
 class MyHomePage extends StatelessWidget {
   final AuthService _auth = AuthService();
