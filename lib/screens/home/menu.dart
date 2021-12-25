@@ -19,18 +19,20 @@ class MenuPage extends StatelessWidget {
             ),
           ),
         ),
-        Card(
-          child: ListTile(
-            //tileColor: Colors.red,
-            title: Text(
-              'නව පන්තිය',
-              style: TextStyle(
-                fontSize: 20.0,
+        Padding(
+          child: Card(
+            child: ListTile(
+              //tileColor: Colors.red,
+              title: Text(
+                'නව පන්තිය',
+                style: TextStyle(
+                  fontSize: 20.0,
+                ),
               ),
-            ),
-            leading: Icon(
-              Icons.add_circle_outline_sharp,
-              size: 40.0,
+              leading: Icon(
+                Icons.add_circle_outline_sharp,
+                size: 40.0,
+              ),
             ),
           ),
         ),
