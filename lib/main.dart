@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         ),
         home: AnimatedSplashScreen(
           splash: Splash(),
-          duration: 3000,
+          duration: 1000,
           splashTransition: SplashTransition.scaleTransition,
           backgroundColor: Colors.purple[100],
           nextScreen: Wrapper(),
