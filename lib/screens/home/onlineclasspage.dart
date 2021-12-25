@@ -43,6 +43,13 @@ class MyHomePage extends StatelessWidget {
       drawer: Drawer(
         child: MenuPage(),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          // Add your onPressed code here!
+        },
+        backgroundColor: Colors.green,
+        child: const Icon(Icons.navigation),
+      ),
       body: ListView(
         padding: const EdgeInsets.all(8),
         children: <Widget>[
