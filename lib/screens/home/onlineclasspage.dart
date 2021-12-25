@@ -24,7 +24,7 @@ class MyHomePage extends StatelessWidget {
         centerTitle: true,
         leading: IconButton(
           icon: Icon(Icons.menu),
-          onPressed: () {}; //=> Scaffold.of(context).openEndDrawer(),
+          onPressed: () {}, //=> Scaffold.of(context).openEndDrawer(),
           /*{
             Navigator.of(context).push(
               CustomPageRoute(child: MenuPage()),
