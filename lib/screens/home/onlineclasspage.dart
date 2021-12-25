@@ -30,7 +30,7 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('පන්ති'),
         centerTitle: true,
-        leading: ElevatedButton(
+        leading: IconButton(
           icon: Icon(Icons.menu),
           onPressed: () {
             showModalSideSheet(
