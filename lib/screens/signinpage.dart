@@ -48,7 +48,7 @@ class _SignInPageState extends State<SignInPage> {
                     color: Colors.white,
                   )),
               flexibleSpace: Image.asset(
-                "assets/appbar_image.png",
+                "assets/eassyclass_icon.png",
                 fit: BoxFit.cover,
               ),
               backgroundColor: Colors.transparent,

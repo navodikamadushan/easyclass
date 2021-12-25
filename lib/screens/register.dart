@@ -36,7 +36,7 @@ class _RegisterState extends State<Register> {
                     color: Colors.white,
                   )),
               flexibleSpace: Image.asset(
-                "assets/appbar_image.png",
+                "assets/eassyclass_icon.png",
                 fit: BoxFit.cover,
               ),
               backgroundColor: Colors.transparent,
