@@ -26,7 +26,11 @@ class MyApp extends StatelessWidget {
           dividerColor: Colors.black,
         ),
         home: AnimatedSplashScreen(
-          splash: Splash(),
+          splash: Scaffold(
+            appBar: AppBar(
+              title: Text('HI'),
+            ),
+          ), //Splash(),
           duration: 3000,
           splashTransition: SplashTransition.scaleTransition,
           backgroundColor: Colors.purple[100],
