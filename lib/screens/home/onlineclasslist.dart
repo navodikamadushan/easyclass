@@ -12,7 +12,7 @@ class LessonList extends StatefulWidget {
 
 class _LessonList extends State<LessonList> {
   final DatabaseService databaseService = DatabaseService();
-  ScrollController _controller = new ScrollController();
+  //ScrollController _controller = new ScrollController();
   @override
   Widget build(BuildContext context) {
     final userforid = Provider.of<MyUser>(context);
@@ -29,8 +29,8 @@ class _LessonList extends State<LessonList> {
 
   Widget _buildList(BuildContext context, List<DocumentSnapshot> snapshot) {
     return ListView(
-      physics: const AlwaysScrollableScrollPhysics(),
-      controller: _controller,
+      //physics: const AlwaysScrollableScrollPhysics(),
+      //controller: _controller,
       scrollDirection: Axis.vertical,
       shrinkWrap: true,
       padding: const EdgeInsets.only(top: 5.0),
