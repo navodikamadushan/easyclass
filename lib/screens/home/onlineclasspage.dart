@@ -54,7 +54,7 @@ class MyHomePage extends StatelessWidget {
         elevation: 10,
       ),
       body: ListView(
-        //padding: const EdgeInsets.all(8),
+        padding: const EdgeInsets.all(8),
         children: <Widget>[
           ListTile(
             trailing: buildAddNewClassButton(),
