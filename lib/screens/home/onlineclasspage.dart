@@ -31,6 +31,23 @@ class MyHomePage extends StatelessWidget {
         title: Text('පන්ති'),
         centerTitle: true,
         leading: ElevatedButton(
+            onPressed: () {
+              showModalSideSheet(
+                  context: context,
+                  ignoreAppBar: false,
+                  body: ListView.builder(
+                    itemBuilder: (context, index) {
+                      return ListTile(
+                        leading: Icon(Icons.face),
+                        title: Text("I am on $index index"),
+                        trailing: Icon(Icons.safety_divider),
+                      );
+                    },
+                  ));
+            },
+            child: Text("Show Modal Side Sheet")),
+
+        /*ElevatedButton(
           child: Text("Show"),
           //icon: Icon(Icons.menu),
           onPressed: () {
@@ -47,7 +64,8 @@ class MyHomePage extends StatelessWidget {
                   },
                 ));
           },
-        ),
+        ),*/
+
         actions: <Widget>[
           ProfileImageWidget(
             imagePath: 'https://media.istockphoto.com/photos/portrait-of-a-happy-latin-american-boy-smiling-picture-id1271410473',
