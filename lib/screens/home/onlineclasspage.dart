@@ -11,6 +11,7 @@ import "package:easyclass/screens/home/profileimagewidget.dart";
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:top_modal_sheet/top_modal_sheet.dart';
 import "package:easyclass/screens/home/menu.dart";
+import 'package:easyclass/shared/custom_page_route.dart';
 //import 'package:top_modal_sheet/top_modal_sheet.dart';
 
 class MyHomePage extends StatelessWidget {
@@ -25,7 +26,7 @@ class MyHomePage extends StatelessWidget {
           icon: Icon(Icons.menu),
           onPressed: () {
             Navigator.of(context).push(
-              MaterialPageRoute(builder: (context) => MenuPage()),
+              CustomPageRoute(builder: (context) => MenuPage()),
             );
           },
         ),
