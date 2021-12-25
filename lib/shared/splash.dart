@@ -7,33 +7,26 @@ class Splash extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.transparent,
       //extendBody: true,
-      body: new LayoutBuilde(builder: (BuildContext context, BoxConstraints viewportConstraints) {
-        return SingleChildScrollView(
-          child: ConstrainedBox(
-            constraints: BoxConstraints(
-              minHeight: viewportConstraints.maxHeight,
-            ),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: <Widget>[
-                Container(
-                  child: Transform.scale(
-                    scale: 7.5,
-                    child: IconButton(
-                      onPressed: () {},
-                      icon: new Image.asset("assets/eassyclass_icon.png"),
-                    ),
-                  ),
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: <Widget>[
+            Container(
+              child: Transform.scale(
+                scale: 7.5,
+                child: IconButton(
+                  onPressed: () {},
+                  icon: new Image.asset("assets/eassyclass_icon.png"),
                 ),
-                SizedBox(height: 30.0),
-                Text('From'),
-                Text('Navodika Karunasingha'),
-              ],
+              ),
             ),
-          ),
-        );
-      }), /**/
+            SizedBox(height: 30.0),
+            Text('From'),
+            Text('Navodika Karunasingha'),
+          ],
+        ),
+      ), /**/
     );
   }
 }
