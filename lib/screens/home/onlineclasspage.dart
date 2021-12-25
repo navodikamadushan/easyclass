@@ -22,15 +22,6 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('පන්ති'),
         centerTitle: true,
-        /*leading: IconButton(
-          icon: Icon(Icons.menu),
-          onPressed: () {}, //=> Scaffold.of(context).openEndDrawer(),
-          {
-            Navigator.of(context).push(
-              CustomPageRoute(child: MenuPage()),
-            );
-          },
-        ),*/
         actions: <Widget>[
           ProfileImageWidget(
             imagePath: 'https://media.istockphoto.com/photos/portrait-of-a-happy-latin-american-boy-smiling-picture-id1271410473',
