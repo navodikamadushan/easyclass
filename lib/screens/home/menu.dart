@@ -4,25 +4,25 @@ class MenuPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
-          children: <Widget>[
-            DrawerHeader(
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage('assets/drawer_image.jpg'),
-                ),
-              ),
-              child: Text(
-                'මෙනුව',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20.0,
-                ),
-              ),
+      children: <Widget>[
+        DrawerHeader(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('assets/drawer_image.jpg'),
             ),
-            ListTile(
-              title: Text('නව පන්තිය'),
+          ),
+          child: Text(
+            'මෙනුව',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 20.0,
             ),
-          ],
+          ),
         ),
+        ListTile(
+          title: Text('නව පන්තිය'),
+        ),
+      ],
+    );
   }
 }
