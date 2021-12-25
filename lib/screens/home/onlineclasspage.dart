@@ -44,6 +44,11 @@ class MyHomePage extends StatelessWidget {
         child: ListView(
           children: <Widget>[
             DrawerHeader(
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage('assets/eassyclass_icon.png'),
+                ),
+              ),
               child: Text(
                 'මෙනුව',
                 style: TextStyle(fontWeight: FontWeight.bold),
