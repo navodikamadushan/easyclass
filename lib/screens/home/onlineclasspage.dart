@@ -52,7 +52,8 @@ class MyHomePage extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 10,
       ),
-      body: Column(
+      body: ListView(
+        padding: const EdgeInsets.all(8),
         children: <Widget>[
           Text('HI'),
           LessonList(),
