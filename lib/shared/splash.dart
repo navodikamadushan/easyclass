@@ -18,7 +18,7 @@ class Splash extends StatelessWidget {
                 scale: 7.5,
                 child: IconButton(
                   onPressed: () {},
-                  icon: new Image.asset("assets/school_icon.png"),
+                  icon: new Image.asset("assets/eassyclass_icon.png"),
                 ),
               ),
             ),
