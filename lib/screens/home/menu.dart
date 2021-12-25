@@ -22,8 +22,14 @@ class MenuPage extends StatelessWidget {
         ListTile(
           title: Text(
             'නව පන්තිය',
+            style: TextStyle(
+              fontSize: 20.0,
+            ),
           ),
-          leading: Icon(Icons.add),
+          leading: Icon(
+            Icons.add,
+            size: 20,
+          ),
         ),
       ],
     );
