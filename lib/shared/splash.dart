@@ -7,9 +7,8 @@ class Splash extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.transparent,
       //extendBody: true,
-      body: LayoutBuilde(
-        builder: (BuildContext context, BoxConstraints viewportConstraints){
-          return SingleChildScrollView(
+      body: LayoutBuilde(builder: (BuildContext context, BoxConstraints viewportConstraints) {
+        return SingleChildScrollView(
           child: ConstrainedBox(
             constraints: BoxConstraints(
               minHeight: viewportConstraints.maxHeight,
@@ -33,10 +32,8 @@ class Splash extends StatelessWidget {
               ],
             ),
           ),
-        ),
-        }
-        
-      ), /**/
+        );
+      }), /**/
     );
   }
 }
