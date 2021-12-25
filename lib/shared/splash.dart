@@ -22,8 +22,8 @@ class Splash extends StatelessWidget {
                 ),
               ),
             ),
-            //SizedBox(height: 30.0),
-            //Text('From'),
+            SizedBox(height: 30.0),
+            Text('From'),
             //Text('Navodika Karunasingha'),
           ],
         ), /**/
