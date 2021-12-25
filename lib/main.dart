@@ -26,12 +26,7 @@ class MyApp extends StatelessWidget {
           dividerColor: Colors.black,
         ),
         home: AnimatedSplashScreen(
-          splash: Container(
-            color: Colors.pink,
-            height: 500,
-            //MediaQuery.of(context).size.height * 0.25,
-            child: Text('HI'),
-          ), //Splash(),
+          splash: Splash(),
           duration: 3000,
           splashTransition: SplashTransition.scaleTransition,
           backgroundColor: Colors.purple[100],
