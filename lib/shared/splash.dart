@@ -13,7 +13,7 @@ class Splash extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             mainAxisSize: MainAxisSize.min,
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
               Container(
                 child: Transform.scale(
