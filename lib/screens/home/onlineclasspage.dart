@@ -20,7 +20,9 @@ class MyHomePage extends StatelessWidget {
     void _showUserPannel() {
       showTopModalSheet<String>(
         context: context,
-        child: Text('HI'),
+        child: Scaffold(
+          body: Text('HI'),
+        ),
       );
 
       /*showModalBottomSheet(
