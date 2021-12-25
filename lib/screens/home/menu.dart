@@ -20,6 +20,7 @@ class MenuPage extends StatelessWidget {
           ),
         ),
         ListTile(
+          color: Colors.pink,
           title: Text(
             'නව පන්තිය',
             style: TextStyle(
