@@ -55,6 +55,7 @@ class MyHomePage extends StatelessWidget {
       body: Column(
         children: <Widget>[
           Text('HI'),
+          LessonList(),
         ],
       ),
     );
