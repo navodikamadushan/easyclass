@@ -9,7 +9,7 @@ class Splash extends StatelessWidget {
       //extendBody: true,
       body: Container(
         child: Transform.scale(
-          scale: 7.5,
+          scale: 5.5,
           child: IconButton(
             onPressed: () {},
             icon: new Image.asset("assets/eassyclass_icon.png"),
