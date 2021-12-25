@@ -44,7 +44,10 @@ class MyHomePage extends StatelessWidget {
         child: ListView(
           children: <Widget>[
             DrawerHeader(
-              child: Text('මෙනුව'),
+              child: Text(
+                'මෙනුව',
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
             ),
             ListTile(
               title: Text('නව පන්තිය'),
