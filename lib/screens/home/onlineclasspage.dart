@@ -18,7 +18,7 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     void _showUserPannel() {
-      showTopModalSheet<String>(context: context, child: DumyModal());
+      showTopModalSheet<String>(context: context, child: Container());
 
       /*showModalBottomSheet(
         isScrollControlled: true,
