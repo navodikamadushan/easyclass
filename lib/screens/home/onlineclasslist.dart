@@ -30,7 +30,7 @@ class _LessonList extends State<LessonList> {
     return ListView(
       scrollDirection: Axis.vertical,
       shrinkWrap: true,
-      padding: const EdgeInsets.only(top: 20.0),
+      padding: const EdgeInsets.only(top: 10.0),
       children: snapshot.map((data) => _buildListItem(context, data)).toList(),
     );
   }
@@ -68,23 +68,6 @@ class _LessonList extends State<LessonList> {
                 }).toList(),
               ),
             ],
-            /*Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: record.timeslot.map((onValue) {
-                return Container(
-                  child: Text(
-                    onValue,
-                    style: TextStyle(
-                      fontSize: 10,
-                    ),
-                  ),
-                );
-              }).toList(),
-            ),*/
-            /*onTap: () {
-              print(record.timeslot.length.toString());
-            },*/
           ),
         ));
   }
