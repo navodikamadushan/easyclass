@@ -49,6 +49,18 @@ class MyHomePage extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 10,
       ),
+      drawer: Drawer(
+        child: ListView(
+          children: <Widget>[
+            DrawerHeader(
+              child: Text('මෙනුව'),
+            ),
+            ListTile(
+              title: Text('setting');
+            ),
+          ],
+        ),
+      ),
       body: ListView(
         padding: const EdgeInsets.all(8),
         children: <Widget>[
