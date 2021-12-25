@@ -9,6 +9,7 @@ import "package:easyclass/screens/profile/profilepage.dart";
 import "package:easyclass/screens/profile/editprofilepage.dart";
 import "package:easyclass/screens/home/profileimagewidget.dart";
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:top_modal_sheet/top_modal_sheet.dart';
 //import "package:easyclass/screens/home/menu.dart";
 
 class MyHomePage extends StatelessWidget {
@@ -16,7 +17,22 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     void _showUserPannel() {
-      showModalBottomSheet(
+      return MaterialButton(
+  color: Colors.white,
+  elevation: 5,
+  child: const Text("Show TopModal"),
+  onPressed: () async {
+    var value = await showTopModalSheet<String>(context: context, child: DumyModal());
+
+    if(value != null){
+      setState(() {
+        _topModalData = value;
+      });
+    }
+  },
+)
+
+      /*showModalBottomSheet(
         isScrollControlled: true,
         context: context,
         builder: (context) {
@@ -37,7 +53,7 @@ class MyHomePage extends StatelessWidget {
             ],
           );
         },
-      );
+      );*/
     }
 
     return Scaffold(
