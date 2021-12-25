@@ -27,7 +27,7 @@ class _LessonList extends State<LessonList> {
   }
 
   Widget _buildList(BuildContext context, List<DocumentSnapshot> snapshot) {
-    return ListView(
+    return ListWheelScrollView(
       itemExtent: 100,
       scrollDirection: Axis.vertical,
       shrinkWrap: true,
