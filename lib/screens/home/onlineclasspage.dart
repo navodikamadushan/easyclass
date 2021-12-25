@@ -51,7 +51,10 @@ class MyHomePage extends StatelessWidget {
               ),
               child: Text(
                 'මෙනුව',
-                style: TextStyle(fontWeight: FontWeight.bold),
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20.0,
+                ),
               ),
             ),
             ListTile(
