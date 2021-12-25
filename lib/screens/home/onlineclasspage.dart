@@ -32,7 +32,18 @@ class MyHomePage extends StatelessWidget {
         leading: IconButton(
           icon: Icon(Icons.menu),
           onPressed: () {
-            print('Clicked Iconbutton');
+            showModalSideSheet(
+                context: context,
+                ignoreAppBar: false,
+                body: ListView.builder(
+                  itemBuilder: (context, index) {
+                    return ListTile(
+                      leading: Icon(Icons.face),
+                      title: Text("I am on $index index"),
+                      trailing: Icon(Icons.safety_divider),
+                    );
+                  },
+                ));
           },
         ),
         actions: <Widget>[
