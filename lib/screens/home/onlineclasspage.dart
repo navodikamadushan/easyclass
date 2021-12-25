@@ -47,7 +47,7 @@ class MyHomePage extends StatelessWidget {
               child: Text('මෙනුව'),
             ),
             ListTile(
-              title: Text('setting'),
+              title: Text('නව පන්තිය'),
             ),
           ],
         ),
