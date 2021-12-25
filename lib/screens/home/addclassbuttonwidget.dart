@@ -13,7 +13,7 @@ class ButtonWidget extends StatelessWidget {
         style: ElevatedButton.styleFrom(
           primary: Colors.purple[600],
           onPrimary: Colors.white,
-          shape: StadiumBorder(),
+          // shape: StadiumBorder(),
           padding: EdgeInsets.symmetric(horizontal: 32, vertical: 12),
         ),
         child: Text(text),
