@@ -32,29 +32,7 @@ class MyHomePage extends StatelessWidget {
         centerTitle: true,
         leading: IconButton(
           icon: Icon(Icons.menu),
-          onPressed: () {
-            showModalBottomSheet(
-              context: context,
-              builder: (context) {
-                return Wrap(
-                  children: [
-                    ListTile(
-                      leading: Icon(Icons.share),
-                      title: Text('Share'),
-                    ),
-                    ListTile(
-                      leading: Icon(Icons.copy),
-                      title: Text('Copy Link'),
-                    ),
-                    ListTile(
-                      leading: Icon(Icons.edit),
-                      title: Text('Edit'),
-                    ),
-                  ],
-                );
-              },
-            );
-          },
+          onPressed: () {},
         ),
         actions: <Widget>[
           ProfileImageWidget(
