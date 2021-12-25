@@ -3,11 +3,26 @@ import 'package:flutter/material.dart';
 class MenuPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('මෙනුව'),
-        centerTitle: true,
-      ),
-    );
+    return ListView(
+          children: <Widget>[
+            DrawerHeader(
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage('assets/drawer_image.jpg'),
+                ),
+              ),
+              child: Text(
+                'මෙනුව',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20.0,
+                ),
+              ),
+            ),
+            ListTile(
+              title: Text('නව පන්තිය'),
+            ),
+          ],
+        ),
   }
 }

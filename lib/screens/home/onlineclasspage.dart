@@ -11,8 +11,8 @@ import "package:easyclass/screens/home/profileimagewidget.dart";
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:top_modal_sheet/top_modal_sheet.dart';
 import "package:easyclass/screens/home/menu.dart";
-import 'package:easyclass/shared/custom_page_route.dart';
-//import 'package:top_modal_sheet/top_modal_sheet.dart';
+//import 'package:easyclass/shared/custom_page_route.dart';
+import 'package:top_modal_sheet/top_modal_sheet.dart';
 
 class MyHomePage extends StatelessWidget {
   final AuthService _auth = AuthService();
@@ -41,27 +41,7 @@ class MyHomePage extends StatelessWidget {
         elevation: 10,
       ),
       drawer: Drawer(
-        child: ListView(
-          children: <Widget>[
-            DrawerHeader(
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage('assets/drawer_image.jpg'),
-                ),
-              ),
-              child: Text(
-                'මෙනුව',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20.0,
-                ),
-              ),
-            ),
-            ListTile(
-              title: Text('නව පන්තිය'),
-            ),
-          ],
-        ),
+        child: MenuPage(),
       ),
       body: ListView(
         padding: const EdgeInsets.all(8),
