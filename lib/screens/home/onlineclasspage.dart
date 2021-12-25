@@ -22,7 +22,7 @@ class MyHomePage extends StatelessWidget {
         elevation: 5,
         child: const Text("Show TopModal"),
         onPressed: () async {
-          var value = await showTopModalSheet<String>(context: context, child: DumyModal());
+          var value = await showTopModalSheet<String>(context: context, child: Container());
 
           if (value != null) {
             setState(() {
