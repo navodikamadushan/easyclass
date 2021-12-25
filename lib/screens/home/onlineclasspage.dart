@@ -17,13 +17,27 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     void _showUserPannel() {
       showModalBottomSheet(
-          isScrollControlled: true,
-          context: context,
-          builder: (context) {
-            //return SettingPage(context);
-            return ProfilePage();
-            //return EditProfilePage();
-          });
+        isScrollControlled: true,
+        context: context,
+        builder: (context) {
+          return Wrap(
+            children: [
+              ListTile(
+                leading: Icon(Icons.share),
+                title: Text('Share'),
+              ),
+              ListTile(
+                leading: Icon(Icons.copy),
+                title: Text('Copy Link'),
+              ),
+              ListTile(
+                leading: Icon(Icons.edit),
+                title: Text('Edit'),
+              ),
+            ],
+          );
+        },
+      );
     }
 
     return Scaffold(
@@ -33,7 +47,7 @@ class MyHomePage extends StatelessWidget {
         leading: IconButton(
           icon: Icon(Icons.menu),
           onPressed: () {
-            MenuWidget();
+            _showUserPannel();
           },
         ),
         actions: <Widget>[
