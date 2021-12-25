@@ -55,7 +55,10 @@ class MyHomePage extends StatelessWidget {
       body: ListView(
         padding: const EdgeInsets.all(8),
         children: <Widget>[
-          Card(child: ListTile(title: Text('One-line ListTile'))),
+          Card(
+              child: ListTile(
+            trailing: Icon(Icons.more_vert),
+          )),
           LessonList(),
         ],
       ),
