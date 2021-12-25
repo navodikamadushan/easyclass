@@ -4,10 +4,10 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 class Splash extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.transparent,
-      extendBody: true,
-      body: SingleChildScrollView(
+    return DefaultTextStyle(
+      // backgroundColor: Colors.transparent,
+      // extendBody: true,
+      child: SingleChildScrollView(
         child: Column(
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.spaceAround,
