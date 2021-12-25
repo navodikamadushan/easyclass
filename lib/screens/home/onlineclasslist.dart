@@ -30,7 +30,7 @@ class _LessonList extends State<LessonList> {
     return ListView(
       scrollDirection: Axis.vertical,
       shrinkWrap: true,
-      padding: const EdgeInsets.only(top: 10.0),
+      padding: const EdgeInsets.only(top: 5.0),
       children: snapshot.map((data) => _buildListItem(context, data)).toList(),
     );
   }
