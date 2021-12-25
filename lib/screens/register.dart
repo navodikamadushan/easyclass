@@ -36,7 +36,7 @@ class _RegisterState extends State<Register> {
                     color: Colors.white,
                   )),
               flexibleSpace: Image.asset(
-                "assets/eassyclass_icon.png",
+                "assets/appbar_image.png",
                 fit: BoxFit.cover,
               ),
               backgroundColor: Colors.transparent,
@@ -71,7 +71,7 @@ class _RegisterState extends State<Register> {
                         scale: 3.5,
                         child: IconButton(
                           onPressed: () {},
-                          icon: new Image.asset("assets/school_icon.png"),
+                          icon: new Image.asset("assets/eassyclass_icon.png"),
                         ),
                       ),
                     ),
