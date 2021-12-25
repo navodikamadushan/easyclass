@@ -32,7 +32,9 @@ class MyHomePage extends StatelessWidget {
         centerTitle: true,
         leading: IconButton(
           icon: Icon(Icons.menu),
-          onPressed: () {},
+          onPressed: () {
+            MenuWidget();
+          },
         ),
         actions: <Widget>[
           ProfileImageWidget(
