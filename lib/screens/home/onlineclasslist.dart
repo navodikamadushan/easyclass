@@ -27,12 +27,12 @@ class _LessonList extends State<LessonList> {
   }
 
   Widget _buildList(BuildContext context, List<DocumentSnapshot> snapshot) {
-    return ListView.builder(
+    return ListView(
       itemExtent: 100,
       scrollDirection: Axis.vertical,
       shrinkWrap: true,
       padding: const EdgeInsets.only(top: 5.0),
-      child: snapshot.map((data) => _buildListItem(context, data)).toList(),
+      children: snapshot.map((data) => _buildListItem(context, data)).toList(),
     );
   }
 
