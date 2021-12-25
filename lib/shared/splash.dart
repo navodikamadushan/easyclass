@@ -6,7 +6,6 @@ class Splash extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.transparent,
-      //extendBody: true,
       body: Center(
         child: Transform.scale(
           scale: 5.5,
