@@ -31,7 +31,8 @@ class MyHomePage extends StatelessWidget {
         title: Text('පන්ති'),
         centerTitle: true,
         leading: ElevatedButton(
-          icon: Icon(Icons.menu),
+          child: Text("Show")),
+          //icon: Icon(Icons.menu),
           onPressed: () {
             showModalSideSheet(
                 context: context,
