@@ -5,7 +5,7 @@ class CustomPageRoute extends PageRouteBuilder {
   CustomPageRoute({
     this.child,
   }) : super(
-          transitionDuration: Duration(seconds: 2),
+          transitionDuration: Duration(seconds: 1),
           pageBuilder: (context, animation, secondaryAnimation) => child,
         );
 
