@@ -6,7 +6,7 @@ class Splash extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.transparent,
-      extendBody: true,
+      //extendBody: true,
       body: SingleChildScrollView(
         child: Column(
           mainAxisSize: MainAxisSize.min,
