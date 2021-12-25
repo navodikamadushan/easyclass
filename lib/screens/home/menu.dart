@@ -26,6 +26,7 @@ class MenuPage extends StatelessWidget {
               fontSize: 20.0,
             ),
           ),
+          leading: Icon(Icons.add),
         ),
       ],
     );
