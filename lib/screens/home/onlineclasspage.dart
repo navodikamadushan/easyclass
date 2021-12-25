@@ -4,6 +4,7 @@ import "package:easyclass/services/database.dart";
 import 'package:provider/provider.dart';
 import "package:easyclass/screens/home/onlineclasslist.dart";
 import "package:easyclass/screens/home/setting.dart";
+import "package:easyclass/screens/home/addclassbuttonwidget.dart";
 import "package:easyclass/screens/profile/profilepage.dart";
 import "package:easyclass/screens/profile/editprofilepage.dart";
 import "package:easyclass/screens/home/profileimagewidget.dart";
@@ -57,7 +58,7 @@ class MyHomePage extends StatelessWidget {
         children: <Widget>[
           Card(
             child: ListTile(
-              trailing: Icon(Icons.more_vert),
+              trailing: buildAddNewClassButton(),
             ),
           ),
           LessonList(),
@@ -65,4 +66,9 @@ class MyHomePage extends StatelessWidget {
       ),
     );
   }
+
+  Widget buildAddNewClassButton() => ButtonWidget(
+        text: 'New Class',
+        onClicked: () {},
+      );
 }
