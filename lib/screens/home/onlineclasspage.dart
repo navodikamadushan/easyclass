@@ -33,18 +33,27 @@ class MyHomePage extends StatelessWidget {
         leading: IconButton(
           icon: Icon(Icons.menu),
           onPressed: () {
-            showModalSideSheet(
-                context: context,
-                ignoreAppBar: false,
-                body: ListView.builder(
-                  itemBuilder: (context, index) {
-                    return ListTile(
-                      leading: Icon(Icons.face),
-                      title: Text("I am on $index index"),
-                      trailing: Icon(Icons.safety_divider),
-                    );
-                  },
-                ));
+            showModalBottomSheet(
+              context: context,
+              builder: (context) {
+                return Wrap(
+                  children: [
+                    ListTile(
+                      leading: Icon(Icons.share),
+                      title: Text('Share'),
+                    ),
+                    ListTile(
+                      leading: Icon(Icons.copy),
+                      title: Text('Copy Link'),
+                    ),
+                    ListTile(
+                      leading: Icon(Icons.edit),
+                      title: Text('Edit'),
+                    ),
+                  ],
+                );
+              },
+            );
           },
         ),
         actions: <Widget>[
