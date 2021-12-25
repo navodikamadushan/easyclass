@@ -45,7 +45,7 @@ class MyHomePage extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          // Add your onPressed code here!
+          print('HI');
         },
         backgroundColor: Colors.blue,
         child: const Icon(Icons.add),
