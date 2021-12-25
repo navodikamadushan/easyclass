@@ -10,8 +10,8 @@ import "package:easyclass/screens/profile/editprofilepage.dart";
 import "package:easyclass/screens/home/profileimagewidget.dart";
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:top_modal_sheet/top_modal_sheet.dart';
-//import "package:easyclass/screens/home/menu.dart";
-import 'package:top_modal_sheet/top_modal_sheet.dart';
+import "package:easyclass/screens/home/menu.dart";
+//import 'package:top_modal_sheet/top_modal_sheet.dart';
 
 class MyHomePage extends StatelessWidget {
   final AuthService _auth = AuthService();
@@ -24,7 +24,9 @@ class MyHomePage extends StatelessWidget {
         leading: IconButton(
           icon: Icon(Icons.menu),
           onPressed: () {
-            // _showUserPannel();
+            Navigator.of(context).push(
+              MaterialPageRoute(builder: (context) => MenuPage()),
+            );
           },
         ),
         actions: <Widget>[
