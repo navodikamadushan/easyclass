@@ -7,7 +7,7 @@ class Splash extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.transparent,
       //extendBody: true,
-      body: Container(
+      body: Center(
         child: Transform.scale(
           scale: 5.5,
           child: IconButton(
