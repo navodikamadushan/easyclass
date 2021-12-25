@@ -23,7 +23,6 @@ class MenuPage extends StatelessWidget {
           title: Text(
             'නව පන්තිය',
             style: TextStyle(
-              fontWeight: FontWeight.bold,
               fontSize: 20.0,
             ),
           ),
