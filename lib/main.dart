@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
         home: AnimatedSplashScreen(
           splash: Container(
             color: Colors.pink,
-            //height: MediaQuery.of(context).size.height,
+            MediaQuery.of(context).size.height * 0.25
             child: Text('HI'),
           ), //Splash(),
           duration: 3000,
