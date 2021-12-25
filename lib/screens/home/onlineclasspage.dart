@@ -24,11 +24,12 @@ class MyHomePage extends StatelessWidget {
         centerTitle: true,
         leading: IconButton(
           icon: Icon(Icons.menu),
-          onPressed: () {
+          onPressed: () => Scaffold.of(context).openDrawer(),
+          /*{
             Navigator.of(context).push(
               CustomPageRoute(child: MenuPage()),
             );
-          },
+          },*/
         ),
         actions: <Widget>[
           ProfileImageWidget(
