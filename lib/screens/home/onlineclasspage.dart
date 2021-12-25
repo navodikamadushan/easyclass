@@ -68,7 +68,7 @@ class MyHomePage extends StatelessWidget {
   }
 
   Widget buildAddNewClassButton() => ButtonWidget(
-        text: 'New Class',
+        text: 'නව පන්තිය',
         onClicked: () {},
       );
 }
