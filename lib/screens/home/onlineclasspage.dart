@@ -18,19 +18,19 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     void _showUserPannel() {
       MaterialButton(
-  color: Colors.white,
-  elevation: 5,
-  child: const Text("Show TopModal"),
-  onPressed: () async {
-    var value = await showTopModalSheet<String>(context: context, child: DumyModal());
+        color: Colors.white,
+        elevation: 5,
+        child: const Text("Show TopModal"),
+        onPressed: () async {
+          var value = await showTopModalSheet<String>(context: context, child: DumyModal());
 
-    if(value != null){
-      setState(() {
-        _topModalData = value;
-      });
-    }
-  },
-)
+          if (value != null) {
+            setState(() {
+              _topModalData = value;
+            });
+          }
+        },
+      );
 
       /*showModalBottomSheet(
         isScrollControlled: true,
