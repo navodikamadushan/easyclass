@@ -17,7 +17,7 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     void _showUserPannel() {
-      return MaterialButton(
+      MaterialButton(
   color: Colors.white,
   elevation: 5,
   child: const Text("Show TopModal"),
