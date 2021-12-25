@@ -26,7 +26,7 @@ class MyHomePage extends StatelessWidget {
           icon: Icon(Icons.menu),
           onPressed: () {
             Navigator.of(context).push(
-              CustomPageRoute(builder: (context) => MenuPage()),
+              CustomPageRoute(child: MenuPage()),
             );
           },
         ),
