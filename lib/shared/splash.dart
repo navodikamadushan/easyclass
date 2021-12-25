@@ -7,7 +7,7 @@ class Splash extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.transparent,
       //extendBody: true,
-      body: LayoutBuilde(builder: (BuildContext context, BoxConstraints viewportConstraints) {
+      body: new LayoutBuilde(builder: (BuildContext context, BoxConstraints viewportConstraints) {
         return SingleChildScrollView(
           child: ConstrainedBox(
             constraints: BoxConstraints(
