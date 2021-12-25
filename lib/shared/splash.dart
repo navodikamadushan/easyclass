@@ -12,6 +12,7 @@ class Splash extends StatelessWidget {
         height: MediaQuery.of(context).size.height,
         child: SingleChildScrollView(
           child: Column(
+            mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Container(
