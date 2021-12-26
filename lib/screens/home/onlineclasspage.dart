@@ -50,15 +50,7 @@ class MyHomePage extends StatelessWidget {
         backgroundColor: Colors.blue,
         child: const Icon(Icons.add),
       ),
-      body: ListView(
-        padding: const EdgeInsets.all(8),
-        children: <Widget>[
-          /*ListTile(
-            trailing: buildAddNewClassButton(),
-          ),*/
-          LessonList(),
-        ],
-      ),
+      body: LessonList(),
     );
   }
 
