@@ -52,7 +52,7 @@ class _LessonList extends State<LessonList> {
           ),
           child: ExpansionTile(
             key: expansionTileKey,
-            initiallyExpanded: true,
+            initiallyExpanded: false,
             leading: FlutterLogo(),
             title: Text(
               record.class_name,
