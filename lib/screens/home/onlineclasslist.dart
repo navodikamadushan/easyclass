@@ -33,7 +33,7 @@ class _LessonList extends State<LessonList> {
         //physics: const AlwaysScrollableScrollPhysics(),
         //controller: _controller,
         //scrollDirection: Axis.vertical,
-        shrinkWrap: true,
+        //shrinkWrap: true,
         padding: const EdgeInsets.only(top: 5.0),
         children: snapshot.map((data) => _buildListItem(context, data)).toList(),
       ),
