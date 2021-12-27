@@ -34,7 +34,7 @@ class _LessonList extends State<LessonList> {
         //controller: _controller,
         //scrollDirection: Axis.vertical,
         //shrinkWrap: true,
-        padding: const EdgeInsets.only(top: 5.0),
+        //padding: const EdgeInsets.only(top: 5.0),
         children: snapshot.map((data) => _buildListItem(context, data)).toList(),
       ),
     );
