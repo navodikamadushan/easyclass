@@ -28,6 +28,7 @@ class _LessonList extends State<LessonList> {
   }
 
   Widget _buildList(BuildContext context, List<DocumentSnapshot> snapshot) {
+    final record = Record.fromSnapshot(data);
     return SingleChildScrollView(
       child: ExpansionPanelList.radio(
         //physics: const AlwaysScrollableScrollPhysics(),
@@ -35,7 +36,8 @@ class _LessonList extends State<LessonList> {
         //scrollDirection: Axis.vertical,
         //shrinkWrap: true,
         //padding: const EdgeInsets.only(top: 5.0),
-        children: snapshot.map((data) => _buildListItem(context, data)).toList(),
+        //children: snapshot.map((data) => _buildListItem(context, data)).toList(),
+        children: snapshot.map((data) => ExpansionPanelRadio(value: ValueKey(record.class_name), canTapOnHeader: true, headerBuilder: (context, isExpanded) => _buildListItem(context, data))).toList(),
       ),
     );
   }
