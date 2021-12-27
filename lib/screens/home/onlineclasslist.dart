@@ -56,7 +56,7 @@ class _LessonList extends State<LessonList> {
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
             subtitle: Text(record.subject),
-            onExpansionChanged: () {
+            onExpansionChanged: (value) {
               print('HI');
             },
             children: <Widget>[
