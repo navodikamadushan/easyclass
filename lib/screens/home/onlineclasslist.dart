@@ -29,7 +29,7 @@ class _LessonList extends State<LessonList> {
 
   Widget _buildList(BuildContext context, List<DocumentSnapshot> snapshot) {
     return SingleChildScrollView(
-      child: ExpansionPanelList.radio(
+      child: ListView//ExpansionPanelList.radio(
         //physics: const AlwaysScrollableScrollPhysics(),
         //controller: _controller,
         scrollDirection: Axis.vertical,
