@@ -40,6 +40,7 @@ class _LessonList extends State<LessonList> {
   }
 
   Widget _buildListItem(BuildContext context, DocumentSnapshot data) {
+    final GlobalKey expansionTileKey = GlobalKey();
     final record = Record.fromSnapshot(data);
     return Padding(
         key: ValueKey(record.class_name),
@@ -50,6 +51,7 @@ class _LessonList extends State<LessonList> {
             borderRadius: BorderRadius.circular(5.0),
           ),
           child: ExpansionTile(
+            key: expansionTileKey,
             leading: FlutterLogo(),
             title: Text(
               record.class_name,
