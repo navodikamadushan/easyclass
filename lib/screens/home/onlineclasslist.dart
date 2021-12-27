@@ -36,7 +36,7 @@ class _LessonList extends State<LessonList> {
         //shrinkWrap: true,
         //padding: const EdgeInsets.only(top: 5.0),
         //children: snapshot.map((data) => _buildListItem(context, data)).toList(),
-        children: snapshot.map((data) => ExpansionPanelRadio(value: '1234', canTapOnHeader: true, headerBuilder: (context, isExpanded) => _buildListItem(context, data))).toList(),
+        children: snapshot.map((data) => ExpansionPanelRadio(value: 'Kandy Group', canTapOnHeader: true, headerBuilder: (context, isExpanded) => _buildListItem(context, data))).toList(),
       ),
     );
   }
