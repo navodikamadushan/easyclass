@@ -44,6 +44,7 @@ class _LessonList extends State<LessonList> {
     final record = Record.fromSnapshot(data);
     return Padding(
         key: ValueKey(record.class_name),
+        initiallyExpanded: 3,
         padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
         child: Container(
           decoration: BoxDecoration(
@@ -60,6 +61,7 @@ class _LessonList extends State<LessonList> {
             subtitle: Text(record.subject),
             onExpansionChanged: (value) {
               print(expansionTileKey.currentContext.toString());
+              SetState(() {});
             },
             children: <Widget>[
               Column(
