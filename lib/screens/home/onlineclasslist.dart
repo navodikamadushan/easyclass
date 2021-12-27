@@ -31,7 +31,7 @@ class _LessonList extends State<LessonList> {
     return ListView(
       // ExpansionPanelList.radio(
       physics: const AlwaysScrollableScrollPhysics(),
-      controller: _controller,
+      //controller: _controller,
       scrollDirection: Axis.vertical,
       shrinkWrap: true,
       padding: const EdgeInsets.only(top: 5.0),
