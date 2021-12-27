@@ -57,7 +57,7 @@ class _LessonList extends State<LessonList> {
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
             subtitle: Text(record.subject),
-            /*children: <Widget>[
+            children: <Widget>[
               Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -72,7 +72,7 @@ class _LessonList extends State<LessonList> {
                   );
                 }).toList(),
               ),
-            ],*/
+            ],
           ),
         ));
   }
