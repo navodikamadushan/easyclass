@@ -28,15 +28,14 @@ class _LessonList extends State<LessonList> {
   }
 
   Widget _buildList(BuildContext context, List<DocumentSnapshot> snapshot) {
-    return 
-          ListView(
-          ExpansionPanelList.radio(
-        physics: const AlwaysScrollableScrollPhysics(),
-        controller: _controller,
-        scrollDirection: Axis.vertical,
-        shrinkWrap: true,
-        padding: const EdgeInsets.only(top: 5.0),
-        children: snapshot.map((data) => _buildListItem(context, data)).toList(),
+    return ListView(
+      // ExpansionPanelList.radio(
+      physics: const AlwaysScrollableScrollPhysics(),
+      controller: _controller,
+      scrollDirection: Axis.vertical,
+      shrinkWrap: true,
+      padding: const EdgeInsets.only(top: 5.0),
+      children: snapshot.map((data) => _buildListItem(context, data)).toList(),
     );
   }
 
