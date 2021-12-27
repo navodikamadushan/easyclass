@@ -53,8 +53,8 @@ class _LessonList extends State<LessonList> {
             border: Border.all(color: Colors.grey),
             borderRadius: BorderRadius.circular(5.0),
           ),
-          child: ListTile(
-            //ExpansionTile(
+          child: //ListTile(
+              ExpansionTile(
             leading: FlutterLogo(),
             title: Text(
               record.class_name,
