@@ -37,7 +37,7 @@ class _LessonList extends State<LessonList> {
         //scrollDirection: Axis.vertical,
         //shrinkWrap: true,
         //padding: const EdgeInsets.only(top: 5.0),
-        children: snapshot.map<ExpansionPanel>((data) => _buildListItem(context, data)).toList(),
+        children: snapshot.map((data) => _buildListItem(context, data)).toList(),
         //children: snapshot.map((data) => ExpansionPanelRadio(value: 'Kandy Group', canTapOnHeader: true, headerBuilder: (context, isExpanded) => _buildListItem(context, data))).toList(),
       ),
     );
@@ -53,7 +53,8 @@ class _LessonList extends State<LessonList> {
             border: Border.all(color: Colors.grey),
             borderRadius: BorderRadius.circular(5.0),
           ),
-          child: ExpansionTile(
+          child: ListTile(
+            //ExpansionTile(
             leading: FlutterLogo(),
             title: Text(
               record.class_name,
