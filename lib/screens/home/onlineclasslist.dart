@@ -32,7 +32,7 @@ class _LessonList extends State<LessonList> {
       child: ListView//ExpansionPanelList.radio(
         //physics: const AlwaysScrollableScrollPhysics(),
         //controller: _controller,
-        scrollDirection: Axis.vertical,
+        //scrollDirection: Axis.vertical,
         shrinkWrap: true,
         padding: const EdgeInsets.only(top: 5.0),
         children: snapshot.map((data) => _buildListItem(context, data)).toList(),
