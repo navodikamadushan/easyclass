@@ -70,7 +70,10 @@ class _LessonList extends State<LessonList> {
               DataTable(
                   columns: <DataColumn>[
                     DataColumn(
-                      label: Text("Date"),
+                      label: Container(
+                        width: 30,
+                        child: Text("Date"),
+                      ),
                       numeric: false,
                       onSort: (i, b) {},
                       tooltip: "Display date of class",
