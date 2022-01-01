@@ -62,7 +62,7 @@ class _LessonList extends State<LessonList> {
             subtitle: Text(record.subject),
             onExpansionChanged: (value) {
               print(expansionTileKey.hashCode.toString());
-              selected = expansionTileKey.hashCode
+              selected = expansionTileKey.hashCode;
               //setState(() => selected = expansionTileKey.hashCode);
             },
             children: <Widget>[
