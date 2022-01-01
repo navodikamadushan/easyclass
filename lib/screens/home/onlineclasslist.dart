@@ -67,6 +67,17 @@ class _LessonList extends State<LessonList> {
               //setState(() => selected = expansionTileKey.hashCode);
             },
             children: <Widget>[
+              DataTable(
+                columns: <DataColumn>[
+                  DataColumn(
+                    label: Text("Time Slot"),
+                    numeric: false,
+                    onSort: (i,b){},
+                    tooltip: "Display time slots of class",
+                  )
+                ],
+                rows: <DataRow> [],
+              );
               /*Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 crossAxisAlignment: CrossAxisAlignment.start,
