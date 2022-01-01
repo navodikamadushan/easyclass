@@ -67,7 +67,7 @@ class _LessonList extends State<LessonList> {
               //setState(() => selected = expansionTileKey.hashCode);
             },
             children: <Widget>[
-              Column(
+              /*Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: record.timeslot.map((onValue) {
@@ -80,7 +80,7 @@ class _LessonList extends State<LessonList> {
                     ),
                   );
                 }).toList(),
-              ),
+              ),*/
             ],
           ),
         ));
