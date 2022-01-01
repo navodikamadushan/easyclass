@@ -74,7 +74,7 @@ class _LessonList extends State<LessonList> {
                     numeric: false,
                     onSort: (i,b){},
                     tooltip: "Display time slots of class",
-                  )
+                  ),
                 ],
                 rows: <DataRow> [],
               );
