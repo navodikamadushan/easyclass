@@ -53,18 +53,15 @@ class _LessonList extends State<LessonList> {
             borderRadius: BorderRadius.circular(5.0),
           ),
           child: ExpansionTile(
-            key: expansionTileKey,
-            initiallyExpanded: false,
+            key: Key(index.toString()),
+            initiallyExpanded: index == selected,
             leading: FlutterLogo(),
             title: Text(
               record.class_name,
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
             subtitle: Text(record.subject),
-            onExpansionChanged: (value) {
-              print(expansionTileKey.currentState.toString());
-              //SetState(() {});
-            },
+            onExpansionChanged: (value) {},
             children: <Widget>[
               Column(
                 mainAxisAlignment: MainAxisAlignment.end,
