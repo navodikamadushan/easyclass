@@ -72,12 +72,12 @@ class _LessonList extends State<LessonList> {
                   DataColumn(
                     label: Text("Time Slot"),
                     numeric: false,
-                    onSort: (i,b){},
+                    onSort: (i, b) {},
                     tooltip: "Display time slots of class",
                   ),
                 ],
-                rows: <DataRow> [],
-              );
+                rows: <DataRow>[],
+              ),
               /*Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 crossAxisAlignment: CrossAxisAlignment.start,
