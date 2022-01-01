@@ -44,7 +44,7 @@ class _LessonList extends State<LessonList> {
     );
   }
 
-  Widget _buildListItem(BuildContext context, var index, DocumentSnapshot data) {
+  Widget _buildListItem(BuildContext context, DocumentSnapshot data) {
     final GlobalKey expansionTileKey = GlobalKey();
     final record = Record.fromSnapshot(data);
     return Padding(
