@@ -89,15 +89,17 @@ class _LessonList extends State<LessonList> {
                           onSort: (i, b) {},
                           tooltip: "Display time of class",
                         ),
-                        DataColumn(
-                          label: Container(
-                            color: Colors.pink,
-                            width: 95,
-                            child: Text("AM/PM"),
+                        Container(
+                          child: DataColumn(
+                            label: Container(
+                              color: Colors.pink,
+                              width: 95,
+                              child: Text("AM/PM"),
+                            ),
+                            numeric: false,
+                            onSort: (i, b) {},
+                            tooltip: "Display time of class",
                           ),
-                          numeric: false,
-                          onSort: (i, b) {},
-                          tooltip: "Display time of class",
                         ),
                       ],
                       rows: record.timeslot
