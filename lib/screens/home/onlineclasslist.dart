@@ -109,20 +109,6 @@ class _LessonList extends State<LessonList> {
                             DataCell(Text(time.split(' ')[4])),
                           ]))
                       .toList()),
-              /*Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: record.timeslot.map((onValue) {
-                  return Container(
-                    child: Text(
-                      onValue,
-                      style: TextStyle(
-                          //fontSize: 10,
-                          ),
-                    ),
-                  );
-                }).toList(),
-              ),*/
             ],
           ),
         ));
