@@ -95,8 +95,9 @@ class _LessonList extends State<LessonList> {
                       .map((time) => DataRow(cells: [
                             DataCell(Text(time.split(' ')[0])),
                             DataCell(Container(
-                              width: 100;
-                              child:Text(time.split(' ')[1] + ' - ' + time.split(' ')[3]),)),
+                              width: 100,
+                              child: Text(time.split(' ')[1] + ' - ' + time.split(' ')[3]),
+                            )),
                             DataCell(Text(time.split(' ')[4])),
                           ]))
                       .toList()),
