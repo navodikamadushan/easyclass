@@ -70,7 +70,7 @@ class _LessonList extends State<LessonList> {
               Container(
                 color: Colors.pink,
                 child: Padding(
-                  padding: EdgeInsets.only(right: 40.0),
+                  padding: EdgeInsets.only(right: 20.0),
                   child: DataTable(
                       columns: <DataColumn>[
                         DataColumn(
