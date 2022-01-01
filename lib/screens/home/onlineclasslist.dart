@@ -87,7 +87,7 @@ class _LessonList extends State<LessonList> {
                     ),
                     DataColumn(
                       label: Container(
-                        width: 95,
+                        //width: 95,
                         child: Text("AM/PM"),
                       ),
                       numeric: false,
