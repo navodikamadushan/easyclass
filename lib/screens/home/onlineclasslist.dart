@@ -75,7 +75,6 @@ class _LessonList extends State<LessonList> {
                       columns: <DataColumn>[
                         DataColumn(
                           label: Container(
-                            color: Colors.pink,
                             //width: 40,
                             child: Text("Date"),
                           ),
@@ -91,7 +90,6 @@ class _LessonList extends State<LessonList> {
                         ),
                         DataColumn(
                           label: Container(
-                            color: Colors.pink,
                             width: 95,
                             child: Text("AM/PM"),
                           ),
