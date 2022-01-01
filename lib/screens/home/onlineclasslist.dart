@@ -81,11 +81,18 @@ class _LessonList extends State<LessonList> {
                       onSort: (i, b) {},
                       tooltip: "Display time of class",
                     ),
+                    DataColumn(
+                      label: Text("AM/PM"),
+                      numeric: false,
+                      onSort: (i, b) {},
+                      tooltip: "Display time of class",
+                    ),
                   ],
                   rows: record.timeslot
                       .map((time) => DataRow(cells: [
                             DataCell(Text(time.split(' ')[0])),
                             DataCell(Text(time.split(' ')[1] + ' - ' + time.split(' ')[3])),
+                            DataCell(Text(time.split(' ')[4])),
                           ]))
                       .toList()),
               /*Column(
