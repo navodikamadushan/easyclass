@@ -76,6 +76,8 @@ class _LessonList extends State<LessonList> {
                       tooltip: "Display date of class",
                     ),
                     DataColumn(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       label: Text("Time"),
                       numeric: false,
                       onSort: (i, b) {},
