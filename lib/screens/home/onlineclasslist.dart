@@ -57,7 +57,7 @@ class _LessonList extends State<LessonList> {
           ),
           child: ExpansionTile(
             //key: Key(index.toString()),
-            initiallyExpanded: false, //index == selected,
+            initiallyExpanded: true, //index == selected,
             leading: FlutterLogo(),
             title: Text(
               record.class_name,
