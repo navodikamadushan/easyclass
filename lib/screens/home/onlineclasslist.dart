@@ -82,7 +82,10 @@ class _LessonList extends State<LessonList> {
                       tooltip: "Display time of class",
                     ),
                     DataColumn(
-                      label: Text("AM/PM"),
+                      label: Container(
+                        width: 100,
+                        child: Text("AM/PM"),
+                      ),
                       numeric: false,
                       onSort: (i, b) {},
                       tooltip: "Display time of class",
