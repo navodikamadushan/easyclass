@@ -12,6 +12,7 @@ class LessonList extends StatefulWidget {
 
 class _LessonList extends State<LessonList> {
   final DatabaseService databaseService = DatabaseService();
+  int selected = 0 ;
   //ScrollController _controller = new ScrollController();
   @override
   Widget build(BuildContext context) {
@@ -29,6 +30,7 @@ class _LessonList extends State<LessonList> {
 
   Widget _buildList(BuildContext context, List<DocumentSnapshot> snapshot) {
     return ListView(
+       key: Key('builder ${selected.toString()}')
       // ExpansionPanelList.radio(
       physics: const AlwaysScrollableScrollPhysics(),
       //controller: _controller,
