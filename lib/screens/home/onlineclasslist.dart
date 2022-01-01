@@ -56,7 +56,7 @@ class _LessonList extends State<LessonList> {
             borderRadius: BorderRadius.circular(5.0),
           ),
           child: ExpansionTile(
-            key: Key(index.toString()),
+            //key: Key(index.toString()),
             initiallyExpanded: false, //index == selected,
             leading: FlutterLogo(),
             title: Text(
