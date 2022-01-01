@@ -68,6 +68,8 @@ class _LessonList extends State<LessonList> {
             },
             children: <Widget>[
               DataTable(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   columns: <DataColumn>[
                     DataColumn(
                       label: Text("Date"),
