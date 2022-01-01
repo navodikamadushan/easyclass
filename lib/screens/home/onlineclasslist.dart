@@ -29,7 +29,7 @@ class _LessonList extends State<LessonList> {
   }
 
   Widget _buildList(BuildContext context, List<DocumentSnapshot> snapshot) {
-    return ListView(
+    return ListView.builder(
       key: Key('builder ${selected.toString()}'),
       // ExpansionPanelList.radio(
       physics: const AlwaysScrollableScrollPhysics(),
@@ -37,7 +37,8 @@ class _LessonList extends State<LessonList> {
       scrollDirection: Axis.vertical,
       shrinkWrap: true,
       padding: const EdgeInsets.only(top: 5.0),
-      children: snapshot.map((data) => _buildListItem(context, data)).toList(),
+      //children: snapshot.map((data) => _buildListItem(context, data)).toList(),
+      itemBuilder: snapshot.map((data) => _buildListItem(context, data)).toList(),
     );
   }
 
@@ -54,7 +55,7 @@ class _LessonList extends State<LessonList> {
           ),
           child: ExpansionTile(
             key: Key(index.toString()),
-            initiallyExpanded: index == selected,
+            initiallyExpanded: false, //index == selected,
             leading: FlutterLogo(),
             title: Text(
               record.class_name,
