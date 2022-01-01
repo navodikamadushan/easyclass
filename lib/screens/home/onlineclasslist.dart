@@ -68,7 +68,6 @@ class _LessonList extends State<LessonList> {
             },
             children: <Widget>[
               DataTable(
-                  spacing: 20,
                   columns: <DataColumn>[
                     DataColumn(
                       label: Container(
