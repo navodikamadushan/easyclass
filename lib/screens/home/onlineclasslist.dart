@@ -68,27 +68,26 @@ class _LessonList extends State<LessonList> {
             },
             children: <Widget>[
               DataTable(
-                columns: <DataColumn>[
-                  DataColumn(
-                    label: Text("Date"),
-                    numeric: false,
-                    onSort: (i, b) {},
-                    tooltip: "Display date of class",
-                  ),
-                  DataColumn(
-                    label: Text("Time"),
-                    numeric: false,
-                    onSort: (i, b) {},
-                    tooltip: "Display time of class",
-                  ),
-                ],
-                rows: <DataRow>[
-                  DataRow(cells: <DataCell>[
-                    DataCell(Text('Sat')),
-                    DataCell(Text('10:00 - 11:00'))
-                  ]),
-                ],
-              ),
+                  columns: <DataColumn>[
+                    DataColumn(
+                      label: Text("Date"),
+                      numeric: false,
+                      onSort: (i, b) {},
+                      tooltip: "Display date of class",
+                    ),
+                    DataColumn(
+                      label: Text("Time"),
+                      numeric: false,
+                      onSort: (i, b) {},
+                      tooltip: "Display time of class",
+                    ),
+                  ],
+                  rows: record.timeslot
+                      .map((time) => DataRow(cells: [
+                            DataCell(Text('Sat')),
+                            DataCell(Text(time)),
+                          ]))
+                      .toList()),
               /*Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 crossAxisAlignment: CrossAxisAlignment.start,
