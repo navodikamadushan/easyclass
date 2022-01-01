@@ -61,7 +61,7 @@ class _LessonList extends State<LessonList> {
             ),
             subtitle: Text(record.subject),
             onExpansionChanged: (value) {
-              print(expansionTileKey.currentState.toString());
+              print(expansionTileKey.toString());
               //SetState(() {});
             },
             children: <Widget>[
