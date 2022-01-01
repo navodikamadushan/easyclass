@@ -82,7 +82,12 @@ class _LessonList extends State<LessonList> {
                     tooltip: "Display time of class",
                   ),
                 ],
-                rows: <DataRow>[],
+                rows: <DataRow>[
+                  DataRow(cells: <DataCell>[
+                    DataCell(Text('Sat')),
+                    DataCell(Text('10:00 - 11:00'))
+                  ]),
+                ],
               ),
               /*Column(
                 mainAxisAlignment: MainAxisAlignment.end,
