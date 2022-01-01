@@ -68,7 +68,7 @@ class _LessonList extends State<LessonList> {
             },
             children: <Widget>[
               Padding(
-                padding: EdgeInsets.only(right: 10.0),
+                padding: EdgeInsets.only(right: 20.0),
                 child: DataTable(
                     columns: <DataColumn>[
                       DataColumn(
