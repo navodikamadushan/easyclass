@@ -83,7 +83,7 @@ class _LessonList extends State<LessonList> {
                     ),
                     DataColumn(
                       label: Container(
-                        width: 1000,
+                        width: 100,
                         child: Text("AM/PM"),
                       ),
                       numeric: false,
@@ -93,11 +93,9 @@ class _LessonList extends State<LessonList> {
                   ],
                   rows: record.timeslot
                       .map((time) => DataRow(
-                              //mainAxisAlignment: MainAxisAlignment.end,
-                              //crossAxisAlignment: CrossAxisAlignment.start,
                               cells: [
                                 DataCell(Text(time.split(' ')[0])),
-                                DataCell(Text(time.split(' ')[1])), // + ' - ' + time.split(' ')[3])),
+                                DataCell(Text(time.split(' ')[1]) + ' - ' + time.split(' ')[3])),
                                 DataCell(Text(time.split(' ')[4])),
                               ]))
                       .toList()),
