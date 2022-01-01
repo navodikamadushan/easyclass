@@ -67,48 +67,50 @@ class _LessonList extends State<LessonList> {
               //setState(() => selected = expansionTileKey.hashCode);
             },
             children: <Widget>[
-              DataTable(
-                  columns: <DataColumn>[
-                    DataColumn(
-                      label: Container(
-                        color: Colors.pink,
-                        //width: 40,
-                        child: Text("Date"),
+              Padding(
+                child: DataTable(
+                    columns: <DataColumn>[
+                      DataColumn(
+                        label: Container(
+                          color: Colors.pink,
+                          //width: 40,
+                          child: Text("Date"),
+                        ),
+                        numeric: false,
+                        onSort: (i, b) {},
+                        tooltip: "Display date of class",
                       ),
-                      numeric: false,
-                      onSort: (i, b) {},
-                      tooltip: "Display date of class",
-                    ),
-                    DataColumn(
-                      label: Text("Time"),
-                      numeric: false,
-                      onSort: (i, b) {},
-                      tooltip: "Display time of class",
-                    ),
-                    DataColumn(
-                      label: Container(
-                        color: Colors.pink,
-                        width: 95,
-                        child: Text("AM/PM"),
+                      DataColumn(
+                        label: Text("Time"),
+                        numeric: false,
+                        onSort: (i, b) {},
+                        tooltip: "Display time of class",
                       ),
-                      numeric: false,
-                      onSort: (i, b) {},
-                      tooltip: "Display time of class",
-                    ),
-                  ],
-                  rows: record.timeslot
-                      .map((time) => DataRow(cells: [
-                            DataCell(Container(
-                              width: 30,
-                              child: Text(time.split(' ')[0]),
-                            )),
-                            DataCell(Container(
-                              width: 90,
-                              child: Text(time.split(' ')[1] + ' - ' + time.split(' ')[3]),
-                            )),
-                            DataCell(Text(time.split(' ')[4])),
-                          ]))
-                      .toList()),
+                      DataColumn(
+                        label: Container(
+                          color: Colors.pink,
+                          width: 95,
+                          child: Text("AM/PM"),
+                        ),
+                        numeric: false,
+                        onSort: (i, b) {},
+                        tooltip: "Display time of class",
+                      ),
+                    ],
+                    rows: record.timeslot
+                        .map((time) => DataRow(cells: [
+                              DataCell(Container(
+                                width: 30,
+                                child: Text(time.split(' ')[0]),
+                              )),
+                              DataCell(Container(
+                                width: 90,
+                                child: Text(time.split(' ')[1] + ' - ' + time.split(' ')[3]),
+                              )),
+                              DataCell(Text(time.split(' ')[4])),
+                            ]))
+                        .toList()),
+              ),
             ],
           ),
         ));
