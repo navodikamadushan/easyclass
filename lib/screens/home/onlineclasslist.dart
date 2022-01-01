@@ -72,7 +72,7 @@ class _LessonList extends State<LessonList> {
                     DataColumn(
                       label: Container(
                         color: Colors.pink,
-                        width: 40,
+                        //width: 40,
                         child: Text("Date"),
                       ),
                       numeric: false,
