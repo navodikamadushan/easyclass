@@ -38,7 +38,9 @@ class _LessonList extends State<LessonList> {
       shrinkWrap: true,
       padding: const EdgeInsets.only(top: 5.0),
       //children: snapshot.map((data) => _buildListItem(context, data)).toList(),
-      itemBuilder: snapshot.map((data) => _buildListItem(context, data)).toList(),
+      itemBuilder: () {
+        snapshot.map((data) => _buildListItem(context, data)).toList();
+      },
     );
   }
 
