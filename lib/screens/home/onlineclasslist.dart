@@ -84,7 +84,7 @@ class _LessonList extends State<LessonList> {
                   ],
                   rows: record.timeslot
                       .map((time) => DataRow(cells: [
-                            DataCell(time.split(' ')[1]),
+                            DataCell(time.split(' ')[1].toString()),
                             DataCell(Text(time)),
                           ]))
                       .toList()),
