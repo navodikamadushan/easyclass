@@ -70,6 +70,7 @@ class _LessonList extends State<LessonList> {
               DataTable(
                   columns: <DataColumn>[
                     DataColumn(
+                      width: 50,
                       label: Container(
                         color: Colors.pink,
                         //width: 40,
