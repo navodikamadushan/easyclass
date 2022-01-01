@@ -30,7 +30,6 @@ class _LessonList extends State<LessonList> {
 
   Widget _buildList(BuildContext context, List<DocumentSnapshot> snapshot) {
     return ListView(
-      key: Key('builder ${selected.toString()}'),
       // ExpansionPanelList.radio(
       physics: const AlwaysScrollableScrollPhysics(),
       //controller: _controller,
@@ -53,8 +52,8 @@ class _LessonList extends State<LessonList> {
             borderRadius: BorderRadius.circular(5.0),
           ),
           child: ExpansionTile(
-            key: Key(index.toString()),
-            initiallyExpanded: index == selected,
+            key: expansionTileKey,
+            initiallyExpanded: false,
             leading: FlutterLogo(),
             title: Text(
               record.class_name,
