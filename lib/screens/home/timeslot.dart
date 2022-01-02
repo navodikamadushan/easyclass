@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class TimeSlot extends StatelessWidget {
-  List timeslot;
+  List<String> timeslot;
   TimeSlot({this.timeslot});
   @override
   Widget build(BuildContext context) {
