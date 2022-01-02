@@ -1,3 +1,6 @@
+// All right reserved by EasyClass
+// Auther Information :- Navodika Karunasingha (eng.navodika@gmail.com)
+
 import 'package:flutter/material.dart';
 import 'package:easyclass/screens/home/onlineclasspage.dart';
 import 'package:easyclass/screens/authenticate.dart';
