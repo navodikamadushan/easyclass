@@ -72,7 +72,7 @@ class _LessonList extends State<LessonList> {
                 child: TimeSlot(record.timeslot),
               ),
               Card(
-                child: Text('No of student'),
+                child: Text('No of students: 25'),
               )
             ],
           ),
