@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class TimeSlot extends StatelessWidget {
+  var timeslot;
+  TimeSlot({this.timeslot});
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -36,7 +38,7 @@ class TimeSlot extends StatelessWidget {
                 tooltip: "Display time of class",
               ),
             ],
-            rows: record.timeslot
+            rows: timeslot //record.timeslot
                 .map((time) => DataRow(cells: [
                       DataCell(Container(
                         width: 30,
