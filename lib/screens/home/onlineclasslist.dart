@@ -68,10 +68,12 @@ class _LessonList extends State<LessonList> {
               //setState(() => selected = expansionTileKey.hashCode);
             },
             children: <Widget>[
-              Text('Time Stamp'),
               Card(
                 child: TimeSlot(record.timeslot),
               ),
+              Card(
+                child: Text('No of student'),
+              )
             ],
           ),
         ));
