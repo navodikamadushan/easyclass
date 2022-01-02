@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class TimeSlot extends StatelessWidget {
-  String timeslot;
+  var timeslot;
   TimeSlot(
     this.timeslot,
   );
