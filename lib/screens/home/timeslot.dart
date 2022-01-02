@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 class TimeSlot extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      child: Text('HI'),
+    );
   }
 }
