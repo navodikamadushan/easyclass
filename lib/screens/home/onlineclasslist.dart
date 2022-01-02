@@ -68,7 +68,7 @@ class _LessonList extends State<LessonList> {
               //setState(() => selected = expansionTileKey.hashCode);
             },
             children: <Widget>[
-              TimeSlot(record.timeslot),
+              TimeSlot('hello'),
             ],
           ),
         ));
