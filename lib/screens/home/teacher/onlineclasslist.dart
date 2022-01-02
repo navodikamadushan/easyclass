@@ -7,7 +7,7 @@ import "package:easyclass/services/database.dart";
 import "package:easyclass/models/record.dart";
 import 'package:provider/provider.dart';
 import "package:easyclass/models/user.dart";
-import "package:easyclass/screens/home/timeslot.dart";
+import "package:easyclass/screens/home/teacher/timeslot.dart";
 
 class LessonList extends StatefulWidget {
   @override
