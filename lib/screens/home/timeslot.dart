@@ -14,7 +14,7 @@ class TimeSlot extends StatelessWidget {
         child: SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: DataTable(
-              padding: 10.0,
+              data-table-padding: 10.0,
               columns: <DataColumn>[
                 DataColumn(
                   label: Container(
