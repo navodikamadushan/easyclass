@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 class TimeSlot extends StatelessWidget {
   String timeslot;
-  TimeSlot({
+  TimeSlot(
     this.timeslot,
-  });
+  );
   @override
   Widget build(BuildContext context) {
     return Container(
