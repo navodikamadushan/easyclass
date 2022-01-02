@@ -73,7 +73,7 @@ class _LessonList extends State<LessonList> {
               ),
               Card(
                 child: Text(
-                  'සිසුන් සංඛ්‍යාව: 25',
+                  'සිසුන් සංඛ්‍යාව: ${record.no_student}',
                   style: TextStyle(
                     fontSize: 20.0,
                   ),
