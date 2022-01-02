@@ -4,6 +4,7 @@ import "package:easyclass/services/database.dart";
 import "package:easyclass/models/record.dart";
 import 'package:provider/provider.dart';
 import "package:easyclass/models/user.dart";
+import "package:easyclass/screens/home/timeslot.dart";
 
 class LessonList extends StatefulWidget {
   @override
@@ -67,7 +68,8 @@ class _LessonList extends State<LessonList> {
               //setState(() => selected = expansionTileKey.hashCode);
             },
             children: <Widget>[
-              Container(
+              TimeSlot(),
+              /*Container(
                 // color: Colors.pink,
                 child: Padding(
                   padding: EdgeInsets.only(left: 0.0),
@@ -114,7 +116,7 @@ class _LessonList extends State<LessonList> {
                               ]))
                           .toList()),
                 ),
-              ),
+              ),*/
             ],
           ),
         ));
