@@ -16,7 +16,7 @@ class TimeSlot extends StatelessWidget {
           child: DataTable(
               dataRowHeight: 25.0,
               headingRowHeight: 25.0,
-              columnSpacing: 20.0,
+              columnSpacing: 30.0,
               columns: <DataColumn>[
                 DataColumn(
                   label: Container(
