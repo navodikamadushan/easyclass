@@ -10,7 +10,7 @@ class TimeSlot extends StatelessWidget {
     return Container(
       // color: Colors.pink,
       child: Padding(
-        padding: EdgeInsets.only(right: 10.0),
+        padding: EdgeInsets.only(right: 0.0),
         child: SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: DataTable(
