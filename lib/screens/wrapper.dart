@@ -17,7 +17,7 @@ class Wrapper extends StatelessWidget {
     if (user == null) {
       return Authenticate();
     } else {
-      return MyHomePage();
+      return OnlineClassTeacherPage();
       //return EmailVerify();
     }
     //return SignInPage();

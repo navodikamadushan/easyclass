@@ -17,7 +17,7 @@ import "package:easyclass/screens/home/menu.dart";
 //import 'package:easyclass/shared/custom_page_route.dart';
 import 'package:top_modal_sheet/top_modal_sheet.dart';
 
-class MyHomePage extends StatelessWidget {
+class OnlineClassTeacherPage extends StatelessWidget {
   final AuthService _auth = AuthService();
   @override
   Widget build(BuildContext context) {
