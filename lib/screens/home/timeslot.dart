@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class TimeSlot extends StatelessWidget {
   String timeslot;
-  const TimeSlot({
+  TimeSlot({
     this.timeslot,
   });
   @override
