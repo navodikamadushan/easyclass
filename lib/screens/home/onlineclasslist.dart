@@ -69,6 +69,7 @@ class _LessonList extends State<LessonList> {
             },
             children: <Widget>[
               TimeSlot(record.timeslot),
+              Text("Hiiiiiiii");
             ],
           ),
         ));
