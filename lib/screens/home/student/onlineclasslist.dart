@@ -29,7 +29,7 @@ class _LessonList extends State<LessonList> {
         if (!snapshot.hasData) return LinearProgressIndicator();
         return !snapshot.hasData
             ? Scaffold(
-                body: Center(Text('No Classes')),
+                body: Center(child: Text('No Classes')),
               )
             : _buildList(context, snapshot.data.docs);
       },
