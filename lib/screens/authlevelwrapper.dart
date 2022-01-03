@@ -3,6 +3,7 @@
 
 import 'package:flutter/material.dart';
 import "package:easyclass/services/database.dart";
+import "package:easyclass/models/user.dart";
 
 class AuthLevelWrapper extends StatelessWidget {
   final DatabaseService databaseService = DatabaseService();
