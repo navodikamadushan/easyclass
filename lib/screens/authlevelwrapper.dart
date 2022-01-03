@@ -26,7 +26,7 @@ class AuthLevelWrapper extends StatelessWidget {
     if (data['auth_level'] == 1) {
       return OnlineClassStudentPage();
     } else if (data['auth_level'] == 2) {
-      return return OnlineClassTeacherPage();
+      return OnlineClassTeacherPage();
     } else {
       return Scaffold(
         body: Text('else'),
