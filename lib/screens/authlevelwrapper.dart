@@ -8,6 +8,7 @@ import "package:easyclass/models/user.dart";
 import 'package:provider/provider.dart';
 import "package:easyclass/shared/loading.dart";
 import "package:easyclass/screens/home/teacher/onlineclasspage.dart";
+import "package:easyclass/screens/home/student/onlineclasspage.dart";
 
 class AuthLevelWrapper extends StatelessWidget {
   final DatabaseService databaseService = DatabaseService();
@@ -22,12 +23,10 @@ class AuthLevelWrapper extends StatelessWidget {
   }
 
   Widget _buildWrapper(DocumentSnapshot data) {
-    if (data['auth_level'] == 2) {
-      return OnlineClassTeacherPage();
-    } else if (data['auth_level'] == 1) {
-      return Scaffold(
-        body: Text('1'),
-      );
+    if (data['auth_level'] == 1) {
+      return OnlineClassStudentPage();
+    } else if (data['auth_level'] == 2) {
+      return return OnlineClassTeacherPage();
     } else {
       return Scaffold(
         body: Text('else'),
