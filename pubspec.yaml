@@ -61,6 +61,7 @@ flutter:
    - assets/school_icon.png
    - assets/eassyclass_icon.png
    - assets/drawer_image.jpg
+   - assets/drawer_image_1.0.0.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
