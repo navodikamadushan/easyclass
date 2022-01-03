@@ -17,7 +17,6 @@ class LessonList extends StatefulWidget {
 class _LessonList extends State<LessonList> {
   final DatabaseService databaseService = DatabaseService();
   int selected = 0;
-  //ScrollController _controller = new ScrollController();
   @override
   Widget build(BuildContext context) {
     final userforid = Provider.of<MyUser>(context);
