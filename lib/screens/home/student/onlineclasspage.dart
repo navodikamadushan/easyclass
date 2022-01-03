@@ -62,5 +62,5 @@ class OnlineClassStudentPage extends StatelessWidget {
         onClicked: () {
           print('clicked new class button');
         },
-      );/*
+      );*/
 }
