@@ -24,6 +24,8 @@ class AuthLevelWrapper extends StatelessWidget {
   Widget _buildWrapper(DocumentSnapshot data) {
     if (data['auth_level'] == 2) {
       return OnlineClassTeacherPage();
+    } else {
+      return Scaffold();
     }
   }
 }
