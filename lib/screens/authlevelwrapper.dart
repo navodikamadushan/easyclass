@@ -23,7 +23,7 @@ class AuthLevelWrapper extends StatelessWidget {
   }
 
   Widget _buildWrapper(DocumentSnapshot data) {
-    if (data['auth_level'] == 1) {
+    if (data['auth_level'] == 3) {
       return Scaffold(
         body: Center(child: Text('else')),
       );
