@@ -30,7 +30,7 @@ class _LessonList extends State<LessonList> {
         print(snapshot.data.docs.toString());
         return snapshot.data.docs.toString() == "[]"
             ? Scaffold(
-                body: Center(child: Text('No Classes')),
+                body: Center(child: Text('ඔබ කිසිදු පන්තියකට දායක වී නැත')),
               )
             : _buildList(context, snapshot.data.docs);
       },
