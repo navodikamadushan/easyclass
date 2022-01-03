@@ -7,6 +7,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import "package:easyclass/models/user.dart";
 import 'package:provider/provider.dart';
 import "package:easyclass/shared/loading.dart";
+import "package:easyclass/screens/home/teacher/onlineclasspage.dart";
 
 class AuthLevelWrapper extends StatelessWidget {
   final DatabaseService databaseService = DatabaseService();
@@ -21,8 +22,8 @@ class AuthLevelWrapper extends StatelessWidget {
   }
 
   Widget _buildWrapper(DocumentSnapshot data) {
-    return Scaffold(
-      body: Text(data['auth_level'].toString()),
-    );
+    if(data['auth_level'] == 2){
+      return OnlineClassTeacherPage();
+    },
   }
 }
