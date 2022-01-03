@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import "package:easyclass/services/database.dart";
 import 'package:cloud_firestore/cloud_firestore.dart';
 import "package:easyclass/models/user.dart";
+import 'package:provider/provider.dart';
 
 class AuthLevelWrapper extends StatelessWidget {
   final DatabaseService databaseService = DatabaseService();
