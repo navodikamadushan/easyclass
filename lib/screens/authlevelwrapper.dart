@@ -29,7 +29,7 @@ class AuthLevelWrapper extends StatelessWidget {
       return OnlineClassTeacherPage();
     } else {
       return Scaffold(
-        body: Text('else'),
+        body: Center(child: Text('else')),
       );
     }
   }
