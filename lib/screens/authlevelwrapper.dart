@@ -22,7 +22,7 @@ class AuthLevelWrapper extends StatelessWidget {
 
   Widget _buildWrapper(List<DocumentSnapshot> snapshot) {
     return Scaffold(
-      body: Text(snapshot.data['auth_level'].toString()),
-    );
+        // body: Text(snapshot.data['auth_level'].toString()),
+        );
   }
 }
