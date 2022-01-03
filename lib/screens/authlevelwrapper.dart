@@ -13,7 +13,7 @@ class AuthLevelWrapper extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final userforid = Provider.of<MyUser>(context);
-    return StreamBuilder<QuerySnapshot>(
+    return StreamBuilder<DocumentSnapshot>(
         stream: FirebaseFirestore.instance.collection('users').doc(userforid.uid).snapshots(),
         builder: (context, snapshot) {
           if (!snapshot.hasData) return Loading();
