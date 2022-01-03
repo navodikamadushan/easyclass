@@ -6,6 +6,7 @@ import "package:easyclass/services/database.dart";
 import 'package:cloud_firestore/cloud_firestore.dart';
 import "package:easyclass/models/user.dart";
 import 'package:provider/provider.dart';
+import "package:easyclass/shared/loading.dart";
 
 class AuthLevelWrapper extends StatelessWidget {
   final DatabaseService databaseService = DatabaseService();
@@ -15,6 +16,7 @@ class AuthLevelWrapper extends StatelessWidget {
     return StreamBuilder<QuerySnapshot>(
         stream: FirebaseFirestore.instance.collection('users').doc(userforid.uid).snapshots(),
         builder: (context, snapshot) {
+          if (!snapshot.hasData) return Loading();
           return Scaffold();
         });
   }
