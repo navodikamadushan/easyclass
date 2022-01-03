@@ -16,7 +16,11 @@ class AuthLevelWrapper extends StatelessWidget {
     return StreamBuilder<DocumentSnapshot>(
         stream: FirebaseFirestore.instance.collection('users').doc(userforid.uid).snapshots(),
         builder: (context, snapshot) {
-          return !snapshot.hasData ? Loading() : Scaffold();
+          return !snapshot.hasData
+              ? Loading()
+              : Scaffold(
+                  body: Text('HI'),
+                );
         });
   }
 }
