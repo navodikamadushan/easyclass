@@ -57,10 +57,10 @@ class OnlineClassStudentPage extends StatelessWidget {
     );
   }
 
-  Widget buildAddNewClassButton() => ButtonWidget(
+  /*Widget buildAddNewClassButton() => ButtonWidget(
         text: 'නව පන්තිය',
         onClicked: () {
           print('clicked new class button');
         },
-      );
+      );/*
 }
