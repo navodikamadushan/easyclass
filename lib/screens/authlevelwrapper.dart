@@ -20,9 +20,9 @@ class AuthLevelWrapper extends StatelessWidget {
         });
   }
 
-  Widget _buildWrapper(DocumentSnapshot snapshot) {
+  Widget _buildWrapper(DocumentSnapshot data) {
     return Scaffold(
-        // body: Text(snapshot.data['auth_level'].toString()),
-        );
+      body: Text(data['auth_level'].toString()),
+    );
   }
 }
