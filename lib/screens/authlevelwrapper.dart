@@ -23,13 +23,13 @@ class AuthLevelWrapper extends StatelessWidget {
   }
 
   Widget _buildWrapper(DocumentSnapshot data) {
-    if (data['auth_level'] == 3) {
+    if (data['role'] == 'admin') {
       return Scaffold(
         body: Center(
           child: Text('this feature will be available in EasyClass v2'),
         ),
       );
-    } else if (data['auth_level'] == 2) {
+    } else if (data['role'] == 'teacher') {
       return OnlineClassTeacherPage();
     } else {
       return OnlineClassStudentPage();
