@@ -25,7 +25,7 @@ class DatabaseService {
   }
 
   // add user details to user document
-  Future addUserProfileData(String currentUserId, String name, String email, String phoneno, String about, Sring role) async {
+  Future addUserProfileData(String currentUserId, String name, String email, String phoneno, String about, String role) async {
     return await users.doc(currentUserId).set({
       'name': name,
       'email': email,
