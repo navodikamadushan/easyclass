@@ -11,7 +11,7 @@ class MenuPage extends StatelessWidget {
         DrawerHeader(
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage('assets/drawer_image_1.0.0.jpeg'),
+              image: AssetImage('assets/drawer_image_1.1.0.jpeg'),
             ),
           ),
           child: Text(
