@@ -27,7 +27,7 @@ class _LessonList extends State<LessonList> {
       ]).snapshots(),*/
       builder: (context, snapshot) {
         if (!snapshot.hasData) return LinearProgressIndicator();
-        print(snapshot.data.docs[0].doc_id.toString());
+        print(snapshot.data.docs[0].toString());
         return snapshot.data.docs.toString() == "[]"
             ? Scaffold(
                 body: Center(
