@@ -29,7 +29,7 @@ class _LessonList extends State<LessonList> {
       builder: (context, snapshot) {
         if (!snapshot.hasData) return LinearProgressIndicator();
         print(snapshot.data.toString());
-        return snapshot.data.docs.toString() == "[]"
+        return snapshot.data.toString() == "[]"
             ? Scaffold(
                 body: Center(
                   child: Text('ඔබ කිසිදු පන්තියකට දායක වී නැත.'),
