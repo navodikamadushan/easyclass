@@ -22,10 +22,11 @@ class _LessonList extends State<LessonList> {
     final userforid = Provider.of<MyUser>(context);
     return StreamBuilder<QuerySnapshot>(
       stream: databaseService.onlineclass.where('teacher_id', whereIn: [
-        userforid.uid
-      ]).snapshots() and databaseService.onlineclass.where('teacher_id', whereIn: [
-        userforid.uid
-      ]).snapshots(),
+            userforid.uid
+          ]).snapshots() &
+          databaseService.onlineclass.where('teacher_id', whereIn: [
+            userforid.uid
+          ]).snapshots(),
       /*databaseService.onlineclass.where('teacher_id', whereIn: [
         userforid.uid
       ]).snapshots(),*/
