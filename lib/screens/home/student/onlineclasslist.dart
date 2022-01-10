@@ -26,7 +26,7 @@ class _LessonList extends State<LessonList> {
       /*databaseService.onlineclass.where('teacher_id', whereIn: [
         userforid.uid
       ]).snapshots(),*/
-      builder: (context, snapshot) {
+      builder: (context, snapshot.data) {
         if (!snapshot.hasData) return LinearProgressIndicator();
         print(snapshot); //.data.docs.toString());
         return snapshot == "[]" //.data.docs.toString() == "[]"
