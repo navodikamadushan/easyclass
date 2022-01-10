@@ -22,7 +22,7 @@ class _LessonList extends State<LessonList> {
     final userforid = Provider.of<MyUser>(context);
     return StreamBuilder<QuerySnapshot>(
       stream: //databaseService.onlineclass.doc('71PAS80HCRNv7BAoiKYs').snapshots(),
-          databaseService.onlineclass.where('Document ID', whereIn: [
+          databaseService.onlineclass.where('ID', whereIn: [
         '71PAS80HCRNv7BAoiKYs'
       ]).snapshots(),
       builder: (context, snapshot) {
