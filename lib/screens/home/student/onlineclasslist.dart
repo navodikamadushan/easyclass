@@ -28,7 +28,7 @@ class _LessonList extends State<LessonList> {
         databaseService.onlineclass.where('teacher_id', whereIn: [
           userforid.uid
         ]).snapshots()
-      ],
+      ].tosnapshot(),
       /*databaseService.onlineclass.where('teacher_id', whereIn: [
         userforid.uid
       ]).snapshots(),*/
