@@ -22,14 +22,14 @@ class _LessonList extends State<LessonList> {
     final userforid = Provider.of<MyUser>(context);
     return StreamBuilder<QuerySnapshot>(
       // QuerySnapshot
-      stream: //databaseService.onlineclass.doc('71PAS80HCRNv7BAoiKYs').snapshots(),
-          databaseService.onlineclass.where('teacher_id', whereIn: [
+      stream: databaseService.onlineclass.doc('71PAS80HCRNv7BAoiKYs').snapshots(),
+      /*databaseService.onlineclass.where('teacher_id', whereIn: [
         userforid.uid
-      ]).snapshots(),
+      ]).snapshots(),*/
       builder: (context, snapshot) {
         if (!snapshot.hasData) return LinearProgressIndicator();
-        print(snapshot.data.docs.toString());
-        return snapshot.data.docs.toString() == "[]"
+        print(snapshot); //.data.docs.toString());
+        return snapshot == "[]" //.data.docs.toString() == "[]"
             ? Scaffold(
                 body: Center(
                   child: Text('ඔබ කිසිදු පන්තියකට දායක වී නැත.'),
