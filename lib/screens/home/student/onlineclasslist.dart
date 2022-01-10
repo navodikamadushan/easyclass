@@ -20,14 +20,15 @@ class _LessonList extends State<LessonList> {
   @override
   Widget build(BuildContext context) {
     final userforid = Provider.of<MyUser>(context);
-    return StreamBuilder<DocumentSnapshot>( // QuerySnapshot
+    return StreamBuilder<DocumentSnapshot>(
+      // QuerySnapshot
       stream: databaseService.onlineclass.doc('71PAS80HCRNv7BAoiKYs').snapshots(),
       /*databaseService.onlineclass.where('teacher_id', whereIn: [
         userforid.uid
       ]).snapshots(),*/
       builder: (context, snapshot) {
         if (!snapshot.hasData) return LinearProgressIndicator();
-        print(snapshot.data.docs.toString());
+        print(snapshot.data.toString());
         return snapshot.data.docs.toString() == "[]"
             ? Scaffold(
                 body: Center(
