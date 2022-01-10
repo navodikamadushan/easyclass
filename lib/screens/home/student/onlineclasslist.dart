@@ -27,14 +27,14 @@ class _LessonList extends State<LessonList> {
       ]).snapshots(),*/
       builder: (context, snapshot) {
         if (!snapshot.hasData) return LinearProgressIndicator();
-        print(snapshot.data.docs.toString());
-        return snapshot.data.docs.toString() == "[]"
+        print(snapshot); //.data.docs.toString());
+        return snapshot == "[]" //.data.docs.toString() == "[]"
             ? Scaffold(
                 body: Center(
                   child: Text('ඔබ කිසිදු පන්තියකට දායක වී නැත.'),
                 ),
               )
-            : _buildList(context, snapshot.data.docs);
+            : Container(); //_buildList(context, snapshot.data.docs);
       },
     );
   }
