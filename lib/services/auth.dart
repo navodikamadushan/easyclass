@@ -64,7 +64,7 @@ class AuthService {
     try {
       UserCredential result = await _auth.createUserWithEmailAndPassword(email: email, password: password);
       User user = result.user;
-      await DatabaseService().addUserProfileData(user.uid, '', email, '', '', 'student');
+      await DatabaseService().addUserProfileData(user.uid, '', email, '', '', 'student', []);
       return [
         _userFromFirebaseUser(user),
         null
