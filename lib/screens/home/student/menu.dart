@@ -54,10 +54,10 @@ class MenuPage extends StatelessWidget {
                   fontSize: 15.0,
                 ),
               ),
-              leading: Icon(
+              /*leading: Icon(
                 Icons.add_circle_outline_sharp,
                 size: 30.0,
-              ),
+              ),*/
               onTap: () {
                 print('My Classes');
               },
