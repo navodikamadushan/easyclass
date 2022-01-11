@@ -24,7 +24,7 @@ class _FullLessonList extends State<FullLessonList> {
   int selected = 0;
   @override
   Widget build(BuildContext context) {
-    print('HIiiiiii');
+    print(userInfo.data['name']);
     final userforid = Provider.of<MyUser>(context);
     return StreamBuilder<QuerySnapshot>(
       stream: databaseService.onlineclass.snapshots(),
