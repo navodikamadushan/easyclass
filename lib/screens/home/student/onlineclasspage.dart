@@ -19,9 +19,9 @@ import "package:easyclass/screens/home/student/onlinefullclasspage.dart";
 import 'package:top_modal_sheet/top_modal_sheet.dart';
 
 class OnlineClassStudentPage extends StatelessWidget {
-  var subscribed_classes;
-  OnlineClassStudentPage(var subscribed_classes) {
-    this.subscribed_classes = subscribed_classes;
+  DocumentSnapshot userInfo;
+  OnlineClassStudentPage(DocumentSnapshot userInfo) {
+    this.userInfo = userInfo;
   }
   final AuthService _auth = AuthService();
   @override
@@ -62,7 +62,7 @@ class OnlineClassStudentPage extends StatelessWidget {
         backgroundColor: Colors.blue,
         child: const Icon(Icons.add),
       ),
-      body: LessonList(subscribed_classes),
+      body: LessonList(userInfo['subscribed_class']),
     );
   }
 
