@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import "package:easyclass/services/auth.dart";
 import "package:easyclass/services/database.dart";
 import 'package:provider/provider.dart';
-import "package:easyclass/shared/loading.dart";
 import "package:easyclass/screens/home/student/onlinefullclasslist.dart";
 import "package:easyclass/screens/home/setting.dart";
 //import "package:easyclass/screens/home/teacher/addclassbuttonwidget.dart";
