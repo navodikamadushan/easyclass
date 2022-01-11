@@ -52,6 +52,13 @@ class DatabaseService {
     });
   }
 
+  // subscribe a class : add subscribed_id to user document
+  Future updateSubscribedClassIDtoUserProfile(String currentUserId, String subscribed_id) async {
+    return await users.doc(currentUserId).updateData({
+      'subscribed_class': subscribed_id,
+    });
+  }
+
   // get tf_categories stream
   /*Stream<QuerySnapshot> get lessons {
     return tf_categories.snapshots();
