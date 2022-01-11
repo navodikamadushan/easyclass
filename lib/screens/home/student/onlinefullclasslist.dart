@@ -32,7 +32,7 @@ class _FullLessonList extends State<FullLessonList> {
             ),
           )
         : StreamBuilder<QuerySnapshot>(
-            stream: databaseService.onlineclass.where('online_class_id', whereIn: widget.subscribed_classes).snapshots(),
+            stream: databaseService.onlineclass.snapshots(),
             builder: (context, snapshot) {
               if (!snapshot.hasData) return LinearProgressIndicator();
               //print(snapshot.data.docs); // snapshot.data.docs[11].id
