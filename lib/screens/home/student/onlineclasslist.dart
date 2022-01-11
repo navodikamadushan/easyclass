@@ -30,13 +30,13 @@ class _LessonList extends State<LessonList> {
       builder: (context, snapshot) {
         if (!snapshot.hasData) return LinearProgressIndicator();
         print(snapshot.data.docs); // snapshot.data.docs[11].id
-        return snapshot.data.docs.toString() == "[]"
+        /*return snapshot.data.docs.toString() == "[]"
             ? Scaffold(
                 body: Center(
                   child: Text('ඔබ කිසිදු පන්තියකට දායක වී නැත.'),
                 ),
               )
-            : Container(); //_buildList(context, snapshot.data.docs);
+            : _buildList(context, snapshot.data.docs);*/
       },
     );
   }
