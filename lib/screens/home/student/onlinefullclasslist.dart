@@ -13,8 +13,10 @@ import "package:easyclass/shared/loading.dart";
 
 class FullLessonList extends StatefulWidget {
   DocumentSnapshot userInfo;
-  FullLessonList(DocumentSnapshot userInfo) {
+  BuildContext precontext;
+  FullLessonList(DocumentSnapshot userInfo, BuildContext precontext) {
     this.userInfo = userInfo;
+    this.precontext = precontext;
   }
   @override
   _FullLessonList createState() => _FullLessonList();
@@ -88,7 +90,7 @@ class _FullLessonList extends State<FullLessonList> {
               dynamic result = await databaseService.updateSubscribedClassIDtoUserProfile(userforid.uid, record.online_class_id);
               if (result == null) {
                 setState(() => loading = false);
-                Navigator.pop(context);
+                Navigator.pop(this.precontext);
               }
             },
           ),
