@@ -74,6 +74,7 @@ class _FullLessonList extends State<FullLessonList> {
               //print(expansionTileKey.hashCode.toString());
               selected = expansionTileKey.hashCode;
               print(selected.toString());
+              print(record.online_class_id);
               //setState(() => selected = expansionTileKey.hashCode);
             },
             children: <Widget>[
