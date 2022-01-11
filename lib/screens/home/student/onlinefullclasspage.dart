@@ -20,9 +20,9 @@ import 'package:top_modal_sheet/top_modal_sheet.dart';
 class OnlineFullClassStudentPage extends StatelessWidget {
   var subscribed_classes;
   BuildContext precontext;
-  OnlineFullClassStudentPage(var subscribed_classes,BuildContext precontext) {
-    this.subscribed_classes = subscribed_classes,
-    this.precontext = precontext,
+  OnlineFullClassStudentPage(var subscribed_classes, BuildContext precontext) {
+    this.subscribed_classes = subscribed_classes;
+    this.precontext = precontext;
   }
   final AuthService _auth = AuthService();
   @override
