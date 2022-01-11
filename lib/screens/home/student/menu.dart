@@ -4,10 +4,10 @@
 import 'package:flutter/material.dart';
 
 class MenuPage extends StatelessWidget {
-  /*BuildContext precontext;
-  MenuPage(BuildContext precontext) {
-    this.precontext = precontext;
-  }*/
+  DocumentSnapshot userInfo;
+  MenuPage(DocumentSnapshot userInfo;) {
+    this.userInfo = userInfo;
+  }
   @override
   Widget build(BuildContext context) {
     return ListView(
