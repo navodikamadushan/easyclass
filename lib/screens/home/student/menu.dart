@@ -73,7 +73,7 @@ class MenuPage extends StatelessWidget {
                 print('My Classes');
                 Navigator.pop(context);
                 if (this.precontext != null) {
-                  this.precontextNavigator.pop(this.precontext);
+                  Navigator.pop(this.precontext);
                 }
               },
             ),
