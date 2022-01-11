@@ -25,20 +25,22 @@ class _LessonList extends State<LessonList> {
   Widget build(BuildContext context) {
     print(widget.subscribed_classes);
     final userforid = Provider.of<MyUser>(context);
-     widget.subscribed_classes == null ? return Container() : return StreamBuilder<QuerySnapshot>(
-      stream: databaseService.onlineclass.where('online_class_id', whereIn: widget.subscribed_classes).snapshots(),
-      builder: (context, snapshot) {
-        if (!snapshot.hasData) return LinearProgressIndicator();
-        //print(snapshot.data.docs); // snapshot.data.docs[11].id
-        /*return snapshot.data.docs.toString() == "[]"
+    return widget.subscribed_classes == null
+        ? Container()
+        : StreamBuilder<QuerySnapshot>(
+            stream: databaseService.onlineclass.where('online_class_id', whereIn: widget.subscribed_classes).snapshots(),
+            builder: (context, snapshot) {
+              if (!snapshot.hasData) return LinearProgressIndicator();
+              //print(snapshot.data.docs); // snapshot.data.docs[11].id
+              /*return snapshot.data.docs.toString() == "[]"
             ? Scaffold(
                 body: Center(
                   child: Text('ඔබ කිසිදු පන්තියකට දායක වී නැත.'),
                 ),
               )
             : _buildList(context, snapshot.data.docs);*/
-      },
-    );
+            },
+          );
   }
 
   Widget _buildList(BuildContext context, List<DocumentSnapshot> snapshot) {
