@@ -24,7 +24,6 @@ class _FullLessonList extends State<FullLessonList> {
   int selected = 0;
   @override
   Widget build(BuildContext context) {
-    print(widget.subscribed_classes);
     final userforid = Provider.of<MyUser>(context);
     return widget.subscribed_classes.toString() == '[]'
         ? Scaffold(
