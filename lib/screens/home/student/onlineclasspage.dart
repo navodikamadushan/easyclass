@@ -18,9 +18,14 @@ import "package:easyclass/screens/home/student/menu.dart";
 import 'package:top_modal_sheet/top_modal_sheet.dart';
 
 class OnlineClassStudentPage extends StatelessWidget {
+  var subscribed_classes;
+  OnlineClassStudentPage(var subscribed_classes) {
+    this.subscribed_classes = subscribed_classes;
+  }
   final AuthService _auth = AuthService();
   @override
   Widget build(BuildContext context) {
+    print(widget.subscribed_classes);
     return Scaffold(
       appBar: AppBar(
         title: Text('පන්ති'),
