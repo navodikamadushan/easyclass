@@ -21,25 +21,28 @@ class FullLessonList extends StatefulWidget {
 
 class _FullLessonList extends State<FullLessonList> {
   final DatabaseService databaseService = DatabaseService();
+  bool loading = false;
   int selected = 0;
   @override
   Widget build(BuildContext context) {
     final userforid = Provider.of<MyUser>(context);
-    return StreamBuilder<QuerySnapshot>(
-      stream: databaseService.onlineclass.snapshots(),
-      builder: (context, snapshot) {
-        if (!snapshot.hasData) return LinearProgressIndicator();
-        //print(snapshot.data.docs); // snapshot.data.docs[11].id
-        print(snapshot.data.docs[11].id);
-        return snapshot.data.docs.toString() == "[]"
-            ? Scaffold(
-                body: Center(
-                  child: Text('ඔබ දායක වූ සියලුම පන්ති මකා ඇත.'),
-                ),
-              )
-            : _buildList(context, snapshot.data.docs);
-      },
-    );
+    return loading
+        ? Loading()
+        : StreamBuilder<QuerySnapshot>(
+            stream: databaseService.onlineclass.snapshots(),
+            builder: (context, snapshot) {
+              if (!snapshot.hasData) return LinearProgressIndicator();
+              //print(snapshot.data.docs); // snapshot.data.docs[11].id
+              print(snapshot.data.docs[11].id);
+              return snapshot.data.docs.toString() == "[]"
+                  ? Scaffold(
+                      body: Center(
+                        child: Text('ඔබ දායක වූ සියලුම පන්ති මකා ඇත.'),
+                      ),
+                    )
+                  : _buildList(context, snapshot.data.docs);
+            },
+          );
   }
 
   Widget _buildList(BuildContext context, List<DocumentSnapshot> snapshot) {
