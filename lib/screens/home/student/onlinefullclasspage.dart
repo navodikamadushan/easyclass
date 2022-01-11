@@ -35,7 +35,6 @@ class OnlineFullClassStudentPage extends StatelessWidget {
             imagePath: 'https://media.istockphoto.com/photos/portrait-of-a-happy-latin-american-boy-smiling-picture-id1271410473',
             onClicked: () async {
               //_showUserPannel();
-              Navigator.pop(context);
               Navigator.of(context).push(
                 MaterialPageRoute(builder: (context) => ProfilePage()),
               );
@@ -54,6 +53,7 @@ class OnlineFullClassStudentPage extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
+          Navigator.pop(context);
           print('New Classes');
         },
         backgroundColor: Colors.blue,
