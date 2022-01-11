@@ -90,7 +90,7 @@ class _FullLessonList extends State<FullLessonList> {
               dynamic result = await databaseService.updateSubscribedClassIDtoUserProfile(userforid.uid, record.online_class_id);
               if (result == null) {
                 setState(() => loading = false);
-                Navigator.pop(this.precontext);
+                Navigator.pop(widget.precontext);
               }
             },
           ),
