@@ -25,7 +25,8 @@ class _FullLessonList extends State<FullLessonList> {
       stream: databaseService.onlineclass.snapshots(),
       builder: (context, snapshot) {
         if (!snapshot.hasData) return LinearProgressIndicator();
-        print(snapshot.data.docs); // snapshot.data.docs[11].id
+        //print(snapshot.data.docs); // snapshot.data.docs[11].id
+        print(snapshot.data.docs[11].id);
         return snapshot.data.docs.toString() == "[]"
             ? Scaffold(
                 body: Center(
