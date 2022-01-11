@@ -52,7 +52,7 @@ class OnlineClassStudentPage extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          print('HI');
+          print('New Classes');
         },
         backgroundColor: Colors.blue,
         child: const Icon(Icons.add),
