@@ -86,7 +86,7 @@ class _SignInPageState extends State<SignInPage> {
                         scale: 3.5,
                         child: IconButton(
                           onPressed: () {},
-                          icon: new Image.asset("assets/official_easy_class_logo__short__purple"),
+                          icon: new Image.asset("assets/official_easy_class_logo__short__purple.png"),
                         ),
                       ),
                     ),
