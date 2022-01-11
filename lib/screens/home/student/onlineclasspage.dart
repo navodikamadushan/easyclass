@@ -20,6 +20,10 @@ import 'package:top_modal_sheet/top_modal_sheet.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class OnlineClassStudentPage extends StatelessWidget {
+  DocumentSnapshot userInfo;
+  OnlineClassStudentPage(DocumentSnapshot userInfo) {
+    this.userInfo = userInfo;
+  }
   final AuthService _auth = AuthService();
   @override
   Widget build(BuildContext sup_context) {
@@ -54,7 +58,7 @@ class OnlineClassStudentPage extends StatelessWidget {
           print('New Classes');
           //Navigator.pop(sup_context);
           Navigator.of(sup_context).push(
-            MaterialPageRoute(builder: (context) => OnlineFullClassStudentPage(userInfo)),
+            MaterialPageRoute(builder: (context) => OnlineFullClassStudentPage(userInfo, sup_context)),
           );
         },
         backgroundColor: Colors.blue,

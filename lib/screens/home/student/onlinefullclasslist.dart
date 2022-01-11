@@ -11,10 +11,6 @@ import "package:easyclass/screens/home/student/timeslot.dart";
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class FullLessonList extends StatefulWidget {
-  DocumentSnapshot userInfo;
-  FullLessonList(DocumentSnapshot userInfo) {
-    this.userInfo = userInfo;
-  }
   @override
   _FullLessonList createState() => _FullLessonList();
 }
