@@ -70,7 +70,7 @@ class _FullLessonList extends State<FullLessonList> {
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
             subtitle: Text(record.subject),
-            enabled: record.online_class_id == '2' ? false : true,
+            enabled: record.online_class_id in ['2'] ? false : true,
             onTap: () {
               //selected = expansionTileKey.hashCode;
               //print(selected.toString());
