@@ -21,9 +21,7 @@ class _LessonList extends State<LessonList> {
   Widget build(BuildContext context) {
     final userforid = Provider.of<MyUser>(context);
     return StreamBuilder<QuerySnapshot>(
-      stream: databaseService.onlineclass.where(id, whereIn: [
-        userforid.uid
-      ]).snapshots(),
+      stream: databaseService.onlineclass.doc('71PAS80HCRNv7BAoiKYs').snapshots(),
       /*databaseService.onlineclass.where('teacher_id', whereIn: [
         userforid.uid
       ]).snapshots(),*/
