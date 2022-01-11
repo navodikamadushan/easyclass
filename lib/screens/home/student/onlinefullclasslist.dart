@@ -21,8 +21,7 @@ class _FullLessonList extends State<FullLessonList> {
   @override
   Widget build(BuildContext context) {
     final userforid = Provider.of<MyUser>(context);
-    return Container();
-    /*StreamBuilder<QuerySnapshot>(
+    return StreamBuilder<QuerySnapshot>(
       stream: databaseService.onlineclass.snapshots(),
       builder: (context, snapshot) {
         if (!snapshot.hasData) return LinearProgressIndicator();
@@ -35,7 +34,7 @@ class _FullLessonList extends State<FullLessonList> {
               )
             : _buildList(context, snapshot.data.docs);
       },
-    );*/
+    );
   }
 
   Widget _buildList(BuildContext context, List<DocumentSnapshot> snapshot) {
