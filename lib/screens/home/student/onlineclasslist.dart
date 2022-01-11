@@ -29,7 +29,7 @@ class _LessonList extends State<LessonList> {
       stream: databaseService.onlineclass.where('online_class_id', whereIn: widget.subscribed_classes).snapshots(),
       builder: (context, snapshot) {
         if (!snapshot.hasData) return LinearProgressIndicator();
-        print(snapshot.data.docs); // snapshot.data.docs[11].id
+        //print(snapshot.data.docs); // snapshot.data.docs[11].id
         /*return snapshot.data.docs.toString() == "[]"
             ? Scaffold(
                 body: Center(
