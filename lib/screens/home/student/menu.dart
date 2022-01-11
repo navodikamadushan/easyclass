@@ -55,7 +55,7 @@ class MenuPage extends StatelessWidget {
                 ),
               ),
               leading: Icon(
-                Icons.add_circle_outline_sharp,
+                Icons.watch,
                 size: 30.0,
               ),
               onTap: () {
