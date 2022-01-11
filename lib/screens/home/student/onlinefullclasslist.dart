@@ -25,7 +25,7 @@ class _FullLessonList extends State<FullLessonList> {
   @override
   Widget build(BuildContext context) {
     final userforid = Provider.of<MyUser>(context);
-    return widget.subscribed_classes.toString() == '[]'
+    return widget.userInfo['subscribed_classes'].toString() == '[]'
         ? Scaffold(
             body: Center(
               child: Text('ඔබ කිසිදු පන්තියකට දායක වී නැත.'),
