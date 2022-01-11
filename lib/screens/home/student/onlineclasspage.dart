@@ -54,6 +54,9 @@ class OnlineClassStudentPage extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           print('New Classes');
+          Navigator.of(context).push(
+            MaterialPageRoute(builder: (context) => OnlineFullClassStudentPage([])),
+          );
         },
         backgroundColor: Colors.blue,
         child: const Icon(Icons.add),
