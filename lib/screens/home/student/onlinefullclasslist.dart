@@ -55,6 +55,7 @@ class _FullLessonList extends State<FullLessonList> {
   }
 
   Widget _buildListItem(BuildContext context, DocumentSnapshot data) {
+    final userforid = Provider.of<MyUser>(context);
     final GlobalKey expansionTileKey = GlobalKey();
     final record = Record.fromSnapshot(data);
     return Padding(
@@ -79,7 +80,7 @@ class _FullLessonList extends State<FullLessonList> {
               //selected = expansionTileKey.hashCode;
               //print(selected.toString());
               print(record.online_class_id);
-              await databaseService.updateSubscribedClassIDtoUserProfile('x9VkYoqBJee0PAWufuMAsije0GF3', record.online_class_id);
+              await databaseService.updateSubscribedClassIDtoUserProfile(userforid, record.online_class_id);
             },
           ),
         ));
