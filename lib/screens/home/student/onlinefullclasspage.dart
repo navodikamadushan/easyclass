@@ -56,7 +56,7 @@ class OnlineFullClassStudentPage extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Navigator.pop(context);
+          //Navigator.pop(context);
           print('New Classes');
         },
         backgroundColor: Colors.blue,
