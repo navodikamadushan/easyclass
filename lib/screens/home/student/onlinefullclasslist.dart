@@ -25,26 +25,20 @@ class _FullLessonList extends State<FullLessonList> {
   @override
   Widget build(BuildContext context) {
     final userforid = Provider.of<MyUser>(context);
-    return widget.userInfo['subscribed_class'].toString() == '[]'
-        ? Scaffold(
-            body: Center(
-              child: Text('ඔබ කිසිදු පන්තියකට දායක වී නැත.'),
-            ),
-          )
-        : StreamBuilder<QuerySnapshot>(
-            stream: databaseService.onlineclass.snapshots(),
-            builder: (context, snapshot) {
-              if (!snapshot.hasData) return LinearProgressIndicator();
-              //print(snapshot.data.docs); // snapshot.data.docs[11].id
-              return snapshot.data.docs.toString() == "[]"
-                  ? Scaffold(
-                      body: Center(
-                        child: Text('ඔබ දායක වූ සියලුම පන්ති මකා ඇත.'),
-                      ),
-                    )
-                  : _buildList(context, snapshot.data.docs);
-            },
-          );
+    return StreamBuilder<QuerySnapshot>(
+      stream: databaseService.onlineclass.snapshots(),
+      builder: (context, snapshot) {
+        if (!snapshot.hasData) return LinearProgressIndicator();
+        //print(snapshot.data.docs); // snapshot.data.docs[11].id
+        return snapshot.data.docs.toString() == "[]"
+            ? Scaffold(
+                body: Center(
+                  child: Text('ඔබ දායක වූ සියලුම පන්ති මකා ඇත.'),
+                ),
+              )
+            : _buildList(context, snapshot.data.docs);
+      },
+    );
   }
 
   Widget _buildList(BuildContext context, List<DocumentSnapshot> snapshot) {
