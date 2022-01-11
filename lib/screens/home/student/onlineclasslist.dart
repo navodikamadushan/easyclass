@@ -22,7 +22,8 @@ class _LessonList extends State<LessonList> {
     final userforid = Provider.of<MyUser>(context);
     return StreamBuilder<QuerySnapshot>(
       stream: databaseService.onlineclass.where('online_class_id', whereIn: [
-        'FhGzt4DQyBmmx8UzZBGK'
+        'FhGzt4DQyBmmx8UzZBGK',
+        'mrsYzLHId955WJQMuoQ8'
       ]).snapshots(),
       /*databaseService.onlineclass.where('teacher_id', whereIn: [
         userforid.uid
