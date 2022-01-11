@@ -28,43 +28,41 @@ class OnlineFullClassStudentPage extends StatelessWidget {
   final AuthService _auth = AuthService();
   @override
   Widget build(BuildContext context) {
-    return loading
-        ? Loading()
-        : Scaffold(
-            appBar: AppBar(
-              title: Text('නව පන්ති'),
-              centerTitle: true,
-              actions: <Widget>[
-                ProfileImageWidget(
-                  imagePath: 'https://media.istockphoto.com/photos/portrait-of-a-happy-latin-american-boy-smiling-picture-id1271410473',
-                  onClicked: () async {
-                    //_showUserPannel();
-                    Navigator.pop(context);
-                    Navigator.of(this.precontext).push(
-                      MaterialPageRoute(builder: (context) => ProfilePage()),
-                    );
-                  },
-                ),
-              ],
-              flexibleSpace: Image.asset(
-                "assets/appbar_image.png",
-                fit: BoxFit.cover,
-              ),
-              backgroundColor: Colors.transparent,
-              elevation: 10,
-            ),
-            drawer: Drawer(
-              child: MenuPage(this.userInfo, context),
-            ),
-            floatingActionButton: FloatingActionButton(
-              onPressed: () {
-                Navigator.pop(context);
-                print('New Classes');
-              },
-              backgroundColor: Colors.blue,
-              child: const Icon(Icons.add),
-            ),
-            body: FullLessonList(),
-          );
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('නව පන්ති'),
+        centerTitle: true,
+        actions: <Widget>[
+          ProfileImageWidget(
+            imagePath: 'https://media.istockphoto.com/photos/portrait-of-a-happy-latin-american-boy-smiling-picture-id1271410473',
+            onClicked: () async {
+              //_showUserPannel();
+              Navigator.pop(context);
+              Navigator.of(this.precontext).push(
+                MaterialPageRoute(builder: (context) => ProfilePage()),
+              );
+            },
+          ),
+        ],
+        flexibleSpace: Image.asset(
+          "assets/appbar_image.png",
+          fit: BoxFit.cover,
+        ),
+        backgroundColor: Colors.transparent,
+        elevation: 10,
+      ),
+      drawer: Drawer(
+        child: MenuPage(this.userInfo, context),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.pop(context);
+          print('New Classes');
+        },
+        backgroundColor: Colors.blue,
+        child: const Icon(Icons.add),
+      ),
+      body: FullLessonList(),
+    );
   }
 }
