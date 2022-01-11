@@ -63,6 +63,7 @@ flutter:
    - assets/drawer_image.jpg
    - assets/drawer_image_1.0.0.jpeg
    - assets/drawer_image_1.1.0.jpeg
+   - assets/official_easy_class_logo__short__purple.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
