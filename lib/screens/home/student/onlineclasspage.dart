@@ -58,7 +58,7 @@ class OnlineClassStudentPage extends StatelessWidget {
           print('New Classes');
           //Navigator.pop(sup_context);
           Navigator.of(sup_context).push(
-            MaterialPageRoute(builder: (context) => OnlineFullClassStudentPage(userInfo, sup_context)),
+            MaterialPageRoute(builder: (context) => OnlineFullClassStudentPage(null, sup_context)),
           );
         },
         backgroundColor: Colors.blue,
