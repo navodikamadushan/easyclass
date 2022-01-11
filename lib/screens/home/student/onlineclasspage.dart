@@ -56,7 +56,7 @@ class OnlineClassStudentPage extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           print('New Classes');
-          Navigator.pop(sup_context);
+          //Navigator.pop(sup_context);
           Navigator.of(sup_context).push(
             MaterialPageRoute(builder: (context) => OnlineFullClassStudentPage(userInfo, context)),
           );
