@@ -36,7 +36,7 @@ class _LessonList extends State<LessonList> {
                   child: Text('ඔබ කිසිදු පන්තියකට දායක වී නැත.'),
                 ),
               )
-            : _buildList(context, snapshot.data.docs);
+            : Container(); //_buildList(context, snapshot.data.docs);
       },
     );
   }
