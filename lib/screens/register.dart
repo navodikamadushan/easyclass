@@ -71,7 +71,7 @@ class _RegisterState extends State<Register> {
                     SizedBox(height: 50.0),
                     Container(
                       child: Transform.scale(
-                        scale: 3.5,
+                        scale: 4,
                         child: IconButton(
                           onPressed: () {},
                           icon: new Image.asset("assets/official_easy_class_logo__short__purple.png"),
