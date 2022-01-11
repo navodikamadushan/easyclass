@@ -70,7 +70,7 @@ class _FullLessonList extends State<FullLessonList> {
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
             subtitle: Text(record.subject),
-            onTap: (value) {
+            onTap: () {
               print(record.online_class_id);
             },
             /*onExpansionChanged: (value) {
