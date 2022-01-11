@@ -58,7 +58,7 @@ class OnlineFullClassStudentPage extends StatelessWidget {
         backgroundColor: Colors.blue,
         child: const Icon(Icons.add),
       ),
-      body: Container();//FullLessonList(userInfo['subscribed_class']),
+      body: Container(), //FullLessonList(userInfo['subscribed_class']),
     );
   }
 }
