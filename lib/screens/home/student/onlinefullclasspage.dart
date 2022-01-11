@@ -20,8 +20,10 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 
 class OnlineFullClassStudentPage extends StatelessWidget {
   DocumentSnapshot userInfo;
-  OnlineFullClassStudentPage(DocumentSnapshot userInfo) {
+  BuildContext precontext;
+  OnlineFullClassStudentPage(DocumentSnapshot userInfo, BuildContext precontext) {
     this.userInfo = userInfo;
+    this.precontext = precontext;
   }
   final AuthService _auth = AuthService();
   @override
@@ -35,8 +37,8 @@ class OnlineFullClassStudentPage extends StatelessWidget {
             imagePath: 'https://media.istockphoto.com/photos/portrait-of-a-happy-latin-american-boy-smiling-picture-id1271410473',
             onClicked: () async {
               //_showUserPannel();
-              Navigator.pop(context);
-              Navigator.of(context).push(
+              //Navigator.pop(context);
+              Navigator.of(this.precontext).push(
                 MaterialPageRoute(builder: (context) => ProfilePage()),
               );
             },
