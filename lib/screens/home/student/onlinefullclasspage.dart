@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import "package:easyclass/services/auth.dart";
 import "package:easyclass/services/database.dart";
 import 'package:provider/provider.dart';
-import "package:easyclass/screens/home/student/onlineclasslist.dart";
+import "package:easyclass/screens/home/student/onlinefullclasslist.dart";
 import "package:easyclass/screens/home/setting.dart";
 //import "package:easyclass/screens/home/teacher/addclassbuttonwidget.dart";
 import "package:easyclass/screens/profile/profilepage.dart";
@@ -17,9 +17,9 @@ import "package:easyclass/screens/home/student/menu.dart";
 //import 'package:easyclass/shared/custom_page_route.dart';
 import 'package:top_modal_sheet/top_modal_sheet.dart';
 
-class OnlineClassStudentPage extends StatelessWidget {
+class OnlineFullClassStudentPage extends StatelessWidget {
   var subscribed_classes;
-  OnlineClassStudentPage(var subscribed_classes) {
+  OnlineFullClassStudentPage(var subscribed_classes) {
     this.subscribed_classes = subscribed_classes;
   }
   final AuthService _auth = AuthService();
@@ -57,7 +57,7 @@ class OnlineClassStudentPage extends StatelessWidget {
         backgroundColor: Colors.blue,
         child: const Icon(Icons.add),
       ),
-      body: LessonList(subscribed_classes),
+      body: FullLessonList(subscribed_classes),
     );
   }
 }
