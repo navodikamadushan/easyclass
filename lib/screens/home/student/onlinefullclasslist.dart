@@ -70,7 +70,7 @@ class _FullLessonList extends State<FullLessonList> {
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
             subtitle: Text(record.subject),
-            enabled: false,
+            enabled: true,
             onTap: () {
               selected = expansionTileKey.hashCode;
               // print(selected.toString());
