@@ -45,9 +45,9 @@ class MenuPage extends StatelessWidget {
               ),
               onTap: () {
                 print('New Classes');
-                Navigator.of(context).push(
+                /*Navigator.of(context).push(
                   MaterialPageRoute(builder: (context) => OnlineFullClassStudentPage(this.userInfo)),
-                );
+                );*/
               },
             ),
           ),
