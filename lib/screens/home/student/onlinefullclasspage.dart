@@ -50,11 +50,12 @@ class OnlineFullClassStudentPage extends StatelessWidget {
         elevation: 10,
       ),
       drawer: Drawer(
-        child: MenuPage(this.precontext),
+        child: MenuPage(precontext),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           print('New Classes');
+          Navigator.pop(precontext);
         },
         backgroundColor: Colors.blue,
         child: const Icon(Icons.add),
