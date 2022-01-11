@@ -6,7 +6,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 
 class MenuPage extends StatelessWidget {
   DocumentSnapshot userInfo;
-  MenuPage(DocumentSnapshot userInfo;) {
+  MenuPage(DocumentSnapshot userInfo) {
     this.userInfo = userInfo;
   }
   @override
