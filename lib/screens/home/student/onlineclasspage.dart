@@ -25,7 +25,7 @@ class OnlineClassStudentPage extends StatelessWidget {
   final AuthService _auth = AuthService();
   @override
   Widget build(BuildContext context) {
-    print(widget.subscribed_classes);
+    print(subscribed_classes);
     return Scaffold(
       appBar: AppBar(
         title: Text('පන්ති'),
