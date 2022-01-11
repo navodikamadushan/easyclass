@@ -26,7 +26,7 @@ class OnlineClassStudentPage extends StatelessWidget {
   }
   final AuthService _auth = AuthService();
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext sup_context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('මගේ පන්ති'),
@@ -37,7 +37,7 @@ class OnlineClassStudentPage extends StatelessWidget {
             onClicked: () async {
               //_showUserPannel();
               //Navigator.pop(context);
-              Navigator.of(context).push(
+              Navigator.of(sup_context).push(
                 MaterialPageRoute(builder: (context) => ProfilePage()),
               );
             },
@@ -56,8 +56,8 @@ class OnlineClassStudentPage extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           print('New Classes');
-          Navigator.pop(context);
-          Navigator.of(context).push(
+          Navigator.pop(sup_context);
+          Navigator.of(sup_context).push(
             MaterialPageRoute(builder: (context) => OnlineFullClassStudentPage(userInfo, context)),
           );
         },
