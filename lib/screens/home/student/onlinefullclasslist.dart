@@ -80,7 +80,7 @@ class _FullLessonList extends State<FullLessonList> {
               //selected = expansionTileKey.hashCode;
               //print(selected.toString());
               print(record.online_class_id);
-              await databaseService.updateSubscribedClassIDtoUserProfile(userforid, record.online_class_id);
+              await databaseService.updateSubscribedClassIDtoUserProfile(userforid.uid, record.online_class_id);
             },
           ),
         ));
