@@ -165,7 +165,7 @@ class _SettingPage extends State<SettingPage> {
                           // print(signoutresult.toString());
                           if (signoutresult == null) {
                             Navigator.pop(widget.profile_context);
-                            Navigator.pop(context);
+                            //Navigator.pop(context);
                             setState(() => loading = false);
                             print('signing out!');
                           }
