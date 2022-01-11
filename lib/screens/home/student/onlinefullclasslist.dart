@@ -9,7 +9,6 @@ import 'package:provider/provider.dart';
 import "package:easyclass/models/user.dart";
 import "package:easyclass/screens/home/student/timeslot.dart";
 import 'package:cloud_firestore/cloud_firestore.dart';
-import "package:easyclass/shared/loading.dart";
 
 class FullLessonList extends StatefulWidget {
   @override
@@ -19,7 +18,6 @@ class FullLessonList extends StatefulWidget {
 class _FullLessonList extends State<FullLessonList> {
   final DatabaseService databaseService = DatabaseService();
   int selected = 0;
-  bool loading = false;
   @override
   Widget build(BuildContext context) {
     final userforid = Provider.of<MyUser>(context);
