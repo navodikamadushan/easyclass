@@ -52,7 +52,7 @@ class OnlineFullClassStudentPage extends StatelessWidget {
         elevation: 10,
       ),
       drawer: Drawer(
-        child: MenuPage(this.userInfo),
+        child: MenuPage(this.userInfo, this.precontext),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {

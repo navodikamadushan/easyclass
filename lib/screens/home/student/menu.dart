@@ -7,8 +7,10 @@ import "package:easyclass/screens/home/student/onlinefullclasspage.dart";
 
 class MenuPage extends StatelessWidget {
   DocumentSnapshot userInfo;
-  MenuPage(DocumentSnapshot userInfo) {
+  BuildContext precontext;
+  MenuPage(DocumentSnapshot userInfo, BuildContext precontext) {
     this.userInfo = userInfo;
+    this.precontext = precontext;
   }
   @override
   Widget build(BuildContext context) {
@@ -69,7 +71,7 @@ class MenuPage extends StatelessWidget {
               ),
               onTap: () {
                 print('My Classes');
-                //Navigator.pop(precontext);
+                Navigator.pop(precontext);
               },
             ),
           ),
