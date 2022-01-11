@@ -72,6 +72,8 @@ class _FullLessonList extends State<FullLessonList> {
             subtitle: Text(record.subject),
             enabled: false,
             onTap: () {
+              selected = expansionTileKey.hashCode;
+              // print(selected.toString());
               print(record.online_class_id);
             },
             /*onExpansionChanged: (value) {
