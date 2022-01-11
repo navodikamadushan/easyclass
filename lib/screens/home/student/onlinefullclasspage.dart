@@ -54,14 +54,14 @@ class OnlineFullClassStudentPage extends StatelessWidget {
       drawer: Drawer(
         child: MenuPage(this.userInfo, context),
       ),
-      floatingActionButton: FloatingActionButton(
+      /*floatingActionButton: FloatingActionButton(
         onPressed: () {
           //Navigator.pop(context);
           print('New Classes');
         },
         backgroundColor: Colors.blue,
         child: const Icon(Icons.add),
-      ),
+      ),*/
       body: FullLessonList(),
     );
   }
