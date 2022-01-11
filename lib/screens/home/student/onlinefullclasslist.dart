@@ -61,9 +61,9 @@ class _FullLessonList extends State<FullLessonList> {
             border: Border.all(color: Colors.grey),
             borderRadius: BorderRadius.circular(5.0),
           ),
-          child: ExpansionTile(
+          child: ListTile(
             key: expansionTileKey,
-            initiallyExpanded: selected == expansionTileKey.hashCode,
+            //initiallyExpanded: selected == expansionTileKey.hashCode,
             leading: FlutterLogo(),
             title: Text(
               record.class_name,
