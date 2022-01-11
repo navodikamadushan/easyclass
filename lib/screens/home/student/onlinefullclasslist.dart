@@ -8,11 +8,12 @@ import "package:easyclass/models/record.dart";
 import 'package:provider/provider.dart';
 import "package:easyclass/models/user.dart";
 import "package:easyclass/screens/home/student/timeslot.dart";
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class FullLessonList extends StatefulWidget {
-  var subscribed_classes;
-  FullLessonList(var subscribed_classes) {
-    this.subscribed_classes = subscribed_classes;
+  DocumentSnapshot userInfo;
+  FullLessonList(DocumentSnapshot userInfo) {
+    this.userInfo = userInfo;
   }
   @override
   _FullLessonList createState() => _FullLessonList();
