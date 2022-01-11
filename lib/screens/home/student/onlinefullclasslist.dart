@@ -83,9 +83,6 @@ class _FullLessonList extends State<FullLessonList> {
             subtitle: Text(record.subject),
             enabled: widget.userInfo['subscribed_class'].contains(record.online_class_id) ? false : true,
             onTap: () async {
-              //selected = expansionTileKey.hashCode;
-              //print(selected.toString());
-              print(record.online_class_id);
               setState(() => loading = true);
               dynamic result = await databaseService.updateSubscribedClassIDtoUserProfile(userforid.uid, record.online_class_id);
               if (result == null) {
