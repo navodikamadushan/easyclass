@@ -26,7 +26,11 @@ class _LessonList extends State<LessonList> {
     print(widget.subscribed_classes);
     final userforid = Provider.of<MyUser>(context);
     return widget.subscribed_classes.toString() == '[]'
-        ? Container()
+        ? Scaffold(
+            body: Center(
+              child: Text('ඔබ කිසිදු පන්තියකට දායක වී නැත.'),
+            ),
+          )
         : StreamBuilder<QuerySnapshot>(
             stream: databaseService.onlineclass.where('online_class_id', whereIn: widget.subscribed_classes).snapshots(),
             builder: (context, snapshot) {
