@@ -73,21 +73,9 @@ class _FullLessonList extends State<FullLessonList> {
             enabled: true,
             onTap: () {
               selected = expansionTileKey.hashCode;
-              // print(selected.toString());
+              print(selected.toString());
               print(record.online_class_id);
             },
-            /*onExpansionChanged: (value) {
-              //print(expansionTileKey.hashCode.toString());
-              selected = expansionTileKey.hashCode;
-              // print(selected.toString());
-              print(record.online_class_id);
-              //setState(() => selected = expansionTileKey.hashCode);
-            },
-            children: <Widget>[
-              Card(
-                child: TimeSlot(record.timeslot),
-              ),
-            ],*/
           ),
         ));
   }
