@@ -75,12 +75,7 @@ class _FullLessonList extends State<FullLessonList> {
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
             subtitle: Text(record.subject),
-            enabled: [
-              '1',
-              '2'
-            ].contains(record.online_class_id)
-                ? false
-                : true,
+            enabled: userInfo['subscribed_class'].contains(record.online_class_id) ? false : true,
             onTap: () {
               //selected = expansionTileKey.hashCode;
               //print(selected.toString());
