@@ -32,7 +32,10 @@ class AuthLevelWrapper extends StatelessWidget {
     } else if (data['role'] == 'teacher') {
       return OnlineClassTeacherPage();
     } else {
-      return OnlineClassStudentPage('hiiiii');
+      return OnlineClassStudentPage([
+        'hiii',
+        'hiiiiii'
+      ]);
     }
   }
 }
