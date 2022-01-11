@@ -70,7 +70,7 @@ class _FullLessonList extends State<FullLessonList> {
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
             subtitle: Text(record.subject),
-            onExpansionChanged: (value) {
+            /*onExpansionChanged: (value) {
               //print(expansionTileKey.hashCode.toString());
               selected = expansionTileKey.hashCode;
               // print(selected.toString());
@@ -78,10 +78,10 @@ class _FullLessonList extends State<FullLessonList> {
               //setState(() => selected = expansionTileKey.hashCode);
             },
             children: <Widget>[
-              /*Card(
+              Card(
                 child: TimeSlot(record.timeslot),
-              ),*/
-            ],
+              ),
+            ],*/
           ),
         ));
   }
