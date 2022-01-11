@@ -25,7 +25,7 @@ class _LessonList extends State<LessonList> {
   Widget build(BuildContext context) {
     print(widget.subscribed_classes);
     final userforid = Provider.of<MyUser>(context);
-    if widget.subscribed_classes == null ? return Container() : return StreamBuilder<QuerySnapshot>(
+     widget.subscribed_classes == null ? return Container() : return StreamBuilder<QuerySnapshot>(
       stream: databaseService.onlineclass.where('online_class_id', whereIn: widget.subscribed_classes).snapshots(),
       builder: (context, snapshot) {
         if (!snapshot.hasData) return LinearProgressIndicator();
