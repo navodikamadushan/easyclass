@@ -69,11 +69,11 @@ class _FullLessonList extends State<FullLessonList> {
               record.class_name,
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
-            subtitle: Text(record.online_class_id),
+            subtitle: Text(record.subject),
             onExpansionChanged: (value) {
               //print(expansionTileKey.hashCode.toString());
               selected = expansionTileKey.hashCode;
-              print(selected.toString());
+              // print(selected.toString());
               print(record.online_class_id);
               //setState(() => selected = expansionTileKey.hashCode);
             },
