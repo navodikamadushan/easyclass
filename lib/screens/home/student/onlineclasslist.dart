@@ -10,6 +10,10 @@ import "package:easyclass/models/user.dart";
 import "package:easyclass/screens/home/student/timeslot.dart";
 
 class LessonList extends StatefulWidget {
+  var subscribed_classes;
+  LessonList(var subscribed_classes) {
+    this.subscribed_classes = subscribed_classes;
+  }
   @override
   _LessonList createState() => _LessonList();
 }

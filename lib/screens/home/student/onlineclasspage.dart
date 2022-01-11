@@ -58,7 +58,7 @@ class OnlineClassStudentPage extends StatelessWidget {
         backgroundColor: Colors.blue,
         child: const Icon(Icons.add),
       ),
-      body: LessonList(),
+      body: LessonList('hiiii'),
     );
   }
 
