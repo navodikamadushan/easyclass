@@ -55,13 +55,13 @@ class OnlineClassStudentPage extends StatelessWidget {
         onPressed: () {
           print('New Classes');
           Navigator.of(context).push(
-            MaterialPageRoute(builder: (context) => OnlineFullClassStudentPage([])),
+            MaterialPageRoute(builder: (context) => OnlineFullClassStudentPage([], context)),
           );
         },
         backgroundColor: Colors.blue,
         child: const Icon(Icons.add),
       ),
-      body: LessonList(subscribed_classes, context),
+      body: LessonList(subscribed_classes),
     );
   }
 
