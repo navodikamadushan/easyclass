@@ -38,7 +38,7 @@ class MenuPage extends StatelessWidget {
                 size: 30.0,
               ),
               onTap: () {
-                print('New Class');
+                print('New Classes');
               },
             ),
           ),
@@ -59,7 +59,7 @@ class MenuPage extends StatelessWidget {
                 size: 30.0,
               ),
               onTap: () {
-                print('My classes');
+                print('My Classes');
               },
             ),
           ),
