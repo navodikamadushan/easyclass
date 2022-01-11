@@ -55,7 +55,9 @@ class DatabaseService {
   // subscribe a class : add subscribed_id to user document
   Future updateSubscribedClassIDtoUserProfile(String currentUserId, String subscribed_id) async {
     return await users.doc(currentUserId).update({
-      'subscribed_class': FieldValue.arrayUnion(subscribed_id),
+      'subscribed_class': FieldValue.arrayUnion([
+        subscribed_id
+      ]),
     });
   }
 
