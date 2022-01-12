@@ -193,8 +193,8 @@ class _MeetingWidgetState extends State<MeetingWidget> {
       appSecret: "bT7N61pQzaLXU6VLj9TVl7eYuLbqAiB0KAdb", //API SECRET FROM ZOOM
     );
     var meetingOptions = new ZoomMeetingOptions(
-        userId: 'navodikaefac@gmail.com', //pass host email for zoom
-        userPassword: 'KARUNASINGHa1996', //pass host password for zoom
+        userId: 'evilrattdeveloper@gmail.com', //pass host email for zoom
+        userPassword: 'Dlinkmoderm0641', //pass host password for zoom
         disableDialIn: "false",
         disableDrive: "false",
         disableInvite: "false",
