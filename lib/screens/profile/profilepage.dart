@@ -110,7 +110,7 @@ class _ProfilePageState extends State<ProfilePage> {
         ],
       );
   Widget buildUpgradeButton(String user) => ButtonWidget(
-        text: 'Upgrade To PRO',
+        text: user,
         onClicked: () {},
       );
 }
