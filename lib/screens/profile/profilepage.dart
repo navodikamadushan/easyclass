@@ -41,6 +41,7 @@ class _ProfilePageState extends State<ProfilePage> {
             email: snapshot.data['email'],
             about: snapshot.data['about'],
             phoneno: snapshot.data['phoneno'],
+            role: snapshot.data['role'],
             isDarkMode: false,
           );
           return Scaffold(

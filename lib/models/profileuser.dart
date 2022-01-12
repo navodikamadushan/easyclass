@@ -7,6 +7,7 @@ class ProUser {
   final String email;
   final String about;
   final String phoneno;
+  final String role;
   final bool isDarkMode;
 
   ProUser({
@@ -15,6 +16,7 @@ class ProUser {
     this.email,
     this.about,
     this.phoneno,
+    this.role,
     this.isDarkMode,
   });
 }
