@@ -100,7 +100,7 @@ class _LessonList extends State<LessonList> {
   Widget _buildButton(String text, VoidCallback onClicked) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-        primary: Colors.blue[600],
+        primary: Colors.purple[600],
         onPrimary: Colors.white,
         shape: StadiumBorder(),
         padding: EdgeInsets.symmetric(horizontal: 32, vertical: 12),
