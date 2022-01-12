@@ -83,7 +83,8 @@ class _LessonList extends State<LessonList> {
             subtitle: Text(record.subject),
             trailing: _buildButton('Join', () {
               print(record.class_name);
-              //dynamic result = _zoom.meetingStatus('79349828164');
+              dynamic result = _zoom.meetingStatus('79349828164');
+              print(result.toString());
             }),
             onExpansionChanged: (value) {
               //print(expansionTileKey.hashCode.toString());
