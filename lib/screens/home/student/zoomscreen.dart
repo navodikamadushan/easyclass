@@ -121,7 +121,6 @@ class _MeetingWidgetState extends State<MeetingWidget> {
     }
 
     if (meetingIdController.text.isNotEmpty && meetingPasswordController.text.isNotEmpty) {
-      print("HIII");
       ZoomOptions zoomOptions = new ZoomOptions(
         domain: "zoom.us",
         appKey: "XKE4uWfeLwWEmh78YMbC6mqKcF8oM4YHTr9I", //API KEY FROM ZOOM
@@ -235,7 +234,7 @@ class _MeetingWidgetState extends State<MeetingWidget> {
         });
       }
     }).catchError((error) {
-      print("[Error Generated] : " + error);
+      print("[Error Generated] : " + error.toString());
     });
   }
 
