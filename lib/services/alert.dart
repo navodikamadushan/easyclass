@@ -41,6 +41,48 @@ class AlertService {
     );
   }
 
+  Future<bool> subscribeToNewClass(BuildContext context) {
+    bool wantToaccept;
+    return showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (context) {
+        return AlertDialog(
+          title: Text(
+            'නව පන්ති සැකසුම',
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
+          content: SingleChildScrollView(
+            child: ListBody(
+              children: <Widget>[
+                Text('ඔබට මෙම පන්තියට දායක වීමට අවශ්‍යද?'),
+              ],
+            ),
+          ),
+          actions: <Widget>[
+            TextButton(
+              child: const Text(
+                'දායක වන්න',
+                style: TextStyle(color: Colors.red),
+              ),
+              onPressed: () async {
+                wantToSignOut = true;
+                Navigator.of(context).pop(wantToSignOut);
+              },
+            ),
+            TextButton(
+              child: const Text('ඉවතලන්න'),
+              onPressed: () async {
+                wantToSignOut = false;
+                Navigator.of(context).pop(wantToSignOut);
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
+
   Future<bool> signOutAlert(BuildContext context) {
     bool wantToSignOut;
     return showDialog(

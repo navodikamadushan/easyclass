@@ -10,6 +10,7 @@ import "package:easyclass/models/user.dart";
 import "package:easyclass/screens/home/student/timeslot.dart";
 import 'package:cloud_firestore/cloud_firestore.dart';
 import "package:easyclass/shared/loading.dart";
+import "package:easyclass/services/alert.dart";
 
 class FullLessonList extends StatefulWidget {
   DocumentSnapshot userInfo;
@@ -62,6 +63,7 @@ class _FullLessonList extends State<FullLessonList> {
     final userforid = Provider.of<MyUser>(context);
     final GlobalKey expansionTileKey = GlobalKey();
     final record = Record.fromSnapshot(data);
+    final AlertService _alertService = AlertService();
     return Padding(
         key: ValueKey(record.class_name),
         padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
@@ -81,12 +83,20 @@ class _FullLessonList extends State<FullLessonList> {
             subtitle: Text(record.subject),
             enabled: widget.userInfo['subscribed_class'].contains(record.online_class_id) ? false : true,
             onTap: () async {
-              setState(() => loading = true);
+              _alertService.subscribeToNewClass(context).then((onValue) async {
+                if (onValue) {
+                  print('true!');
+                } else {
+                  print('false!');
+                }
+              });
+
+              /*setState(() => loading = true);
               dynamic result = await databaseService.updateSubscribedClassIDtoUserProfile(userforid.uid, record.online_class_id);
               if (result == null) {
                 setState(() => loading = false);
                 Navigator.pop(widget.precontext);
-              }
+              }*/
             },
           ),
         ));
