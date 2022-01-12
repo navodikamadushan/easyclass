@@ -60,7 +60,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 const SizedBox(height: 24),
                 buildName(myuser),
                 const SizedBox(height: 24),
-                Center(child: buildUpgradeButton(snapshot)),
+                Center(child: buildUpgradeButton(snapshot.data['name'])),
                 const SizedBox(height: 24),
                 NumbersWidget(),
                 const SizedBox(height: 24),
@@ -109,7 +109,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 ),
         ],
       );
-  Widget buildUpgradeButton(DocumentSnapshot user) => ButtonWidget(
+  Widget buildUpgradeButton(String user) => ButtonWidget(
         text: 'Upgrade To PRO',
         onClicked: () {},
       );
