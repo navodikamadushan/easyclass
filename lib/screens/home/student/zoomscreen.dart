@@ -111,7 +111,7 @@ class _MeetingWidgetState extends State<MeetingWidget> {
   joinMeeting(BuildContext context) {
     bool _isMeetingEnded(String status) {
       var result = false;
-
+      print("HI");
       if (Platform.isAndroid)
         result = status == "MEETING_STATUS_DISCONNECTING" || status == "MEETING_STATUS_FAILED";
       else
