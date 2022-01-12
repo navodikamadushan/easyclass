@@ -66,14 +66,14 @@ class AlertService {
                 style: TextStyle(color: Colors.red),
               ),
               onPressed: () async {
-                wantToSignOut = true;
+                wantToaccept = true;
                 Navigator.of(context).pop(wantToSignOut);
               },
             ),
             TextButton(
               child: const Text('ඉවතලන්න'),
               onPressed: () async {
-                wantToSignOut = false;
+                wantToaccept = false;
                 Navigator.of(context).pop(wantToSignOut);
               },
             ),
