@@ -37,7 +37,7 @@ class OnlineFullClassStudentPage extends StatelessWidget {
             imagePath: 'https://media.istockphoto.com/photos/portrait-of-a-happy-latin-american-boy-smiling-picture-id1271410473',
             onClicked: () async {
               //_showUserPannel();
-              //Navigator.pop(context);
+              Navigator.pop(context);
               Navigator.of(this.precontext).push(
                 MaterialPageRoute(builder: (context) => ProfilePage()),
               );
