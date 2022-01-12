@@ -101,7 +101,7 @@ class _LessonList extends State<LessonList> {
                   disableDrive: "true",
                   disableInvite: "true",
                   disableShare: "true",
-                  disableTitlebar: "false",
+                  //disableTitlebar: "false",
                   viewOptions: "true",
                   noAudio: "false",
                   noDisconnectAudio: "false");
