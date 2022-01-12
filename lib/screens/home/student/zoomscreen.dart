@@ -13,7 +13,8 @@ class MeetingWidget extends StatefulWidget {
 class _MeetingWidgetState extends State<MeetingWidget> {
   TextEditingController meetingIdController = TextEditingController();
   TextEditingController meetingPasswordController = TextEditingController();
-  late Timer timer;
+  //late Timer timer;
+  Timer timer;
 
   @override
   Widget build(BuildContext context) {
