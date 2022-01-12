@@ -109,7 +109,6 @@ class _MeetingWidgetState extends State<MeetingWidget> {
   //API KEY & SECRET is required for below methods to work
   //Join Meeting With Meeting ID & Password
   joinMeeting(BuildContext context) {
-    print("HI");
     bool _isMeetingEnded(String status) {
       var result = false;
 
@@ -122,6 +121,7 @@ class _MeetingWidgetState extends State<MeetingWidget> {
     }
 
     if (meetingIdController.text.isNotEmpty && meetingPasswordController.text.isNotEmpty) {
+      print("HIII");
       ZoomOptions zoomOptions = new ZoomOptions(
         domain: "zoom.us",
         appKey: "XKE4uWfeLwWEmh78YMbC6mqKcF8oM4YHTr9I", //API KEY FROM ZOOM
