@@ -148,7 +148,7 @@ class _SignInPageState extends State<SignInPage> {
                       },
                     ),
                     SizedBox(height: 10.0),
-                    RaisedButton(
+                    /*RaisedButton(
                         child: Text(
                           'ආගන්තුකයෙකු ලෙස පුරනය වන්න',
                           textAlign: TextAlign.center,
@@ -163,7 +163,7 @@ class _SignInPageState extends State<SignInPage> {
                             print('signed in');
                             print(result.uid);
                           }
-                        }),
+                        }),*/
                     SizedBox(height: 12.0),
                     Text(
                       error,
