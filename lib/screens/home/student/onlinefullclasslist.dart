@@ -86,17 +86,16 @@ class _FullLessonList extends State<FullLessonList> {
               _alertService.subscribeToNewClass(context).then((onValue) async {
                 if (onValue) {
                   print('true!');
+                  setState(() => loading = true);
+                  dynamic result = await databaseService.updateSubscribedClassIDtoUserProfile(userforid.uid, record.online_class_id);
+                  if (result == null) {
+                    setState(() => loading = false);
+                    Navigator.pop(widget.precontext);
+                  }
                 } else {
                   print('false!');
                 }
               });
-
-              /*setState(() => loading = true);
-              dynamic result = await databaseService.updateSubscribedClassIDtoUserProfile(userforid.uid, record.online_class_id);
-              if (result == null) {
-                setState(() => loading = false);
-                Navigator.pop(widget.precontext);
-              }*/
             },
           ),
         ));
