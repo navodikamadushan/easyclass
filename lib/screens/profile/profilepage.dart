@@ -61,7 +61,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 const SizedBox(height: 24),
                 buildName(myuser),
                 const SizedBox(height: 24),
-                Center(child: buildUpgradeButton(snapshot.data['name'])),
+                Center(child: buildUpgradeButton(myuser)),
                 const SizedBox(height: 24),
                 NumbersWidget(),
                 const SizedBox(height: 24),
@@ -110,10 +110,10 @@ class _ProfilePageState extends State<ProfilePage> {
                 ),
         ],
       );
-  Widget buildUpgradeButton(String role) => ButtonWidget(
-        text: role.toString(),
+  Widget buildUpgradeButton(ProUser user) => ButtonWidget(
+        text: user.role.toString(),
         onClicked: () {
-          print(role);
+          print(user.role);
         },
       );
 }
