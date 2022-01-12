@@ -79,7 +79,9 @@ class _LessonList extends State<LessonList> {
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
             subtitle: Text(record.subject),
-            trailing: _buildButton('hi', () {}),
+            trailing: _buildButton('hi', () {
+              print(record.class_name);
+            }),
             onExpansionChanged: (value) {
               //print(expansionTileKey.hashCode.toString());
               selected = expansionTileKey.hashCode;
