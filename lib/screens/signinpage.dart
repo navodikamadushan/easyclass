@@ -169,7 +169,7 @@ class _SignInPageState extends State<SignInPage> {
                       error,
                       style: TextStyle(color: Colors.red, fontSize: 14.0),
                     ),
-                    SizedBox(height: 12.0),
+                    // SizedBox(height: 12.0),
                     DropdownButton<String>(
                       items: language.map((String dropDownStringItem) {
                         return DropdownMenuItem<String>(
