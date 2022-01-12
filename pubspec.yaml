@@ -40,6 +40,7 @@ dependencies:
   top_modal_sheet: ^1.0.0+1
   zoom: ^1.0.3
   flutter_zoom_plugin: ^0.0.7
+  flutter_zoom_sdk: ^1.0.0
 
 dev_dependencies:
   flutter_test:
