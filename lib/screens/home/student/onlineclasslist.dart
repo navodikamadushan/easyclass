@@ -8,7 +8,7 @@ import "package:easyclass/models/record.dart";
 import 'package:provider/provider.dart';
 import "package:easyclass/models/user.dart";
 import "package:easyclass/screens/home/student/timeslot.dart";
-import "package:easyclass/services/zoom.dart";
+//import "package:easyclass/services/zoom.dart";
 
 class LessonList extends StatefulWidget {
   var subscribed_classes;
@@ -63,7 +63,7 @@ class _LessonList extends State<LessonList> {
   Widget _buildListItem(BuildContext context, DocumentSnapshot data) {
     final GlobalKey expansionTileKey = GlobalKey();
     final record = Record.fromSnapshot(data);
-    final Zoom _zoom = Zoom();
+    //final Zoom _zoom = Zoom();
     return Padding(
         key: ValueKey(record.class_name),
         padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
@@ -83,30 +83,8 @@ class _LessonList extends State<LessonList> {
             subtitle: Text(record.subject),
             trailing: _buildButton('Join', () async {
               print(record.class_name);
-              ZoomOptions zoomOptions = new ZoomOptions(
-                domain: "zoom.us",
-                //https://marketplace.zoom.us/docs/sdk/native-sdks/auth
-                //https://jwt.io/
-                //--todo from server
-                //jwtToken: "your jwtToken",
-                appKey: "XKE4uWfeLwWEmh78YMbC6mqKcF8oM4YHTr9I", // Replace with with key got from the Zoom Marketplace ZOOM SDK Section
-                appSecret: "bT7N61pQzaLXU6VLj9TVl7eYuLbqAiB0KAdb", // Replace with with secret got from the Zoom Marketplace ZOOM SDK Section
-              );
-
-              var meetingOptions = new ZoomMeetingOptions(
-                  userId: 'username', //pass username for join meeting only --- Any name eg:- EVILRATT.
-                  meetingId: '79629718534', //meetingIdController.text, //pass meeting id for join meeting only
-                  meetingPassword: '9Pz5aE', //meetingPasswordController.text, //pass meeting password for join meeting only
-                  disableDialIn: "true",
-                  disableDrive: "true",
-                  disableInvite: "true",
-                  disableShare: "true",
-                  //disableTitlebar: "false",
-                  //viewOptions: "true",
-                  noAudio: "false",
-                  noDisconnectAudio: "false");
-              dynamic result = await _zoom.startMeeting(meetingOptions);
-              print(result.toString());
+              //dynamic result = await _zoom.startMeeting(meetingOptions);
+              //print(result.toString());
             }),
             onExpansionChanged: (value) {
               //print(expansionTileKey.hashCode.toString());
