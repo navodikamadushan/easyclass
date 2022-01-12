@@ -109,9 +109,10 @@ class _MeetingWidgetState extends State<MeetingWidget> {
   //API KEY & SECRET is required for below methods to work
   //Join Meeting With Meeting ID & Password
   joinMeeting(BuildContext context) {
+    print("HI");
     bool _isMeetingEnded(String status) {
       var result = false;
-      print("HI");
+
       if (Platform.isAndroid)
         result = status == "MEETING_STATUS_DISCONNECTING" || status == "MEETING_STATUS_FAILED";
       else
