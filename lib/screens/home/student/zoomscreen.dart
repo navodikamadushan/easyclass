@@ -299,7 +299,7 @@ class _MeetingWidgetState extends State<MeetingWidget> {
         });
       }
     }).catchError((error) {
-      print("[Error Generated] : " + error);
+      print("[Error Generated] : " + error.toString());
     });
   }
 }
