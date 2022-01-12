@@ -8,6 +8,7 @@ import "package:easyclass/models/record.dart";
 import 'package:provider/provider.dart';
 import "package:easyclass/models/user.dart";
 import "package:easyclass/screens/home/student/timeslot.dart";
+import "package:easyclass/services/zoom.dart";
 
 class LessonList extends StatefulWidget {
   var subscribed_classes;
@@ -62,6 +63,7 @@ class _LessonList extends State<LessonList> {
   Widget _buildListItem(BuildContext context, DocumentSnapshot data) {
     final GlobalKey expansionTileKey = GlobalKey();
     final record = Record.fromSnapshot(data);
+    final Zoom _zoom = Zoom();
     return Padding(
         key: ValueKey(record.class_name),
         padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
