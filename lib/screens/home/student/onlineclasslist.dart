@@ -84,9 +84,9 @@ class _LessonList extends State<LessonList> {
             subtitle: Text(record.subject),
             trailing: _buildButton('Join', () async {
               print(record.class_name);
-              /*Navigator.of(context).push(
+              Navigator.of(context).push(
                 MaterialPageRoute(builder: (context) => MeetingWidget()), //'1', '79482849584', '6VrFfY'
-              );*/
+              );
               //dynamic result = await _zoom.startMeeting(meetingOptions);
               //print(result.toString());
             }),
