@@ -152,7 +152,7 @@ class _MeetingWidgetState extends State<MeetingWidget> {
           print("listen on event channel");
           zoom.joinMeeting(meetingOptions).then((joinMeetingResult) {
             timer = Timer.periodic(new Duration(seconds: 2), (timer) {
-              zoom.meetingStatus(meetingOptions.meetingId!).then((status) {
+              zoom.meetingStatus(meetingOptions.meetingId).then((status) {
                 print("[Meeting Status Polling] : " + status[0] + " - " + status[1]);
               });
             });
