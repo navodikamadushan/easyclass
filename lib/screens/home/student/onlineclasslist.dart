@@ -81,7 +81,7 @@ class _LessonList extends State<LessonList> {
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
             subtitle: Text(record.subject),
-            trailing: _buildButton('Join', () {
+            trailing: _buildButton('Join', () async {
               print(record.class_name);
               dynamic result = _zoom.meetingStatus('79349828164');
               print(result.toString());
