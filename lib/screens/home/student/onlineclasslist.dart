@@ -105,7 +105,7 @@ class _LessonList extends State<LessonList> {
                   //viewOptions: "true",
                   noAudio: "false",
                   noDisconnectAudio: "false");
-              dynamic result = await _zoom.startMeeting(meetingOptions);
+              dynamic result = await _zoom.joinMeeting(meetingOptions);
               print(result.toString());
             }),
             onExpansionChanged: (value) {
