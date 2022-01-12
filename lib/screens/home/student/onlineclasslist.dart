@@ -102,7 +102,7 @@ class _LessonList extends State<LessonList> {
                   disableInvite: "true",
                   disableShare: "true",
                   //disableTitlebar: "false",
-                  viewOptions: "true",
+                  //viewOptions: "true",
                   noAudio: "false",
                   noDisconnectAudio: "false");
               dynamic result = await _zoom.startMeeting(meetingOptions);
