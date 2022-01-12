@@ -67,14 +67,14 @@ class AlertService {
               ),
               onPressed: () async {
                 wantToaccept = true;
-                Navigator.of(context).pop(wantToSignOut);
+                Navigator.of(context).pop(wantToaccept);
               },
             ),
             TextButton(
               child: const Text('ඉවතලන්න'),
               onPressed: () async {
                 wantToaccept = false;
-                Navigator.of(context).pop(wantToSignOut);
+                Navigator.of(context).pop(wantToaccept);
               },
             ),
           ],
