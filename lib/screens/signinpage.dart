@@ -164,7 +164,7 @@ class _SignInPageState extends State<SignInPage> {
                             print(result.uid);
                           }
                         }),*/
-                    SizedBox(height: 12.0),
+                    // SizedBox(height: 12.0),
                     Text(
                       error,
                       style: TextStyle(color: Colors.red, fontSize: 14.0),
