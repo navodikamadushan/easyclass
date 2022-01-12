@@ -103,9 +103,6 @@ class _EditProfilePageState extends State<EditProfilePage> {
                         print(currentUserId.uid);
                         print(result);
                         if (result == null) {
-                          /*Navigator.of(context).push(
-                            MaterialPageRoute(builder: (context) => ProfilePage()),
-                          );*/
                           Navigator.pop(context);
                           setState(() => loading = false);
                         }
