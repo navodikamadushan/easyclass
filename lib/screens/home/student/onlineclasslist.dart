@@ -92,7 +92,20 @@ class _LessonList extends State<LessonList> {
                 appKey: "XKE4uWfeLwWEmh78YMbC6mqKcF8oM4YHTr9I", // Replace with with key got from the Zoom Marketplace ZOOM SDK Section
                 appSecret: "bT7N61pQzaLXU6VLj9TVl7eYuLbqAiB0KAdb", // Replace with with secret got from the Zoom Marketplace ZOOM SDK Section
               );
-              dynamic result = await _zoom.init(zoomOptions);
+
+              var meetingOptions = new ZoomMeetingOptions(
+                  userId: 'username', //pass username for join meeting only --- Any name eg:- EVILRATT.
+                  meetingId: '79629718534', //meetingIdController.text, //pass meeting id for join meeting only
+                  meetingPassword: '9Pz5aE', //meetingPasswordController.text, //pass meeting password for join meeting only
+                  disableDialIn: "true",
+                  disableDrive: "true",
+                  disableInvite: "true",
+                  disableShare: "true",
+                  disableTitlebar: "false",
+                  viewOptions: "true",
+                  noAudio: "false",
+                  noDisconnectAudio: "false");
+              dynamic result = await _zoom.startMeeting(meetingOptions);
               print(result.toString());
             }),
             onExpansionChanged: (value) {
