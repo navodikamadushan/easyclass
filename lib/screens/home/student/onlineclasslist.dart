@@ -8,6 +8,7 @@ import "package:easyclass/models/record.dart";
 import 'package:provider/provider.dart';
 import "package:easyclass/models/user.dart";
 import "package:easyclass/screens/home/student/timeslot.dart";
+import "package:easyclass/screens/home/student/zoomscreen.dart";
 //import "package:easyclass/services/zoom.dart";
 
 class LessonList extends StatefulWidget {
@@ -83,6 +84,9 @@ class _LessonList extends State<LessonList> {
             subtitle: Text(record.subject),
             trailing: _buildButton('Join', () async {
               print(record.class_name);
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => MeetingWidget()),
+              );
               //dynamic result = await _zoom.startMeeting(meetingOptions);
               //print(result.toString());
             }),
