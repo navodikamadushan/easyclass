@@ -109,8 +109,8 @@ class _ProfilePageState extends State<ProfilePage> {
                 ),
         ],
       );
-  Widget buildUpgradeButton(String user) => ButtonWidget(
-        text: user,
+  Widget buildUpgradeButton(String role) => ButtonWidget(
+        text: role.toString(),
         onClicked: () {},
       );
 }
