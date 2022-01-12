@@ -32,7 +32,7 @@ class _ProfilePageState extends State<ProfilePage> {
         stream: FirebaseFirestore.instance.collection('users').doc(userforid.uid).snapshots(),
         builder: (context, snapshot) {
           // final docs = snapshot.data.data(userforid.uid);
-          // print(snapshot.data['name']);
+
           if (!snapshot.hasData) return Loading();
 
           final myuser = ProUser(
@@ -60,7 +60,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 const SizedBox(height: 24),
                 buildName(myuser),
                 const SizedBox(height: 24),
-                Center(child: buildUpgradeButton(myuser)),
+                Center(child: buildUpgradeButton(snapshot)),
                 const SizedBox(height: 24),
                 NumbersWidget(),
                 const SizedBox(height: 24),
@@ -109,7 +109,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 ),
         ],
       );
-  Widget buildUpgradeButton(ProUser user) => ButtonWidget(
+  Widget buildUpgradeButton(DocumentSnapshot user) => ButtonWidget(
         text: 'Upgrade To PRO',
         onClicked: () {},
       );
