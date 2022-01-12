@@ -79,7 +79,7 @@ class _LessonList extends State<LessonList> {
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
             subtitle: Text(record.subject),
-            trailing: _buildButton('hi', () {
+            trailing: _buildButton('Join', () {
               print(record.class_name);
             }),
             onExpansionChanged: (value) {
