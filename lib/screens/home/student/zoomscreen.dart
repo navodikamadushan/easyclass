@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:io' show Platform;
 import 'package:flutter/material.dart';
 import 'package:flutter_zoom_plugin/zoom_options.dart';
 import 'package:flutter_zoom_plugin/zoom_view.dart';
