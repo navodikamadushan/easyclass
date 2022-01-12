@@ -83,7 +83,16 @@ class _LessonList extends State<LessonList> {
             subtitle: Text(record.subject),
             trailing: _buildButton('Join', () async {
               print(record.class_name);
-              dynamic result = await _zoom.meetingStatus('7847061056');
+              ZoomOptions zoomOptions = new ZoomOptions(
+                domain: "zoom.us",
+                //https://marketplace.zoom.us/docs/sdk/native-sdks/auth
+                //https://jwt.io/
+                //--todo from server
+                //jwtToken: "your jwtToken",
+                appKey: "XKE4uWfeLwWEmh78YMbC6mqKcF8oM4YHTr9I", // Replace with with key got from the Zoom Marketplace ZOOM SDK Section
+                appSecret: "bT7N61pQzaLXU6VLj9TVl7eYuLbqAiB0KAdb", // Replace with with secret got from the Zoom Marketplace ZOOM SDK Section
+              );
+              dynamic result = await _zoom.init(zoomOptions);
               print(result.toString());
             }),
             onExpansionChanged: (value) {
