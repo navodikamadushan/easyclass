@@ -38,6 +38,7 @@ dependencies:
   animations: ^2.0.2
   modal_side_sheet: ^0.0.1
   top_modal_sheet: ^1.0.0+1
+  flutter_zoom_sdk: ^1.0.0
 
 dev_dependencies:
   flutter_test:
