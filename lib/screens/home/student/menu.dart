@@ -47,6 +47,7 @@ class MenuPage extends StatelessWidget {
               ),
               onTap: () {
                 print('New Classes');
+                Navigator.pop(context);
                 Navigator.of(context).push(
                   MaterialPageRoute(builder: (context) => OnlineFullClassStudentPage(this.userInfo, context)),
                 );
