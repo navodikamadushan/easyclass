@@ -32,7 +32,7 @@ class _ProfilePageState extends State<ProfilePage> {
         stream: FirebaseFirestore.instance.collection('users').doc(userforid.uid).snapshots(),
         builder: (context, snapshot) {
           // final docs = snapshot.data.data(userforid.uid);
-          print(snapshot.data;
+          print(snapshot.data);
           if (!snapshot.hasData) return Loading();
 
           final myuser = ProUser(
