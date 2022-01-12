@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 class MeetingWidget extends StatelessWidget {
   ZoomOptions zoomOptions;
   ZoomMeetingOptions meetingOptions;
