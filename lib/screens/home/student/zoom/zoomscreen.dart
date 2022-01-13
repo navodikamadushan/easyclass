@@ -160,7 +160,7 @@ class _MeetingWidgetState extends State<MeetingWidget> {
           noDisconnectAudio: "false");
 
       var zoom = ZoomView();
-      zoom.initZoom(zoomOptions).then((results) {
+      /*zoom.initZoom(zoomOptions).then((results) {
         if (results[0] == 0) {
           zoom.onMeetingStatus().listen((status) {
             print("[Meeting Status Stream] : " + status[0] + " - " + status[1]);
@@ -180,7 +180,7 @@ class _MeetingWidgetState extends State<MeetingWidget> {
         }
       }).catchError((error) {
         print("[Error Generated] : " + error.toString());
-      });
+      });*/
     } else {
       if (meetingIdController.text.isEmpty) {
         ScaffoldMessenger.of(context).showSnackBar(SnackBar(
@@ -225,7 +225,7 @@ class _MeetingWidgetState extends State<MeetingWidget> {
         noDisconnectAudio: "false");
 
     var zoom = ZoomView();
-    zoom.initZoom(zoomOptions).then((results) {
+    /*zoom.initZoom(zoomOptions).then((results) {
       if (results[0] == 0) {
         zoom.onMeetingStatus().listen((status) {
           print("[Meeting Status Stream] : " + status[0] + " - " + status[1]);
@@ -255,7 +255,7 @@ class _MeetingWidgetState extends State<MeetingWidget> {
       }
     }).catchError((error) {
       print("[Error Generated] : " + error.toString());
-    });
+    });*/
   }
 
   //Start Meeting With Custom Meeting ID ----- Emila & Password For Zoom is required.
@@ -290,7 +290,7 @@ class _MeetingWidgetState extends State<MeetingWidget> {
         noDisconnectAudio: "false");
 
     var zoom = ZoomView();
-    zoom.initZoom(zoomOptions).then((results) {
+    /*zoom.initZoom(zoomOptions).then((results) {
       if (results[0] == 0) {
         zoom.onMeetingStatus().listen((status) {
           print("[Meeting Status Stream] : " + status[0] + " - " + status[1]);
@@ -320,6 +320,6 @@ class _MeetingWidgetState extends State<MeetingWidget> {
       }
     }).catchError((error) {
       print("[Error Generated] : " + error.toString());
-    });
+    });*/
   }
 }
