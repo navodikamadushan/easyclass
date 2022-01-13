@@ -21,6 +21,7 @@ class _MeetingWidgetState extends State<MeetingWidget> {
 
   @override
   Widget build(BuildContext context) {
+    final FlutterZoomSdk _flutterzoomsdk = FlutterZoomSdk();
     // new page needs scaffolding!
     return Scaffold(
       appBar: AppBar(
