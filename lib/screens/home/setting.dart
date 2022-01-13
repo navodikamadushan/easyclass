@@ -226,7 +226,11 @@ class _SettingPage extends State<SettingPage> {
                   child: ListTile(
                     leading: Icon(Icons.update),
                     title: Text('යාවත්කාලීන කරන්න'),
-                    onTap: () {},
+                    onTap: () {
+                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                        content: Text("Not developed this feature"),
+                      ));
+                    },
                   ),
                 ),
                 Card(
@@ -234,7 +238,11 @@ class _SettingPage extends State<SettingPage> {
                     leading: Icon(Icons.language),
                     title: Text('භාෂාව'),
                     subtitle: Text('සිංහල'),
-                    onTap: () {},
+                    onTap: () {
+                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                        content: Text("Not developed this feature"),
+                      ));
+                    },
                   ),
                 ),
               ],
