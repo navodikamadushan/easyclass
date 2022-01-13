@@ -13,6 +13,7 @@ class ZoomView extends ZoomPlatform {
 
   @override
   Future<List> initZoom(ZoomOptions options) async {
+    print('initZoom run');
     assert(options != null);
 
     var optionMap = new Map<String, String>();
