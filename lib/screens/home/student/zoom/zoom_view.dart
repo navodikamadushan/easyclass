@@ -23,8 +23,7 @@ class ZoomView extends ZoomPlatform {
     if (options.appSecret != null) {
       optionMap.putIfAbsent("appSecret", () => options.appSecret);
     }
-    print(options.domain);
-    optionMap.putIfAbsent("domain", () => options.domain);
+    print(optionMap);
     return channel.invokeMethod<List>('init', optionMap).then<List>((List value) => value ?? List.empty());
   }
 
