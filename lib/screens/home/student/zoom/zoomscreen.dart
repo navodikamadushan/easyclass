@@ -1,9 +1,11 @@
-/*import 'dart:async';
+import 'dart:async';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_zoom_sdk/zoom_options.dart';
-import 'package:flutter_zoom_sdk/zoom_view.dart';
+import "package:easyclass/screens/home/student/zoom/zoom_options.dart";
+import "package:easyclass/screens/home/student/zoom/zoom_view.dart";
+//import 'package:flutter_zoom_sdk/zoom_options.dart';
+//import 'package:flutter_zoom_sdk/zoom_view.dart';
 
 class MeetingWidget extends StatefulWidget {
   @override
@@ -303,4 +305,3 @@ class _MeetingWidgetState extends State<MeetingWidget> {
     });
   }
 }
-*/
