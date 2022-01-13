@@ -8,7 +8,7 @@ import "package:easyclass/models/record.dart";
 import 'package:provider/provider.dart';
 import "package:easyclass/models/user.dart";
 import "package:easyclass/screens/home/student/timeslot.dart";
-import "package:easyclass/screens/home/student/zoomscreen.dart";
+import "package:easyclass/screens/home/student/zoom/zoomscreen.dart";
 //import "package:easyclass/services/zoom.dart";
 
 class LessonList extends StatefulWidget {
