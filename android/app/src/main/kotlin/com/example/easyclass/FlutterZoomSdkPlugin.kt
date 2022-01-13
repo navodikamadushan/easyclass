@@ -1,4 +1,4 @@
-package com.example.easyclass.flutter_zoom_sdk
+package com.example.easyclass
 
 import androidx.annotation.NonNull
 
