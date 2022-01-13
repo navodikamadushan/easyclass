@@ -1,7 +1,7 @@
 class ZoomOptions {
-  String? domain;
-  String? appKey;
-  String? appSecret;
+  String domain;
+  String appKey;
+  String appSecret;
 
   ZoomOptions({
     this.domain,
@@ -11,19 +11,19 @@ class ZoomOptions {
 }
 
 class ZoomMeetingOptions {
-  String? userId;
-  String? userPassword;
-  String? displayName;
-  String? meetingId;
-  String? meetingPassword;
-  String? disableDialIn;
-  String? disableDrive;
-  String? disableInvite;
-  String? disableShare;
-  String? disableTitlebar;
-  String? noDisconnectAudio;
-  String? viewOptions;
-  String? noAudio;
+  String userId;
+  String userPassword;
+  String displayName;
+  String meetingId;
+  String meetingPassword;
+  String disableDialIn;
+  String disableDrive;
+  String disableInvite;
+  String disableShare;
+  String disableTitlebar;
+  String noDisconnectAudio;
+  String viewOptions;
+  String noAudio;
   String? jwtAPIKey; //--for web
   String? jwtSignature; //--for web
 
