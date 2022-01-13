@@ -57,7 +57,9 @@ class OnlineFullClassStudentPage extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           //Navigator.pop(context);
-          print('New Classes');
+          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+            content: Text("මෙම විශේෂාංගය තවමත් සංවර්ධනය කර නොමැත."),
+          ));
         },
         backgroundColor: Colors.blue,
         child: const Icon(Icons.add_reaction_rounded),
