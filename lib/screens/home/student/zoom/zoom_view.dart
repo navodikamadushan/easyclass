@@ -1,4 +1,4 @@
-//import 'dart:async';
+import 'dart:async';
 import 'package:flutter/services.dart';
 import "package:easyclass/screens/home/student/zoom/zoom_options.dart";
 import "package:easyclass/screens/home/student/zoom/zoom_platform_view.dart";
@@ -10,6 +10,7 @@ class ZoomView extends ZoomPlatform {
 
   /// The event channel used to interact with the native platform.
   final EventChannel eventChannel = EventChannel('com.evilratt/zoom_sdk_event_stream');
+
   @override
   Future<List> initZoom(ZoomOptions options) async {
     assert(options != null);
