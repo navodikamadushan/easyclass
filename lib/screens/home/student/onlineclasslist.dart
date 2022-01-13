@@ -82,7 +82,6 @@ class _LessonList extends State<LessonList> {
             subtitle: Text(record.subject),
             trailing: _buildButton('Join', () async {
               print(record.class_name);
-              print('HI');
               ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                 content: Text("Not developed this feature"),
               ));
