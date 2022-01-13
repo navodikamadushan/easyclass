@@ -11,7 +11,7 @@ class FlutterZoomSdk {
   static const MethodChannel _channel = MethodChannel('flutter_zoom_sdk');
 
   static Future<String> get platformVersion async {
-    final String? version = await _channel.invokeMethod('getPlatformVersion');
+    final String version = await _channel.invokeMethod('getPlatformVersion');
     return version;
   }
 }
