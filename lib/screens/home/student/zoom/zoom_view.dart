@@ -79,7 +79,7 @@ class ZoomView extends ZoomPlatform {
     optionMap.putIfAbsent("noDisconnectAudio", () => options.noDisconnectAudio);
     optionMap.putIfAbsent("noAudio", () => options.noAudio);
 
-    return channel.invokeMethod<List>('login', optionMap).then<List>((List? value) => value ?? List.empty());
+    return channel.invokeMethod<List>('login', optionMap).then<List>((List value) => value ?? List.empty());
   }
 
   @override
@@ -89,7 +89,7 @@ class ZoomView extends ZoomPlatform {
     var optionMap = new Map<String, String>();
     optionMap.putIfAbsent("meetingId", () => meetingId);
 
-    return channel.invokeMethod<List>('meeting_status', optionMap).then<List>((List? value) => value ?? List.empty());
+    return channel.invokeMethod<List>('meeting_status', optionMap).then<List>((List value) => value ?? List.empty());
   }
 
   @override
@@ -99,6 +99,6 @@ class ZoomView extends ZoomPlatform {
 
   @override
   Future<List> meetinDetails() async {
-    return channel.invokeMethod<List>('meeting_details').then<List>((List? value) => value ?? List.empty());
+    return channel.invokeMethod<List>('meeting_details').then<List>((List value) => value ?? List.empty());
   }
 }
