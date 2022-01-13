@@ -18,7 +18,7 @@ class ZoomView extends ZoomPlatform {
     var optionMap = new Map<String, String>();
 
     if (options.appKey != null) {
-      print('initZoom run 2');
+      print(options.appKey);
       optionMap.putIfAbsent("appKey", () => options.appKey);
     }
     if (options.appSecret != null) {
