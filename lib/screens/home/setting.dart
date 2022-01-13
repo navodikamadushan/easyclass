@@ -186,8 +186,8 @@ class _SettingPage extends State<SettingPage> {
                       style: TextStyle(color: Colors.red),
                     ),
                     onTap: () {
-                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                        content: Text("Not developed this feature"),
+                      ScaffoldMessenger.of(prof_context).showSnackBar(SnackBar(
+                        content: Text("මෙම විශේෂාංගය තවමත් සංවර්ධනය කර නොමැත."),
                       ));
                     },
                   ),
@@ -227,8 +227,8 @@ class _SettingPage extends State<SettingPage> {
                     leading: Icon(Icons.update),
                     title: Text('යාවත්කාලීන කරන්න'),
                     onTap: () {
-                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                        content: Text("Not developed this feature"),
+                      ScaffoldMessenger.of(prof_context).showSnackBar(SnackBar(
+                        content: Text("මෙම විශේෂාංගය තවමත් සංවර්ධනය කර නොමැත."),
                       ));
                     },
                   ),
@@ -239,8 +239,8 @@ class _SettingPage extends State<SettingPage> {
                     title: Text('භාෂාව'),
                     subtitle: Text('සිංහල'),
                     onTap: () {
-                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                        content: Text("Not developed this feature"),
+                      ScaffoldMessenger.of(prof_context).showSnackBar(SnackBar(
+                        content: Text("මෙම විශේෂාංගය තවමත් සංවර්ධනය කර නොමැත."),
                       ));
                     },
                   ),
