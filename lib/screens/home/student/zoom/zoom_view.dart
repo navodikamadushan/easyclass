@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:flutter/services.dart';
-import 'package:flutter_zoom_sdk/zoom_options.dart';
-import 'package:flutter_zoom_sdk/zoom_platform_view.dart';
+import "package:easyclass/screens/home/student/zoom/zoom_options.dart";
+import "package:easyclass/screens/home/student/zoom/zoom_platform_view.dart";
 
 // typedef void ZoomViewCreatedCallback(ZoomViewController controller);
 
