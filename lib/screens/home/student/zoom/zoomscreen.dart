@@ -22,7 +22,6 @@ class _MeetingWidgetState extends State<MeetingWidget> {
 
   @override
   Widget build(BuildContext context) {
-    final FlutterZoomSdk _flutterzoomsdk = FlutterZoomSdk();
     // new page needs scaffolding!
     return Scaffold(
       appBar: AppBar(
@@ -114,9 +113,7 @@ class _MeetingWidgetState extends State<MeetingWidget> {
                         primary: Colors.blue, // background
                         onPrimary: Colors.white, // foreground
                       ),
-                      onPressed: () async {
-                        dynamic result = await _flutterzoomsdk.platformVersion;
-                      },
+                      onPressed: () async {},
                       child: Text('Test button'),
                     );
                   },
