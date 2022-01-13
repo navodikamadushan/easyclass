@@ -40,7 +40,10 @@ dependencies:
   top_modal_sheet: ^1.0.0+1
   plugin_platform_interface: ^2.1.2
   mockito: ^5.0.17
-   
+  flutter_zoom_sdk:
+      git:
+        url: git://github.com/decodedhealth/flutter_zoom_plugin.git
+        ref: master  
 
 dev_dependencies:
   flutter_test:
