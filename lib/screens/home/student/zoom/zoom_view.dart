@@ -13,12 +13,12 @@ class ZoomView extends ZoomPlatform {
 
   @override
   Future<List> initZoom(ZoomOptions options) async {
-    print('initZoom run');
     assert(options != null);
 
     var optionMap = new Map<String, String>();
 
     if (options.appKey != null) {
+      print('initZoom run');
       optionMap.putIfAbsent("appKey", () => options.appKey);
     }
     if (options.appSecret != null) {
