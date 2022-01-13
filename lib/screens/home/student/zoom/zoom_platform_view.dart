@@ -13,7 +13,7 @@ abstract class ZoomPlatform extends PlatformInterface {
     _instance = instance;
   }
 
-  Future<List> initZoom(ZoomOptions options) async {
+  /*Future<List> initZoom(ZoomOptions options) async {
     throw UnimplementedError('initZoom() has not been implemented.');
   }
 
@@ -39,5 +39,5 @@ abstract class ZoomPlatform extends PlatformInterface {
 
   Future<List> meetinDetails() async {
     throw UnimplementedError('meetingDetails() has not been implemented.');
-  }
+  }*/
 }
