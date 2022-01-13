@@ -30,7 +30,11 @@ AppBar buildAppBar(BuildContext prof_context, bool isEditProfile, ProUser myuser
             ),
       IconButton(
         icon: Icon(icon, color: Colors.black),
-        onPressed: () {},
+        onPressed: () {
+          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+            content: Text("මෙම විශේෂාංගය තවමත් සංවර්ධනය කර නොමැත."),
+          ));
+        },
       ),
     ],
   );
