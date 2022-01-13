@@ -114,6 +114,9 @@ class _ProfilePageState extends State<ProfilePage> {
         text: user.role.toString(),
         onClicked: () {
           print(user.role);
+          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+            content: Text("${user.role}"),
+          ));
         },
       );
 }
