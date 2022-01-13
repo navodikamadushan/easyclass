@@ -1,12 +1,12 @@
 import 'dart:async';
-import 'package:flutter/services.dart';
+//import 'package:flutter/services.dart';
 import "package:easyclass/screens/home/student/zoom/zoom_options.dart";
 import "package:easyclass/screens/home/student/zoom/zoom_platform_view.dart";
 
 // typedef void ZoomViewCreatedCallback(ZoomViewController controller);
 
 class ZoomView extends ZoomPlatform {
-  final MethodChannel channel = MethodChannel('com.navodika/zoom_sdk');
+  final MethodChannel channel = MethodChannel('com.evilratt/zoom_sdk');
 
   /// The event channel used to interact with the native platform.
   final EventChannel eventChannel = EventChannel('com.evilratt/zoom_sdk_event_stream');
