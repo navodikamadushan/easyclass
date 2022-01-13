@@ -115,7 +115,7 @@ class _MeetingWidgetState extends State<MeetingWidget> {
                         onPrimary: Colors.white, // foreground
                       ),
                       onPressed: () async {
-                        dynamic result = await _flutterzoomsdk.platformVersion();
+                        dynamic result = await _flutterzoomsdk.platformVersion;
                       },
                       child: Text('Test button'),
                     );
