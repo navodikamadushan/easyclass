@@ -83,11 +83,12 @@ class _LessonList extends State<LessonList> {
             trailing: _buildButton('Join', () async {
               print(record.class_name);
               print('HI');
-              Navigator.of(context).push(
+              ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                content: Text("Not developed this feature"),
+              ));
+              /*Navigator.of(context).push(
                 MaterialPageRoute(builder: (context) => MeetingWidget()), //'1', '79482849584', '6VrFfY'
-              );
-              //dynamic result = await _zoom.startMeeting(meetingOptions);
-              //print(result.toString());
+              );*/
             }),
             onExpansionChanged: (value) {
               //print(expansionTileKey.hashCode.toString());
