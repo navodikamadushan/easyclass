@@ -55,7 +55,11 @@ dev_dependencies:
 
 # The following section is specific to Flutter.
 flutter:
-
+  plugin:
+    platforms:
+      android:
+        package: com.evilratt.flutter_zoom_sdk
+        pluginClass: FlutterZoomSdkPlugin  
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
