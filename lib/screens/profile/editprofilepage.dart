@@ -47,7 +47,11 @@ class _EditProfilePageState extends State<EditProfilePage> {
                 ProfileWidget(
                   isEdit: true,
                   imagePath: widget.user.imagePath,
-                  onClicked: () async {},
+                  onClicked: () async {
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                      content: Text("මෙම විශේෂාංගය තවමත් සංවර්ධනය කර නොමැත."),
+                    ));
+                  },
                 ),
                 const SizedBox(height: 15),
                 TextFieldWidget(
