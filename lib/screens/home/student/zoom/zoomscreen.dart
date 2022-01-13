@@ -114,8 +114,10 @@ class _MeetingWidgetState extends State<MeetingWidget> {
                         primary: Colors.blue, // background
                         onPrimary: Colors.white, // foreground
                       ),
-                      onPressed: () async {},
-                      child: Text('Start Meeting With Meeting ID'),
+                      onPressed: () async {
+                        dynamic result = await _flutterzoomsdk.platformVersion();
+                      },
+                      child: Text('Test button'),
                     );
                   },
                 ),
