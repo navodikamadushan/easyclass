@@ -82,12 +82,12 @@ class _LessonList extends State<LessonList> {
             subtitle: Text(record.subject),
             trailing: _buildButton('Join', () async {
               print(record.class_name);
-              /*ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+              ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                 content: Text("මෙම විශේෂාංගය තවමත් සංවර්ධනය කර නොමැත."),
-              ));*/
-              Navigator.of(context).push(
+              ));
+              /*Navigator.of(context).push(
                 MaterialPageRoute(builder: (context) => MeetingWidget()), //'1', '79482849584', '6VrFfY'
-              );
+              );*/
             }),
             onExpansionChanged: (value) {
               //print(expansionTileKey.hashCode.toString());
