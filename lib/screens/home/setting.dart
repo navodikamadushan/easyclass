@@ -185,7 +185,11 @@ class _SettingPage extends State<SettingPage> {
                       'ගිණුම මකන්න',
                       style: TextStyle(color: Colors.red),
                     ),
-                    onTap: () {},
+                    onTap: () {
+                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                        content: Text("Not developed this feature"),
+                      ));
+                    },
                   ),
                 ),
                 Card(
