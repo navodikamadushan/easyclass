@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import "package:easyclass/screens/home/student/zoom/zoom_options.dart";
 import "package:easyclass/screens/home/student/zoom/zoom_view.dart";
 import "package:easyclass/screens/home/student/zoom/zoom_platform_view.dart";
+import "package:easyclass/screens/home/student/zoom/zoom_sdk.dart";
 //import 'package:flutter_zoom_sdk/zoom_options.dart';
 //import 'package:flutter_zoom_sdk/zoom_view.dart';
 
