@@ -1,5 +1,5 @@
 class JistiVideoConference {
-  final String name;
+  String name;
   JistiVideoConference(String name) {
     this.name;
   }
