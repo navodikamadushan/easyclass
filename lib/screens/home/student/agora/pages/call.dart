@@ -9,13 +9,13 @@ import '../utils/settings.dart';
 
 class CallPage extends StatefulWidget {
   /// non-modifiable channel name of the page
-  final String? channelName;
+  final String channelName;
 
   /// non-modifiable client role of the page
-  final ClientRole? role;
+  final ClientRole role;
 
   /// Creates a call page with given channel name.
-  const CallPage({Key? key, this.channelName, this.role}) : super(key: key);
+  const CallPage({Key key, this.channelName, this.role}) : super(key: key);
 
   @override
   _CallPageState createState() => _CallPageState();
@@ -25,7 +25,7 @@ class _CallPageState extends State<CallPage> {
   final _users = <int>[];
   final _infoStrings = <String>[];
   bool muted = false;
-  late RtcEngine _engine;
+  RtcEngine _engine;
 
   @override
   void dispose() {
@@ -61,7 +61,7 @@ class _CallPageState extends State<CallPage> {
     VideoEncoderConfiguration configuration = VideoEncoderConfiguration();
     configuration.dimensions = VideoDimensions(width: 1920, height: 1080);
     await _engine.setVideoEncoderConfiguration(configuration);
-    await _engine.joinChannel(Token, widget.channelName!, null, 0);
+    await _engine.joinChannel(Token, widget.channelName, null, 0);
   }
 
   /// Create agora sdk instance and initialize
@@ -69,7 +69,7 @@ class _CallPageState extends State<CallPage> {
     _engine = await RtcEngine.create(APP_ID);
     await _engine.enableVideo();
     await _engine.setChannelProfile(ChannelProfile.LiveBroadcasting);
-    await _engine.setClientRole(widget.role!);
+    await _engine.setClientRole(widget.role);
   }
 
   /// Add agora event handlers
@@ -141,14 +141,20 @@ class _CallPageState extends State<CallPage> {
       case 1:
         return Container(
             child: Column(
-          children: <Widget>[_videoView(views[0])],
+          children: <Widget>[
+            _videoView(views[0])
+          ],
         ));
       case 2:
         return Container(
             child: Column(
           children: <Widget>[
-            _expandedVideoRow([views[0]]),
-            _expandedVideoRow([views[1]])
+            _expandedVideoRow([
+              views[0]
+            ]),
+            _expandedVideoRow([
+              views[1]
+            ])
           ],
         ));
       case 3:
@@ -236,7 +242,7 @@ class _CallPageState extends State<CallPage> {
             itemCount: _infoStrings.length,
             itemBuilder: (BuildContext context, int index) {
               if (_infoStrings.isEmpty) {
-                return Text("null");  // return type can't be null, a widget was required
+                return Text("null"); // return type can't be null, a widget was required
               }
               return Padding(
                 padding: const EdgeInsets.symmetric(

@@ -18,7 +18,7 @@ class IndexState extends State<IndexPage> {
   /// if channel textField is validated to have error
   bool _validateError = false;
 
-  ClientRole? _role = ClientRole.Broadcaster;
+  ClientRole _role = ClientRole.Broadcaster;
 
   @override
   void dispose() {
@@ -45,8 +45,7 @@ class IndexState extends State<IndexPage> {
                       child: TextField(
                     controller: _channelController,
                     decoration: InputDecoration(
-                      errorText:
-                          _validateError ? 'Channel name is mandatory' : null,
+                      errorText: _validateError ? 'Channel name is mandatory' : null,
                       border: UnderlineInputBorder(
                         borderSide: BorderSide(width: 1),
                       ),
@@ -62,7 +61,7 @@ class IndexState extends State<IndexPage> {
                     leading: Radio(
                       value: ClientRole.Broadcaster,
                       groupValue: _role,
-                      onChanged: (ClientRole? value) {
+                      onChanged: (ClientRole value) {
                         setState(() {
                           _role = value;
                         });
@@ -74,7 +73,7 @@ class IndexState extends State<IndexPage> {
                     leading: Radio(
                       value: ClientRole.Audience,
                       groupValue: _role,
-                      onChanged: (ClientRole? value) {
+                      onChanged: (ClientRole value) {
                         setState(() {
                           _role = value;
                         });
@@ -88,14 +87,11 @@ class IndexState extends State<IndexPage> {
                 child: Row(
                   children: <Widget>[
                     Expanded(
-                        child: ElevatedButton(
-                        onPressed: onJoin, 
+                      child: ElevatedButton(
+                        onPressed: onJoin,
                         child: Text('Join'),
-                        style: ButtonStyle(
-                          backgroundColor: MaterialStateProperty.all(Colors.blueAccent),
-                          foregroundColor: MaterialStateProperty.all(Colors.white) 
-                        ),
-                        ),
+                        style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.blueAccent), foregroundColor: MaterialStateProperty.all(Colors.white)),
+                      ),
                     ),
                     // Expanded(
                     //   child: RaisedButton(
@@ -118,9 +114,7 @@ class IndexState extends State<IndexPage> {
   Future<void> onJoin() async {
     // update input validation
     setState(() {
-      _channelController.text.isEmpty
-          ? _validateError = true
-          : _validateError = false;
+      _channelController.text.isEmpty ? _validateError = true : _validateError = false;
     });
     if (_channelController.text.isNotEmpty) {
       // await for camera and mic permissions before pushing video page
