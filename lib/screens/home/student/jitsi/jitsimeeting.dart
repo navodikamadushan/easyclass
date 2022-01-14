@@ -194,7 +194,7 @@ class _MyAppState extends State<MyApp> {
           }, onConferenceTerminated: ({message}) {
             debugPrint("${options.room} terminated with message: $message");
           }));
-      print(result.toString() + '\n');
+      print(result[0].toString() + '\n');
     } catch (error) {
       debugPrint("error: $error");
     }
