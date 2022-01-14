@@ -4,7 +4,7 @@ class JistiVideoConference {
     this.name;
   }
   testconstructor() {
-    print(this.name);
+    print(name);
   }
   /*
   joinMeeting() async {
