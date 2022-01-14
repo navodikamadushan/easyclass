@@ -40,6 +40,7 @@ dependencies:
   top_modal_sheet: ^1.0.0+1
   plugin_platform_interface: ^2.1.2
   mockito: ^5.0.17 
+  jitsi_meet: ^4.0.0
 
 dev_dependencies:
   flutter_test:
