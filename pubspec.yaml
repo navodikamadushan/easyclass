@@ -40,6 +40,8 @@ dependencies:
   top_modal_sheet: ^1.0.0+1
   plugin_platform_interface: ^2.1.2
   mockito: ^5.0.17 
+  agora_rtc_engine: ^4.2.0
+  permission_handler: ^8.3.0
 
 dev_dependencies:
   flutter_test:

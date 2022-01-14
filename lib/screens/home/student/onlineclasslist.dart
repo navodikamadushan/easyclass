@@ -8,7 +8,8 @@ import "package:easyclass/models/record.dart";
 import 'package:provider/provider.dart';
 import "package:easyclass/models/user.dart";
 import "package:easyclass/screens/home/student/timeslot.dart";
-import "package:easyclass/screens/home/student/zoom/zoomscreen.dart";
+//import "package:easyclass/screens/home/student/zoom/zoomscreen.dart";
+import "package:easyclass/screens/home/student/agora/pages/index.dart";
 
 class LessonList extends StatefulWidget {
   var subscribed_classes;
@@ -82,12 +83,12 @@ class _LessonList extends State<LessonList> {
             subtitle: Text(record.subject),
             trailing: _buildButton('Join', () async {
               print(record.class_name);
-              ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+              /*ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                 content: Text("මෙම විශේෂාංගය තවමත් සංවර්ධනය කර නොමැත."),
-              ));
-              /*Navigator.of(context).push(
-                MaterialPageRoute(builder: (context) => MeetingWidget()), //'1', '79482849584', '6VrFfY'
-              );*/
+              ));*/
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => IndexPage()), //'1', '79482849584', '6VrFfY'
+              );
             }),
             onExpansionChanged: (value) {
               //print(expansionTileKey.hashCode.toString());
