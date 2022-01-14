@@ -17,9 +17,9 @@ class _MeetingState extends State<Meeting> {
   final nameText = TextEditingController(text: "Plugin Test User");
   final emailText = TextEditingController(text: "fake@email.com");
   final iosAppBarRGBAColor = TextEditingController(text: "#0080FF80"); //transparent blue
-  bool? isAudioOnly = true;
-  bool? isAudioMuted = true;
-  bool? isVideoMuted = true;
+  bool isAudioOnly = true;
+  bool isAudioMuted = true;
+  bool isVideoMuted = true;
 
   @override
   void initState() {
@@ -187,26 +187,26 @@ class _MeetingState extends State<Meeting> {
     );
   }
 
-  _onAudioOnlyChanged(bool? value) {
+  _onAudioOnlyChanged(bool value) {
     setState(() {
       isAudioOnly = value;
     });
   }
 
-  _onAudioMutedChanged(bool? value) {
+  _onAudioMutedChanged(bool value) {
     setState(() {
       isAudioMuted = value;
     });
   }
 
-  _onVideoMutedChanged(bool? value) {
+  _onVideoMutedChanged(bool value) {
     setState(() {
       isVideoMuted = value;
     });
   }
 
   _joinMeeting() async {
-    String? serverUrl = serverText.text.trim().isEmpty ? null : serverText.text;
+    String serverUrl = serverText.text.trim().isEmpty ? null : serverText.text;
 
     // Enable or disable any feature flag here
     // If feature flag are not provided, default values will be used
