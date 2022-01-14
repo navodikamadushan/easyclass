@@ -10,6 +10,7 @@ import "package:easyclass/models/user.dart";
 import "package:easyclass/screens/home/student/timeslot.dart";
 //import "package:easyclass/screens/home/student/zoom/zoomscreen.dart";
 import "package:easyclass/screens/home/student/jitsi/jitsimeeting.dart";
+import "package:easyclass/services/jitsiservice.dart";
 
 class LessonList extends StatefulWidget {
   var subscribed_classes;
@@ -22,6 +23,7 @@ class LessonList extends StatefulWidget {
 
 class _LessonList extends State<LessonList> {
   final DatabaseService databaseService = DatabaseService();
+  final JistiVideoConference jitsi = JistiVideoConference("Name print!");
   int selected = 0;
   @override
   Widget build(BuildContext context) {
@@ -86,9 +88,10 @@ class _LessonList extends State<LessonList> {
               /*ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                 content: Text("මෙම විශේෂාංගය තවමත් සංවර්ධනය කර නොමැත."),
               ));*/
-              Navigator.of(context).push(
+              jitsi.testconstructor();
+              /*Navigator.of(context).push(
                 MaterialPageRoute(builder: (context) => MyApp()), //'1', '79482849584', '6VrFfY'
-              );
+              );*/
             }),
             onExpansionChanged: (value) {
               //print(expansionTileKey.hashCode.toString());
