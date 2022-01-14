@@ -189,6 +189,7 @@ class _MyAppState extends State<MyApp> {
       dynamic result = await JitsiMeet.joinMeeting(options,
           listener: JitsiMeetingListener(onConferenceWillJoin: ({message}) {
             debugPrint("${options.room} will join with message: $message");
+            print("Hiiiiiii");
           }, onConferenceJoined: ({message}) {
             debugPrint("${options.room} joined with message: $message");
           }, onConferenceTerminated: ({message}) {
