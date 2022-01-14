@@ -1,7 +1,9 @@
 class JistiVideoConference {
   final String name;
-  JistiVideoConference(String name){this.name;};
-  testconstructor(){
+  JistiVideoConference(String name) {
+    this.name;
+  }
+  testconstructor() {
     print(this.name);
   }
   /*
