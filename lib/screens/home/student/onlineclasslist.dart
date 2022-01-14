@@ -9,7 +9,6 @@ import 'package:provider/provider.dart';
 import "package:easyclass/models/user.dart";
 import "package:easyclass/screens/home/student/timeslot.dart";
 //import "package:easyclass/screens/home/student/zoom/zoomscreen.dart";
-import "package:easyclass/screens/home/student/agora/pages/index.dart";
 
 class LessonList extends StatefulWidget {
   var subscribed_classes;
