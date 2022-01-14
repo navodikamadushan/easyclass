@@ -1,3 +1,3 @@
 /// Define App ID and Token
 const APP_ID = "b3f705f4c0ef44bebd01a44ab2459e8c";
-//const Token = Your_Token;
+const Token = "00628e81208c764412b9d819c7433c310e1IAD3yawOuoA4V+mDy5D0CoKCBBBvDu01rm9O6S3NIhFdK0Gj/oEAAAAAEACBgxuCzYniYQEAAQDNieJh";
