@@ -186,12 +186,12 @@ class _MyAppState extends State<MyApp> {
         ..videoMuted = isVideoMuted;
 
       debugPrint("JitsiMeetingOptions: $options");
+      print("Hiiiiiiiiiiiiiiiiiii");
       dynamic result = await JitsiMeet.joinMeeting(options,
           listener: JitsiMeetingListener(onConferenceWillJoin: ({message}) {
             debugPrint("${options.room} will join with message: $message");
           }, onConferenceJoined: ({message}) {
             debugPrint("${options.room} joined with message: $message");
-            print("Hiiiiii444444444444444444i");
           }, onConferenceTerminated: ({message}) {
             debugPrint("${options.room} terminated with message: $message");
           }));
