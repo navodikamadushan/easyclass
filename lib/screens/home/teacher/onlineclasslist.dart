@@ -119,7 +119,7 @@ class _LessonList extends State<LessonList> {
           primary: Colors.purple[600],
           onPrimary: Colors.white,
           shape: StadiumBorder(),
-          padding: EdgeInsets.symmetric(horizontal: 32, vertical: 12),
+          padding: EdgeInsets.symmetric(horizontal: 12, vertical: 12),
         ),
         child: Text(label),
         onPressed: onClicked,
