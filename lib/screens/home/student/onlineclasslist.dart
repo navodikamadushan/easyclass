@@ -86,7 +86,7 @@ class _LessonList extends State<LessonList> {
             ),
             subtitle: Text(record.subject),
             trailing: _buildButton('Join', () async {
-              print(record.class_name);
+              print(record.online_class_id);
               /*ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                 content: Text("මෙම විශේෂාංගය තවමත් සංවර්ධනය කර නොමැත."),
               ));*/
