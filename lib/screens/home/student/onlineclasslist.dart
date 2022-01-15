@@ -101,7 +101,7 @@ class _LessonList extends State<LessonList> {
               /*Navigator.of(context).push(
                 MaterialPageRoute(builder: (context) => MyApp()), //'1', '79482849584', '6VrFfY'
               );*/
-            }),
+            }, record.isstart),
             onExpansionChanged: (value) {
               //print(expansionTileKey.hashCode.toString());
               selected = expansionTileKey.hashCode;
@@ -117,8 +117,8 @@ class _LessonList extends State<LessonList> {
         ));
   }
 
-  Widget _buildButton(String text, VoidCallback onClicked) {
-    return record.isstart
+  Widget _buildButton(String text, VoidCallback onClicked, bool isStart) {
+    return isStart
         ? ElevatedButton(
             style: ElevatedButton.styleFrom(
               primary: Colors.blue,
