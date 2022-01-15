@@ -96,14 +96,14 @@ class _LessonList extends State<LessonList> {
                       flex: 5,
                       child: Padding(
                         padding: EdgeInsets.all(8),
-                        child: _buildButton(context, "Start Meeting", () {}),
+                        child: _buildButton(context, "පන්තිය ආරම්භ කරන්න", () {}),
                       ),
                     ),
                     Expanded(
                       flex: 5,
                       child: Padding(
                         padding: EdgeInsets.all(8),
-                        child: _buildButton(context, "Join", () {}),
+                        child: _buildButton(context, "එක්වන්න", () {}),
                       ),
                     )
                   ],
