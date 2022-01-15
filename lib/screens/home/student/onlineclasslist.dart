@@ -88,10 +88,10 @@ class _LessonList extends State<LessonList> {
               /*ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                 content: Text("මෙම විශේෂාංගය තවමත් සංවර්ධනය කර නොමැත."),
               ));*/
-              jitsi.testconstructor("Name print!");
-              /*Navigator.of(context).push(
+              //jitsi.testconstructor("Name print!");
+              Navigator.of(context).push(
                 MaterialPageRoute(builder: (context) => MyApp()), //'1', '79482849584', '6VrFfY'
-              );*/
+              );
             }),
             onExpansionChanged: (value) {
               //print(expansionTileKey.hashCode.toString());
