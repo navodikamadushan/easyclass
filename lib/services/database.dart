@@ -63,7 +63,7 @@ class DatabaseService {
 
   //update for online class starting
   Future updateIsStart(String onlineClassId, bool isstart) async {
-    return await users.doc(onlineClassId).update({
+    return await onlineclass.doc(onlineClassId).update({
       'isstart': isstart,
     });
   }
