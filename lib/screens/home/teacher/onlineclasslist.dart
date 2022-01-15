@@ -96,14 +96,14 @@ class _LessonList extends State<LessonList> {
                       flex: 5,
                       child: Padding(
                         padding: EdgeInsets.all(8),
-                        child: _buildButton(context),
+                        child: _buildButton(context, "Start Meeting", () {}),
                       ),
                     ),
                     Expanded(
                       flex: 5,
                       child: Padding(
                         padding: EdgeInsets.all(8),
-                        child: _buildButton(context),
+                        child: _buildButton(context, "Join", () {}),
                       ),
                     )
                   ],
@@ -114,14 +114,14 @@ class _LessonList extends State<LessonList> {
         ));
   }
 
-  Widget _buildButton(BuildContext context) => ElevatedButton(
+  Widget _buildButton(BuildContext context, String label, VoidCallback onClicked) => ElevatedButton(
         style: ElevatedButton.styleFrom(
           primary: Colors.purple[600],
           onPrimary: Colors.white,
           shape: StadiumBorder(),
           padding: EdgeInsets.symmetric(horizontal: 32, vertical: 12),
         ),
-        child: Text("Join"),
-        onPressed: () {}, //onClicked,
+        child: Text(label),
+        onPressed: onClicked,
       );
 }
