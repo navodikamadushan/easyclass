@@ -90,11 +90,16 @@ class _LessonList extends State<LessonList> {
               ),
               Container(
                 //padding: EdgeInsets.all(8),
-
                 child: Row(
                   children: [
-                    _buildButton(context),
-                    _buildButton(context),
+                    Expanded(
+                      flex: 5,
+                      child: _buildButton(context),
+                    )
+                    Expanded(
+                      flex: 5,
+                      child: _buildButton(context),
+                    )
                   ],
                 ),
               ),
