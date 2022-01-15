@@ -93,9 +93,14 @@ class _LessonList extends State<LessonList> {
                 content: Text("මෙම විශේෂාංගය තවමත් සංවර්ධනය කර නොමැත."),
               ));*/
               _alertService.joinToExistingClass(context, record.class_name).then((onValue) async {
-                print(onValue);
+                if (onValue) {
+                  print("Accept!");
+                  jitsi.joinMeeting(record.online_class_id, record.subject, userInfo['name'], userInfo['email']);
+                } else {
+                  print("Discard!");
+                }
               });
-              jitsi.joinMeeting(record.online_class_id, record.subject, userInfo['name'], userInfo['email']);
+
               /*Navigator.of(context).push(
                 MaterialPageRoute(builder: (context) => MyApp()), //'1', '79482849584', '6VrFfY'
               );*/
