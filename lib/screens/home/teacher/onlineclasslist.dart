@@ -114,7 +114,7 @@ class _LessonList extends State<LessonList> {
                         padding: EdgeInsets.all(8),
                         child: _buildButton(context, "එක්වන්න", Colors.purple[600], () {
                           print("Join!");
-                        }, true),
+                        }, false),
                       ),
                     )
                   ],
