@@ -9,14 +9,18 @@ class JistiVideoConference {
   joinMeeting(String roomName, String subject, String displayname, String useremail) async {
     String serverUrl = null;
 
+    var isAudioOnly = true;
+    var isAudioMuted = true;
+    var isVideoMuted = true;
+
     try {
       var options = JitsiMeetingOptions()
-        ..room = roomText.text
+        ..room = roomName
         ..serverURL = serverUrl
-        ..subject = subjectText.text
-        ..userDisplayName = nameText.text
-        ..userEmail = emailText.text
-        ..iosAppBarRGBAColor = iosAppBarRGBAColor.text
+        ..subject = subject
+        ..userDisplayName = displayname
+        ..userEmail = useremail
+        ..iosAppBarRGBAColor = '#0080FF80' //iosAppBarRGBAColor.text
         ..audioOnly = isAudioOnly
         ..audioMuted = isAudioMuted
         ..videoMuted = isVideoMuted;
