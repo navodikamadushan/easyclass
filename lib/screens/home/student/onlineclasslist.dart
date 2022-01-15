@@ -14,13 +14,10 @@ import "package:easyclass/services/jitsiservice.dart";
 
 class LessonList extends StatefulWidget {
   var subscribed_classes;
-  String username;
-  String email;
   DocumentSnapshot userInfo;
   LessonList(DocumentSnapshot userInfo) {
     this.subscribed_classes = userInfo['subscribed_class'];
-    this.userInfo = userInfo['name'];
-    this.email = userInfo['email'];
+    this.userInfo = userInfo;
   }
   @override
   _LessonList createState() => _LessonList();
@@ -51,12 +48,12 @@ class _LessonList extends State<LessonList> {
                         child: Text('ඔබ දායක වූ සියලුම පන්ති මකා ඇත.'),
                       ),
                     )
-                  : _buildList(context, snapshot.data.docs);
+                  : _buildList(context, snapshot.data.docs, this.userInfo);
             },
           );
   }
 
-  Widget _buildList(BuildContext context, List<DocumentSnapshot> snapshot) {
+  Widget _buildList(BuildContext context, List<DocumentSnapshot> snapshot, DocumentSnapshot userInfo) {
     return ListView(
       // ExpansionPanelList.radio(
       physics: const AlwaysScrollableScrollPhysics(),
