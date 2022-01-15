@@ -7,7 +7,7 @@ class JistiVideoConference {
   }
 
   joinMeeting(String roomName, String subject, String displayname, String useremail) async {
-    String serverUrl = serverText.text?.trim()?.isEmpty ?? "" ? null : null;
+    String serverUrl = null;
 
     try {
       var options = JitsiMeetingOptions()
