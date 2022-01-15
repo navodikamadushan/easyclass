@@ -93,6 +93,7 @@ class _LessonList extends State<LessonList> {
                 child: Row(
                   children: [
                     _buildButton(context),
+                    _buildButton(context),
                   ],
                 ),
               ),
