@@ -14,8 +14,10 @@ import "package:easyclass/services/jitsiservice.dart";
 
 class LessonList extends StatefulWidget {
   var subscribed_classes;
+  DocumentSnapshot userInfo;
   LessonList(var subscribed_classes) {
     this.subscribed_classes = subscribed_classes;
+    this.userInfo = userInfo;
   }
   @override
   _LessonList createState() => _LessonList();
@@ -88,7 +90,7 @@ class _LessonList extends State<LessonList> {
               /*ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                 content: Text("මෙම විශේෂාංගය තවමත් සංවර්ධනය කර නොමැත."),
               ));*/
-              jitsi.testconstructor(record.online_class_id, "physics", "DisplayName", "email@email.com");
+              jitsi.testconstructor(record.online_class_id, record.subject, "DisplayName", "email@email.com");
               /*Navigator.of(context).push(
                 MaterialPageRoute(builder: (context) => MyApp()), //'1', '79482849584', '6VrFfY'
               );*/
