@@ -1,6 +1,9 @@
 class JistiVideoConference {
   testconstructor(String roomName, String subject, String displayname, String useremail) {
     print("roomName:" + roomName);
+    print("subject:" + subject);
+    print("displayname:" + displayname);
+    print("useremail:" + useremail);
   }
   /*
   joinMeeting() async {
