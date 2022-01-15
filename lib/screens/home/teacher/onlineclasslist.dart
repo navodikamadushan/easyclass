@@ -89,7 +89,9 @@ class _LessonList extends State<LessonList> {
                 ),
               ),
               Row(
-                children: _buildButton(context),
+                children: [
+                  _buildButton(context),
+                ],
               )
             ],
           ),
