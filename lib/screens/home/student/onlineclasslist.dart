@@ -15,8 +15,8 @@ import "package:easyclass/services/jitsiservice.dart";
 class LessonList extends StatefulWidget {
   var subscribed_classes;
   DocumentSnapshot userInfo;
-  LessonList(var subscribed_classes) {
-    this.subscribed_classes = subscribed_classes;
+  LessonList(DocumentSnapshot userInfo) {
+    this.subscribed_classes = userInfo['subscribed_class'];
     this.userInfo = userInfo;
   }
   @override
