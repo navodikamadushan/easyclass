@@ -94,11 +94,17 @@ class _LessonList extends State<LessonList> {
                   children: [
                     Expanded(
                       flex: 5,
-                      child: _buildButton(context),
+                      child: Padding(
+                        padding: EdgeInsets.all(8),
+                        child: _buildButton(context),
+                      ),
                     ),
                     Expanded(
                       flex: 5,
-                      child: _buildButton(context),
+                      child: Padding(
+                        padding: EdgeInsets.all(8),
+                        child: _buildButton(context),
+                      ),
                     )
                   ],
                 ),
