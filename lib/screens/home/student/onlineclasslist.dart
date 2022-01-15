@@ -88,7 +88,7 @@ class _LessonList extends State<LessonList> {
               /*ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                 content: Text("මෙම විශේෂාංගය තවමත් සංවර්ධනය කර නොමැත."),
               ));*/
-              jitsi.testconstructor("roomName", "physics", "DisplayName", "email@email.com");
+              jitsi.testconstructor("subject ID should print here", "physics", "DisplayName", "email@email.com");
               /*Navigator.of(context).push(
                 MaterialPageRoute(builder: (context) => MyApp()), //'1', '79482849584', '6VrFfY'
               );*/
