@@ -88,11 +88,14 @@ class _LessonList extends State<LessonList> {
                   ),
                 ),
               ),
-              Row(
-                children: [
-                  _buildButton(context),
-                ],
-              )
+              Padding(
+                padding: EdgeInsets.all(120),
+                child: Row(
+                  children: [
+                    _buildButton(context),
+                  ],
+                ),
+              ),
             ],
           ),
         ));
