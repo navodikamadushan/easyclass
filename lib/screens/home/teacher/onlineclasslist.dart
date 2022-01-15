@@ -105,7 +105,7 @@ class _LessonList extends State<LessonList> {
           shape: StadiumBorder(),
           padding: EdgeInsets.symmetric(horizontal: 32, vertical: 12),
         ),
-        child: Text("HI"),
+        child: Text("Join"),
         onPressed: () {}, //onClicked,
       );
 }
