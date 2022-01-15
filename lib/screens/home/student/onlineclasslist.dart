@@ -89,9 +89,6 @@ class _LessonList extends State<LessonList> {
             subtitle: Text(record.subject),
             trailing: _buildButton('Join', () async {
               print(record.online_class_id);
-              /*ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                content: Text("මෙම විශේෂාංගය තවමත් සංවර්ධනය කර නොමැත."),
-              ));*/
               _alertService.joinToExistingClass(context, record.class_name).then((onValue) async {
                 if (onValue) {
                   print("Accept!");
