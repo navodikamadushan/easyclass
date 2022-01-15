@@ -48,7 +48,7 @@ class _LessonList extends State<LessonList> {
                         child: Text('ඔබ දායක වූ සියලුම පන්ති මකා ඇත.'),
                       ),
                     )
-                  : _buildList(context, snapshot.data.docs, this.userInfo);
+                  : _buildList(context, snapshot.data.docs, widget.userInfo);
             },
           );
   }
