@@ -98,6 +98,7 @@ class _LessonList extends State<LessonList> {
                           padding: EdgeInsets.all(8),
                           child: _buildButton(context, "අරඹන්න", Colors.green[600], () {
                             print("Start!");
+                            print(record.class_id);
                           })),
                     ),
                     Expanded(
