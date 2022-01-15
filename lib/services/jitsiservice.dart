@@ -5,8 +5,8 @@ class JistiVideoConference {
     print("displayname:" + displayname);
     print("useremail:" + useremail);
   }
-  /*
-  joinMeeting() async {
+
+  joinMeeting(String roomName, String subject, String displayname, String useremail) async {
     String serverUrl = serverText.text?.trim()?.isEmpty ?? "" ? null : serverText.text;
 
     try {
@@ -49,5 +49,5 @@ class JistiVideoConference {
 
   _onError(error) {
     debugPrint("_onError broadcasted: $error");
-  }*/
+  }
 }
