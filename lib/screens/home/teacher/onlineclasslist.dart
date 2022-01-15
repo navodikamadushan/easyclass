@@ -94,7 +94,7 @@ class _LessonList extends State<LessonList> {
                   children: [
                     Expanded(
                       flex: 5,
-                      child: Padding(padding: EdgeInsets.all(8), child: _buildButton(context, "අරඹන්න", Colors.purple[600], () {})),
+                      child: Padding(padding: EdgeInsets.all(8), child: _buildButton(context, "අරඹන්න", Colors.green[600], () {})),
                     ),
                     Expanded(
                       flex: 5,
