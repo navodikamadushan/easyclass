@@ -100,7 +100,7 @@ class _LessonList extends State<LessonList> {
           shape: StadiumBorder(),
           padding: EdgeInsets.symmetric(horizontal: 32, vertical: 12),
         ),
-        child: Text(text),
+        child: Text("HI"),
         onPressed: () {}, //onClicked,
       );
 }
