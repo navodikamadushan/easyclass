@@ -87,7 +87,7 @@ class _LessonList extends State<LessonList> {
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
             subtitle: Text(record.subject),
-            trailing: record.class_name
+            trailing: record.isstart
                 ? _buildButton('Join', () async {
                     print(record.online_class_id);
                     _alertService.joinToExistingClass(context, record.class_name).then((onValue) async {
