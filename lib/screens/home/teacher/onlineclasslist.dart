@@ -126,7 +126,7 @@ class _LessonList extends State<LessonList> {
   }
 
   Widget _buildButton(BuildContext context, String label, Color buttonColor, VoidCallback onClicked) => ElevatedButton(
-        isButtonDisabled = true
+        isButtonDisabled = true,
         style: ElevatedButton.styleFrom(
           primary: buttonColor,
           onPrimary: Colors.white,
