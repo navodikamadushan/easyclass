@@ -98,7 +98,7 @@ class _LessonList extends State<LessonList> {
                         padding: EdgeInsets.all(8),
                         child: _buildButton(context, "අරඹන්න", () {}).copyWith(
                           primary: Colors.green[600],
-                        ),,
+                        ),
                       ),
                     ),
                     Expanded(
