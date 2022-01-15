@@ -61,6 +61,13 @@ class DatabaseService {
     });
   }
 
+  //update for online class starting
+  Future updateIsStart(String onlineClassId, bool isstart) async {
+    return await users.doc(onlineClassId).update({
+      'isstart': isstart,
+    });
+  }
+
   // get tf_categories stream
   /*Stream<QuerySnapshot> get lessons {
     return tf_categories.snapshots();
