@@ -96,7 +96,7 @@ class _LessonList extends State<LessonList> {
                       flex: 5,
                       child: Padding(
                         padding: EdgeInsets.all(8),
-                        child: _buildButton(context, "අරඹන්න", () {}).copyWith(
+                        child: _buildButton(context, "අරඹන්න",Colors.purple[600], () {})
                           primary: Colors.green[600],
                         ),
                       ),
@@ -105,7 +105,7 @@ class _LessonList extends State<LessonList> {
                       flex: 5,
                       child: Padding(
                         padding: EdgeInsets.all(8),
-                        child: _buildButton(context, "එක්වන්න", () {}),
+                        child: _buildButton(context, "එක්වන්න",Colors.purple[600], () {}),
                       ),
                     )
                   ],
@@ -116,9 +116,9 @@ class _LessonList extends State<LessonList> {
         ));
   }
 
-  Widget _buildButton(BuildContext context, String label, VoidCallback onClicked) => ElevatedButton(
+  Widget _buildButton(BuildContext context, String label, Color buttonColor, VoidCallback onClicked) => ElevatedButton(
         style: ElevatedButton.styleFrom(
-          primary: Colors.purple[600],
+          primary: buttonColor,
           onPrimary: Colors.white,
           shape: StadiumBorder(),
           padding: EdgeInsets.symmetric(horizontal: 12, vertical: 12),
