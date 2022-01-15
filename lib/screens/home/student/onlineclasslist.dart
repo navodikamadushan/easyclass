@@ -118,7 +118,7 @@ class _LessonList extends State<LessonList> {
   }
 
   Widget _buildButton(String text, VoidCallback onClicked) {
-    return false
+    return record.isstart
         ? ElevatedButton(
             style: ElevatedButton.styleFrom(
               primary: Colors.blue,
