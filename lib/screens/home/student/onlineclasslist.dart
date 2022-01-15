@@ -11,6 +11,7 @@ import "package:easyclass/screens/home/student/timeslot.dart";
 //import "package:easyclass/screens/home/student/zoom/zoomscreen.dart";
 import "package:easyclass/screens/home/student/jitsi/jitsimeeting.dart";
 import "package:easyclass/services/jitsiservice.dart";
+import "package:easyclass/services/alert.dart";
 
 class LessonList extends StatefulWidget {
   var subscribed_classes;
@@ -68,6 +69,7 @@ class _LessonList extends State<LessonList> {
   Widget _buildListItem(BuildContext context, DocumentSnapshot data, DocumentSnapshot userInfo) {
     final GlobalKey expansionTileKey = GlobalKey();
     final record = Record.fromSnapshot(data);
+    final AlertService _alertService = AlertService();
     return Padding(
         key: ValueKey(record.class_name),
         padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
@@ -90,6 +92,9 @@ class _LessonList extends State<LessonList> {
               /*ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                 content: Text("මෙම විශේෂාංගය තවමත් සංවර්ධනය කර නොමැත."),
               ));*/
+              _alertService.joinToExistingClass(context, record.class_name).then((onValue) async {
+                print(onValue);
+              });
               jitsi.joinMeeting(record.online_class_id, record.subject, userInfo['name'], userInfo['email']);
               /*Navigator.of(context).push(
                 MaterialPageRoute(builder: (context) => MyApp()), //'1', '79482849584', '6VrFfY'

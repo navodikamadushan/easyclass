@@ -83,6 +83,48 @@ class AlertService {
     );
   }
 
+  Future<bool> joinToExistingClass(BuildContext context, String classname) {
+    bool wantToaccept;
+    return showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (context) {
+        return AlertDialog(
+          title: Text(
+            'පන්ති සැකසුම',
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
+          content: SingleChildScrollView(
+            child: ListBody(
+              children: <Widget>[
+                Text('ඔබට ${classname} පන්තියට සම්බන්ධ වීමට අවශ්‍යද?'),
+              ],
+            ),
+          ),
+          actions: <Widget>[
+            TextButton(
+              child: const Text(
+                'එක්වන්න',
+                style: TextStyle(color: Colors.red),
+              ),
+              onPressed: () async {
+                wantToaccept = true;
+                Navigator.of(context).pop(wantToaccept);
+              },
+            ),
+            TextButton(
+              child: const Text('ඉවතලන්න'),
+              onPressed: () async {
+                wantToaccept = false;
+                Navigator.of(context).pop(wantToaccept);
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
+
   Future<bool> signOutAlert(BuildContext context) {
     bool wantToSignOut;
     return showDialog(
