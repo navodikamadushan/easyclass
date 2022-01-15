@@ -92,4 +92,15 @@ class _LessonList extends State<LessonList> {
           ),
         ));
   }
+
+  Widget build(BuildContext context) => ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          primary: Colors.purple[600],
+          onPrimary: Colors.white,
+          shape: StadiumBorder(),
+          padding: EdgeInsets.symmetric(horizontal: 32, vertical: 12),
+        ),
+        child: Text(text),
+        onPressed: () {}, //onClicked,
+      );
 }
