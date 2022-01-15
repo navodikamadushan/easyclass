@@ -131,6 +131,7 @@ class _LessonList extends State<LessonList> {
           onPrimary: Colors.white,
           shape: StadiumBorder(),
           padding: EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+          onSurface: buttonColor,
         ),
         child: Text(label),
         onPressed: null, //onClicked,
