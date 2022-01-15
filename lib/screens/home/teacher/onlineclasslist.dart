@@ -88,8 +88,8 @@ class _LessonList extends State<LessonList> {
                   ),
                 ),
               ),
-              Container(
-                //padding: EdgeInsets.all(8),
+              Padding()(
+                padding: EdgeInsets.all(8),
                 child: Row(
                   children: [
                     Expanded(
