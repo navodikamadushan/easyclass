@@ -87,21 +87,23 @@ class _LessonList extends State<LessonList> {
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
             subtitle: Text(record.subject),
-            trailing: _buildButton('Join', () async {
-              print(record.online_class_id);
-              _alertService.joinToExistingClass(context, record.class_name).then((onValue) async {
-                if (onValue) {
-                  print("Accept!");
-                  jitsi.joinMeeting(record.online_class_id, record.subject, userInfo['name'], userInfo['email']);
-                } else {
-                  print("Discard!");
-                }
-              });
+            trailing: record.class_name
+                ? _buildButton('Join', () async {
+                    print(record.online_class_id);
+                    _alertService.joinToExistingClass(context, record.class_name).then((onValue) async {
+                      if (onValue) {
+                        print("Accept!");
+                        jitsi.joinMeeting(record.online_class_id, record.subject, userInfo['name'], userInfo['email']);
+                      } else {
+                        print("Discard!");
+                      }
+                    });
 
-              /*Navigator.of(context).push(
+                    /*Navigator.of(context).push(
                 MaterialPageRoute(builder: (context) => MyApp()), //'1', '79482849584', '6VrFfY'
               );*/
-            }),
+                  })
+                : Container(),
             onExpansionChanged: (value) {
               //print(expansionTileKey.hashCode.toString());
               selected = expansionTileKey.hashCode;
