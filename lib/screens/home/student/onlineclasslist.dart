@@ -131,7 +131,7 @@ class _LessonList extends State<LessonList> {
           )
         : ElevatedButton(
             style: ElevatedButton.styleFrom(
-              primary: Colors.blue,
+              primary: Colors.blue[200],
               onPrimary: Colors.white,
               shape: StadiumBorder(),
               padding: EdgeInsets.symmetric(horizontal: 32, vertical: 12),
