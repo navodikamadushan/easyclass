@@ -106,7 +106,7 @@ class _LessonList extends State<LessonList> {
                               print("Not null");
                             }
                             print(record.online_class_id);
-                          })),
+                          }, record.isstart)),
                     ),
                     Expanded(
                       flex: 5,
@@ -114,7 +114,7 @@ class _LessonList extends State<LessonList> {
                         padding: EdgeInsets.all(8),
                         child: _buildButton(context, "එක්වන්න", Colors.purple[600], () {
                           print("Join!");
-                        }),
+                        }, true),
                       ),
                     )
                   ],
@@ -125,7 +125,7 @@ class _LessonList extends State<LessonList> {
         ));
   }
 
-  Widget _buildButton(BuildContext context, String label, Color buttonColor, VoidCallback onClicked) => ElevatedButton(
+  Widget _buildButton(BuildContext context, String label, Color buttonColor, VoidCallback onClicked, bool isStart) => ElevatedButton(
         style: ElevatedButton.styleFrom(
           primary: buttonColor,
           onPrimary: Colors.white,
@@ -134,6 +134,6 @@ class _LessonList extends State<LessonList> {
           onSurface: buttonColor,
         ),
         child: Text(label),
-        onPressed: null, //onClicked,
+        onPressed: isStart ? null : onClicked,
       );
 }
