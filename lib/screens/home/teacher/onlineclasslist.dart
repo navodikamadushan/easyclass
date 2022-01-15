@@ -89,7 +89,7 @@ class _LessonList extends State<LessonList> {
                 ),
               ),
               Container(
-                  width: double.infinity,
+                  width: 100.0,
                   //padding: EdgeInsets.all(8),
                   child: Center(
                     child: Row(
