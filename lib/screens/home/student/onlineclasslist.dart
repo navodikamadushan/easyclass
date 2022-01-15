@@ -129,6 +129,17 @@ class _LessonList extends State<LessonList> {
             child: Text(text),
             onPressed: onClicked,
           )
-        : Text('hi');
+        : ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              primary: Colors.blue,
+              onPrimary: Colors.white,
+              shape: StadiumBorder(),
+              padding: EdgeInsets.symmetric(horizontal: 32, vertical: 12),
+            ),
+            child: Text(text),
+            onPressed: () {
+              print("Not started yet!");
+            },
+          );
   }
 }
