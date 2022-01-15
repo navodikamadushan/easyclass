@@ -87,6 +87,9 @@ class _LessonList extends State<LessonList> {
                     fontSize: 20.0,
                   ),
                 ),
+              ),
+              Row(
+                children: _buildButton(context),
               )
             ],
           ),
