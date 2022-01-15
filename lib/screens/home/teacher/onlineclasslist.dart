@@ -89,7 +89,7 @@ class _LessonList extends State<LessonList> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.all(120),
+                padding: EdgeInsets.all(8),
                 child: Row(
                   children: [
                     _buildButton(context),
