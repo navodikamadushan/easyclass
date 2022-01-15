@@ -118,6 +118,7 @@ class _LessonList extends State<LessonList> {
   }
 
   Widget _buildButton(String text, VoidCallback onClicked, bool isStart) {
+    final AlertService _alertService = AlertService();
     return isStart
         ? ElevatedButton(
             style: ElevatedButton.styleFrom(
@@ -138,7 +139,7 @@ class _LessonList extends State<LessonList> {
             ),
             child: Text(text),
             onPressed: () {
-              print("Not started yet!");
+              _alertService.singleButtonAlert(context, 'පන්ති සැකසුම', 'මෙම පන්තිය තවම ආරම්භ කර නැත. කරුණාකර ඔබේ ගුරුවරයා අමතන්න.');
             },
           );
   }
