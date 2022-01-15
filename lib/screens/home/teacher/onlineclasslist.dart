@@ -93,7 +93,7 @@ class _LessonList extends State<LessonList> {
         ));
   }
 
-  Widget build(BuildContext context) => ElevatedButton(
+  Widget _buildButton(BuildContext context) => ElevatedButton(
         style: ElevatedButton.styleFrom(
           primary: Colors.purple[600],
           onPrimary: Colors.white,
