@@ -95,7 +95,7 @@ class _LessonList extends State<LessonList> {
                     Expanded(
                       flex: 5,
                       child: _buildButton(context),
-                    )
+                    ),
                     Expanded(
                       flex: 5,
                       child: _buildButton(context),
