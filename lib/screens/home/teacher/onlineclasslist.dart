@@ -89,14 +89,15 @@ class _LessonList extends State<LessonList> {
                 ),
               ),
               Container(
-                //padding: EdgeInsets.all(8),
+                  //padding: EdgeInsets.all(8),
+                  child: Center(
                 child: Row(
                   children: [
                     _buildButton(context),
                     _buildButton(context),
                   ],
                 ),
-              ),
+              )),
             ],
           ),
         ));
