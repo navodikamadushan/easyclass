@@ -61,11 +61,11 @@ class _LessonList extends State<LessonList> {
       scrollDirection: Axis.vertical,
       shrinkWrap: true,
       padding: const EdgeInsets.only(top: 5.0),
-      children: snapshot.map((data) => _buildListItem(context, data)).toList(),
+      children: snapshot.map((data) => _buildListItem(context, data, userInfo)).toList(),
     );
   }
 
-  Widget _buildListItem(BuildContext context, DocumentSnapshot data) {
+  Widget _buildListItem(BuildContext context, DocumentSnapshot data, DocumentSnapshot userInfo) {
     final GlobalKey expansionTileKey = GlobalKey();
     final record = Record.fromSnapshot(data);
     return Padding(
