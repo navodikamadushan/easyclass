@@ -118,15 +118,17 @@ class _LessonList extends State<LessonList> {
   }
 
   Widget _buildButton(String text, VoidCallback onClicked) {
-    return ElevatedButton(
-      style: ElevatedButton.styleFrom(
-        primary: Colors.blue,
-        onPrimary: Colors.white,
-        shape: StadiumBorder(),
-        padding: EdgeInsets.symmetric(horizontal: 32, vertical: 12),
-      ),
-      child: Text(text),
-      onPressed: onClicked,
-    );
+    return record.isstart
+        ? ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              primary: Colors.blue,
+              onPrimary: Colors.white,
+              shape: StadiumBorder(),
+              padding: EdgeInsets.symmetric(horizontal: 32, vertical: 12),
+            ),
+            child: Text(text),
+            onPressed: onClicked,
+          )
+        : Container();
   }
 }
