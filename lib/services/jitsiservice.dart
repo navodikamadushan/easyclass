@@ -1,3 +1,8 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:jitsi_meet/jitsi_meet.dart';
+import 'package:jitsi_meet/jitsi_meeting_listener.dart';
+
 class JistiVideoConference {
   testconstructor(String roomName, String subject, String displayname, String useremail) {
     print("roomName:" + roomName);
