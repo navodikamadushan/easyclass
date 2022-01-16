@@ -151,23 +151,23 @@ class _FormScreenState extends State<FormScreen> {
                           return;
                         }
                         // get current user
-                        setState(() => loading = true);
+                        //setState(() => loading = true);
                         dynamic user = await _auth.getCurrentUser();
                         if (user != null) {
                           print(user.uid.toString());
                           // add a new online class to database
                           dynamic result = await _database.addNewOnlineClass(_className, _subject, user.uid.toString(), context.read<ListProvider>().getAllItems(index));
                           if (result == null) {
-                            setState(() => loading = false);
+                            //setState(() => loading = false);
                             _formKey.currentState.save();
                             // print('');
                             print('submitted!');
                           } else {
-                            setState(() => loading = false);
+                            //setState(() => loading = false);
                             print('not submitted!');
                           }
                         } else {
-                          setState(() => loading = false);
+                          //setState(() => loading = false);
                           print('User not logged!');
                         }
                       },
