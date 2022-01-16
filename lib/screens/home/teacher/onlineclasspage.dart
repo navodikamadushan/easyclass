@@ -20,6 +20,11 @@ import 'package:easyclass/screens/home/teacher/newclass/form_screen.dart';
 
 class OnlineClassTeacherPage extends StatelessWidget {
   final AuthService _auth = AuthService();
+  DocumentSnapshot userInfo;
+  OnlineClassStudentPage(DocumentSnapshot userInfo) {
+    this.userInfo = userInfo;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
