@@ -22,10 +22,10 @@ class JistiVideoConference {
     var isVideoMuted = true;
 
     try {
-      Map<FeatureFlagEnum, bool> featureFlags = {
+      /*Map<FeatureFlagEnum, bool> featureFlags = {
         FeatureFlagEnum.WELCOME_PAGE_ENABLED: false,
         FeatureFlagEnum.INVITE_ENABLED: false,
-      };
+      };*/
       //featureFlag.resolution = FeatureFlagVideoResolution.MD_RESOLUTION; // Limit video resolution to 360p
       //..iosAppBarRGBAColor = '#0080FF80' //iosAppBarRGBAColor.text
       var options = JitsiMeetingOptions()
@@ -36,8 +36,8 @@ class JistiVideoConference {
         ..userEmail = useremail
         ..audioOnly = isAudioOnly
         ..audioMuted = isAudioMuted
-        ..videoMuted = isVideoMuted
-        ..featureFlags.addAll(featureFlags);
+        ..videoMuted = isVideoMuted;
+      //..featureFlags.addAll(featureFlags);
 
       debugPrint("JitsiMeetingOptions: $options");
       dynamic result = await JitsiMeet.joinMeeting(options,
