@@ -19,6 +19,19 @@ class JistiVideoConference {
     var isVideoMuted = true;
 
     try {
+      Map<FeatureFlagEnum, bool> featureFlags = {
+        FeatureFlagEnum.WELCOME_PAGE_ENABLED: false,
+        FeatureFlagEnum.INVITE_ENABLED: false,
+      };
+      // Here is an example, disabling features for each platform
+      if (Platform.isAndroid) {
+        // Disable ConnectionService usage on Android to avoid issues (see README)
+        featureFlags[FeatureFlagEnum.CALL_INTEGRATION_ENABLED] = false;
+      } else if (Platform.isIOS) {
+        // Disable PIP on iOS as it looks weird
+        featureFlags[FeatureFlagEnum.PIP_ENABLED] = false;
+      }
+      //featureFlag.resolution = FeatureFlagVideoResolution.MD_RESOLUTION; // Limit video resolution to 360p
       var options = JitsiMeetingOptions()
         ..room = roomName
         ..serverURL = serverUrl
@@ -28,7 +41,8 @@ class JistiVideoConference {
         ..iosAppBarRGBAColor = '#0080FF80' //iosAppBarRGBAColor.text
         ..audioOnly = isAudioOnly
         ..audioMuted = isAudioMuted
-        ..videoMuted = isVideoMuted;
+        ..videoMuted = isVideoMuted
+        ..featureFlags.addAll(featureFlags);
 
       debugPrint("JitsiMeetingOptions: $options");
       dynamic result = await JitsiMeet.joinMeeting(options,
