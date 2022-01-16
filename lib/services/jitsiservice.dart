@@ -36,7 +36,7 @@ class JistiVideoConference {
         ..userEmail = useremail
         ..audioOnly = isAudioOnly
         ..audioMuted = isAudioMuted
-        ..videoMuted = isVideoMuted;
+        ..videoMuted = isVideoMuted
         ..featureFlags.addAll(featureFlags);
 
       debugPrint("JitsiMeetingOptions: $options");
