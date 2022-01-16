@@ -160,8 +160,8 @@ class _FormScreenState extends State<FormScreen> {
                           if (result == null) {
                             setState(() => loading = false);
                             //_formKey.currentState.save();
-                            // print('');
                             print('submitted!');
+                            Navigator.pop(context);
                           } else {
                             //setState(() => loading = false);
                             print('not submitted!');
