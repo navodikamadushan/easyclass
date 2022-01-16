@@ -27,13 +27,13 @@ class JistiVideoConference {
         FeatureFlagEnum.INVITE_ENABLED: false,
       };
       //featureFlag.resolution = FeatureFlagVideoResolution.MD_RESOLUTION; // Limit video resolution to 360p
+      //..iosAppBarRGBAColor = '#0080FF80' //iosAppBarRGBAColor.text
       var options = JitsiMeetingOptions()
         ..room = roomName
         ..serverURL = serverUrl
         ..subject = subject
         ..userDisplayName = displayname
         ..userEmail = useremail
-        ..iosAppBarRGBAColor = '#0080FF80' //iosAppBarRGBAColor.text
         ..audioOnly = isAudioOnly
         ..audioMuted = isAudioMuted
         ..videoMuted = isVideoMuted
