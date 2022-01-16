@@ -9,6 +9,7 @@ import "package:easyclass/services/auth.dart";
 import 'package:easyclass/models/user.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
+import "package:easyclass/services/provider/list_provider.dart";
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
