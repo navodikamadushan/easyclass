@@ -17,6 +17,7 @@ import "package:easyclass/screens/home/teacher/menu.dart";
 //import 'package:easyclass/shared/custom_page_route.dart';
 import 'package:top_modal_sheet/top_modal_sheet.dart';
 import 'package:easyclass/screens/home/teacher/newclass/form_screen.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class OnlineClassTeacherPage extends StatelessWidget {
   final AuthService _auth = AuthService();
