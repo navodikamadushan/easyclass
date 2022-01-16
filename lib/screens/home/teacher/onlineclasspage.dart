@@ -16,6 +16,7 @@ import 'package:top_modal_sheet/top_modal_sheet.dart';
 import "package:easyclass/screens/home/teacher/menu.dart";
 //import 'package:easyclass/shared/custom_page_route.dart';
 import 'package:top_modal_sheet/top_modal_sheet.dart';
+import 'package:easyclass/screens/home/teacher/newclass/form_screen.dart';
 
 class OnlineClassTeacherPage extends StatelessWidget {
   final AuthService _auth = AuthService();
@@ -48,7 +49,9 @@ class OnlineClassTeacherPage extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          print('HI');
+          Navigator.of(context).push(
+            MaterialPageRoute(builder: (context) => FormScreen()),
+          );
         },
         backgroundColor: Colors.blue,
         child: const Icon(Icons.add),
