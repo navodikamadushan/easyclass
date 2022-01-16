@@ -120,7 +120,7 @@ class _LessonList extends State<LessonList> {
                           _alertService.joinToExistingClass(context, record.class_name).then((onValue) async {
                             if (onValue) {
                               print("Accept!");
-                              //jitsi.joinMeeting(record.online_class_id, record.subject, userInfo['name'], userInfo['email']);
+                              jitsi.joinMeeting(record.online_class_id, record.subject, userInfo['name'], userInfo['email']);
                             } else {
                               print("Discard!");
                             }
