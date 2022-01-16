@@ -68,6 +68,20 @@ class DatabaseService {
     });
   }
 
+  // update online classes
+  Future addNewOnlineClass(String class_name, String subject, String teacherid, var timeslot) async {
+    var onlineclassRef = onlineclass.doc();
+    return await onlineclassRef.set({
+      'class_name': class_name,
+      'subject': subject,
+      'teacher_id': teacherid,
+      'no_student': 0,
+      'isstart': false,
+      'timeslot': timeslot,
+      'online_class_id': onlineclassRef.id,
+    });
+  }
+
   // get tf_categories stream
   /*Stream<QuerySnapshot> get lessons {
     return tf_categories.snapshots();
