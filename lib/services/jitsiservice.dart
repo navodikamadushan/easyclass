@@ -23,14 +23,6 @@ class JistiVideoConference {
         FeatureFlagEnum.WELCOME_PAGE_ENABLED: false,
         FeatureFlagEnum.INVITE_ENABLED: false,
       };
-      // Here is an example, disabling features for each platform
-      if (Platform.isAndroid) {
-        // Disable ConnectionService usage on Android to avoid issues (see README)
-        featureFlags[FeatureFlagEnum.CALL_INTEGRATION_ENABLED] = false;
-      } else if (Platform.isIOS) {
-        // Disable PIP on iOS as it looks weird
-        featureFlags[FeatureFlagEnum.PIP_ENABLED] = false;
-      }
       //featureFlag.resolution = FeatureFlagVideoResolution.MD_RESOLUTION; // Limit video resolution to 360p
       var options = JitsiMeetingOptions()
         ..room = roomName
