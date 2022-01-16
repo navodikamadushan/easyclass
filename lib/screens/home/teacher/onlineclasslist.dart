@@ -125,7 +125,7 @@ class _LessonList extends State<LessonList> {
         ));
   }
 
-  Widget _buildButton(BuildContext context, String label, Color buttonColor, VoidCallback onClicked, bool isStart) => ElevatedButton(
+  Widget _buildButton(BuildContext context, String label, Color buttonColor, VoidCallback onClicked, bool isEnable) => ElevatedButton(
         style: ElevatedButton.styleFrom(
           primary: buttonColor,
           onPrimary: Colors.white,
@@ -134,6 +134,6 @@ class _LessonList extends State<LessonList> {
           onSurface: buttonColor,
         ),
         child: Text(label),
-        onPressed: isStart ? null : onClicked,
+        onPressed: isEnable ? null : onClicked,
       );
 }
