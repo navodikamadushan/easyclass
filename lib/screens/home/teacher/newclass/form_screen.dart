@@ -151,14 +151,14 @@ class _FormScreenState extends State<FormScreen> {
                   if (user != null) {
                     print(user.uid.toString());
                     // add a new online class to database
-                    /*dynamic result = await _database.addNewOnlineClass(_className, _subject, user.uid.toString(), context.read<ListProvider>().getAllItems(index));
+                    dynamic result = await _database.addNewOnlineClass(_className, _subject, user.uid.toString(), context.read<ListProvider>().getAllItems(index));
                     if (result == null) {
                       _formKey.currentState.save();
                       // print('');
                       print('submitted!');
                     } else {
                       print('not submitted!');
-                    }*/
+                    }
                   } else {
                     print('User not logged!');
                   }
