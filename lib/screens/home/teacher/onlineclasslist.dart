@@ -40,12 +40,12 @@ class _LessonList extends State<LessonList> {
                   child: Text('ඔබ පන්ති කිසිවක් නිර්මාණය කර නැත.'),
                 ),
               )
-            : _buildList(context, snapshot.data.docs);
+            : _buildList(context, snapshot.data.docs, widget.userInfo);
       },
     );
   }
 
-  Widget _buildList(BuildContext context, List<DocumentSnapshot> snapshot) {
+  Widget _buildList(BuildContext context, List<DocumentSnapshot> snapshot, DocumentSnapshot userInfo) {
     return ListView(
       // ExpansionPanelList.radio(
       physics: const AlwaysScrollableScrollPhysics(),
@@ -53,11 +53,11 @@ class _LessonList extends State<LessonList> {
       scrollDirection: Axis.vertical,
       shrinkWrap: true,
       padding: const EdgeInsets.only(top: 5.0),
-      children: snapshot.map((data) => _buildListItem(context, data)).toList(),
+      children: snapshot.map((data) => _buildListItem(context, data, userInfo)).toList(),
     );
   }
 
-  Widget _buildListItem(BuildContext context, DocumentSnapshot data) {
+  Widget _buildListItem(BuildContext context, DocumentSnapshot data, DocumentSnapshot userInfo) {
     final GlobalKey expansionTileKey = GlobalKey();
     final record = Record.fromSnapshot(data);
     final DatabaseService _databaseService = DatabaseService();
