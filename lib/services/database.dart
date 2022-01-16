@@ -52,20 +52,6 @@ class DatabaseService {
     });
   }
 
-  // update online classes
-  Future addNewOnlineClass(String class_name, String subject, String teacherid, var timeslot) async {
-    var onlineclassRef = onlineclass.doc();
-    return await onlineclassRef.set({
-      'class_name': class_name,
-      'subject': subject,
-      'teacher_id': teacherid,
-      'no_student': 0,
-      'isstart': false,
-      'timeslot': timeslot,
-      'online_class_id': onlineclassRef.id,
-    });
-  }
-
   // subscribe a class : add subscribed_id to user document
   Future updateSubscribedClassIDtoUserProfile(String currentUserId, String subscribed_id) async {
     return await users.doc(currentUserId).update({
