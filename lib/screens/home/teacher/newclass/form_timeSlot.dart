@@ -2,7 +2,7 @@
 // Auther Information:- Kamith Yudara Tennakooon(kamithyudarathennakoon@gmail.com)
 
 import 'package:flutter/material.dart';
-import 'package:easyclass/screens/shared/constants.dart';
+//import 'package:easyclass/screens/shared/constants.dart';
 import 'package:provider/provider.dart';
 import 'package:easyclass/services/provider/list_provider.dart';
 import 'package:easyclass/models/model.dart';
@@ -37,7 +37,7 @@ class _TimeSlotFormState extends State<TimeSlotForm> {
   Widget _DropDownState() {
     return DropdownButtonFormField(
       value: _currentDay ?? 'Mon',
-      decoration: textInputDecoration,
+      //decoration: textInputDecoration,
       items: _listDays.map((listDay) {
         return DropdownMenuItem(
           value: listDay,
