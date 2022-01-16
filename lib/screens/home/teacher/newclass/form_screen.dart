@@ -5,7 +5,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:easyclass/screens/home/teacher/newclass/form_timeSlot.dart';
-import 'package:myapp/screens/timeSlotList.dart';
+import 'package:easyclass/screens/home/teacher/newclass/timeSlotList.dart';
 import 'package:easyclass/services/provider/list_provider.dart';
 import 'package:easyclass/models/model.dart';
 import "package:easyclass/services/database.dart"; // import database package
