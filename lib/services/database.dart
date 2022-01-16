@@ -65,8 +65,6 @@ class DatabaseService {
       'online_class_id': onlineclassRef.id,
     });
   }
-}
-
 
   // subscribe a class : add subscribed_id to user document
   Future updateSubscribedClassIDtoUserProfile(String currentUserId, String subscribed_id) async {
