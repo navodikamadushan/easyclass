@@ -3,7 +3,7 @@
 
 import 'package:flutter/foundation.dart';
 import 'dart:collection';
-import 'package:myapp/models/model.dart';
+import 'package:easyclass/models/model.dart';
 
 class ListProvider extends ChangeNotifier {
   List<timeslot> _list = [];
