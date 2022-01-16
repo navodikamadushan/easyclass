@@ -159,7 +159,7 @@ class _FormScreenState extends State<FormScreen> {
                           dynamic result = await _database.addNewOnlineClass(_className, _subject, user.uid.toString(), context.read<ListProvider>().getAllItems(index));
                           if (result == null) {
                             setState(() => loading = false);
-                            _formKey.currentState.save();
+                            //_formKey.currentState.save();
                             // print('');
                             print('submitted!');
                           } else {
