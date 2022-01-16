@@ -9,6 +9,7 @@ import 'package:provider/provider.dart';
 import "package:easyclass/models/user.dart";
 import "package:easyclass/screens/home/teacher/timeslot.dart";
 import "package:easyclass/services/alert.dart";
+import "package:easyclass/services/jitsiservice.dart";
 
 class LessonList extends StatefulWidget {
   @override
@@ -17,6 +18,7 @@ class LessonList extends StatefulWidget {
 
 class _LessonList extends State<LessonList> {
   final DatabaseService databaseService = DatabaseService();
+  final JistiVideoConference jitsi = JistiVideoConference();
   int selected = 0;
   //ScrollController _controller = new ScrollController();
   @override
