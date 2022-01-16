@@ -8,6 +8,7 @@ import "package:easyclass/models/record.dart";
 import 'package:provider/provider.dart';
 import "package:easyclass/models/user.dart";
 import "package:easyclass/screens/home/teacher/timeslot.dart";
+import "package:easyclass/services/alert.dart";
 
 class LessonList extends StatefulWidget {
   @override
@@ -54,6 +55,7 @@ class _LessonList extends State<LessonList> {
     final GlobalKey expansionTileKey = GlobalKey();
     final record = Record.fromSnapshot(data);
     final DatabaseService _databaseService = DatabaseService();
+    final AlertService _alertService = AlertService();
     return Padding(
         key: ValueKey(record.class_name),
         padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
@@ -113,7 +115,14 @@ class _LessonList extends State<LessonList> {
                       child: Padding(
                         padding: EdgeInsets.all(8),
                         child: _buildButton(context, "එක්වන්න", Colors.purple[600], () {
-                          print("Join!");
+                          _alertService.joinToExistingClass(context, record.class_name).then((onValue) async {
+                            if (onValue) {
+                              print("Accept!");
+                              //jitsi.joinMeeting(record.online_class_id, record.subject, userInfo['name'], userInfo['email']);
+                            } else {
+                              print("Discard!");
+                            }
+                          });
                         }, !record.isstart),
                       ),
                     )
