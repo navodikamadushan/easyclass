@@ -22,7 +22,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 class OnlineClassTeacherPage extends StatelessWidget {
   final AuthService _auth = AuthService();
   DocumentSnapshot userInfo;
-  OnlineClassStudentPage(DocumentSnapshot userInfo) {
+  OnlineClassTeacherPage(DocumentSnapshot userInfo) {
     this.userInfo = userInfo;
   }
 
