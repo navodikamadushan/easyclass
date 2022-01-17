@@ -87,8 +87,8 @@ class _FullLessonList extends State<FullLessonList> {
                 if (onValue) {
                   print('true!');
                   setState(() => loading = true);
-                  //dynamic result = await databaseService.updateSubscribedClassIDtoUserProfile(userforid.uid, record.online_class_id);
-                  dynamic result = await databaseService.incrementNoStudentOnlineClass(record.online_class_id);
+                  dynamic result = await databaseService.updateSubscribedClassIDtoUserProfile(userforid.uid, record.online_class_id);
+                  //dynamic result = await databaseService.incrementNoStudentOnlineClass(record.online_class_id);
                   if (result == null) {
                     setState(() => loading = false);
                     Navigator.pop(widget.precontext);
