@@ -61,6 +61,13 @@ class DatabaseService {
     });
   }
 
+  //increment no_student for new subscription
+  Future incrementNoStudentOnlineClass(String onlineClassId) async {
+    return await onlineclass.doc(onlineClassId).update({
+      'no_student': increment,
+    });
+  }
+
   //update for online class starting
   Future updateIsStart(String onlineClassId, bool isstart) async {
     return await onlineclass.doc(onlineClassId).update({
