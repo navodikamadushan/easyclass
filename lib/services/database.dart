@@ -64,7 +64,7 @@ class DatabaseService {
   //increment no_student for new subscription
   Future incrementNoStudentOnlineClass(String onlineClassId) async {
     return await onlineclass.doc(onlineClassId).update({
-      'no_student': increment,
+      'no_student': FirebaseFirestore.instance.FieldValue.increment(1),
     });
   }
 
