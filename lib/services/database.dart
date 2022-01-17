@@ -54,7 +54,7 @@ class DatabaseService {
 
   // subscribe a class : add subscribed_id to user document
   Future updateSubscribedClassIDtoUserProfile(String currentUserId, String subscribed_id) async {
-    dynamic result = incrementNoStudentOnlineClass(subscribed_id);
+    dynamic result = await incrementNoStudentOnlineClass(subscribed_id);
     if (result == null) {
       return await users.doc(currentUserId).update({
         'subscribed_class': FieldValue.arrayUnion([
