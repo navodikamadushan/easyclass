@@ -41,6 +41,8 @@ dependencies:
   plugin_platform_interface: ^2.1.2
   mockito: ^5.0.17 
   jitsi_meet: ^0.4.1
+  firebase_storage: ^10.2.5
+  permission_handler: ^8.3.0
 
 dev_dependencies:
   flutter_test:
