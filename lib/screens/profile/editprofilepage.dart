@@ -55,8 +55,10 @@ class _EditProfilePageState extends State<EditProfilePage> {
                       imagePath: imageURL == null ? widget.user.imagePath : imageURL,
                       onClicked: () async {
                         var downloadURL = await _storage.uploadImage();
-                        print(downloadURL);
-                        setState(() => imageURL = downloadURL);
+                        setState(() => imageURL = downloadURL[0]);
+                        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                          content: Text(downloadURL),
+                        ));
                         /*ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                       content: Text("මෙම විශේෂාංගය තවමත් සංවර්ධනය කර නොමැත."),
                     ));*/

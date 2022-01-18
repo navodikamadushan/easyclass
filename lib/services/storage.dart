@@ -15,10 +15,12 @@ class StorageService {
       image = await _picker.getImage(source: ImageSource.gallery);
       var file = File(image.path);
       if (image != null) {
-        return image.path;
-        //var snapshot = await _storage.ref().child("profile_picture/imageName2").putFile(file);
-        //var downloadURL = snapshot.ref.getDownloadURL();
-        //return downloadURL.toString();
+        var snapshot = await _storage.ref().child("profile_picture/imageName2").putFile(file);
+        var downloadURL = snapshot.ref.getDownloadURL();
+        return [
+          image.path,
+          downloadURL.toString()
+        ];
       } else {
         print("No path received!");
       }
