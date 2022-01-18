@@ -116,9 +116,9 @@ class _ProfilePageState extends State<ProfilePage> {
           print(user.role);
           String roleSinhala;
           roleSinhala = user.role == 'student' ? 'ශිෂ්‍යයයෙක්' : 'ගුරුවරයෙක්';
-          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+          /*ScaffoldMessenger.of(context).showSnackBar(SnackBar(
             content: Text("ඔබ ${roleSinhala}. ඔබගේ ගිණුම ප්‍රවර්ධනය කිරීමට හෝ පහත් කිරීමට කරුණාකර පරිපාලක අමතන්න."),
-          ));
+          ));*/
         },
       );
 }
