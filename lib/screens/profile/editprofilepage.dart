@@ -52,7 +52,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
                   children: [
                     ProfileWidget(
                       isEdit: true,
-                      imagePath: widget.user.imagePath,
+                      imagePath: imageURL == null ? widget.user.imagePath : null,
                       onClicked: () async {
                         //var downloadURL = _storage.uploadImage();
                         //setState(() => widget.user.imagePath = downloadURL);
