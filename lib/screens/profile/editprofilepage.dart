@@ -31,6 +31,8 @@ class EditProfilePage extends StatefulWidget {
 
 class _EditProfilePageState extends State<EditProfilePage> {
   //ProUser user = UserPreferences().myUser;
+  String imageURL;
+  print("ProfileEdit Page");
   final _formKey = GlobalKey<FormState>();
   final AuthService _auth = AuthService();
   final StorageService _storage = StorageService();
@@ -39,7 +41,6 @@ class _EditProfilePageState extends State<EditProfilePage> {
   @override
   Widget build(BuildContext context) =>
       //String imageURL;
-      //print("HI");
       loading
           ? Loading()
           : Scaffold(
