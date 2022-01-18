@@ -9,8 +9,9 @@ class StorageService {
     final _storage = FirebaseStorage.instance;
     PickedFile image;
     await Permission.photos.request();
-    var permissionStatus = await Permission.photos.status;
-    if (permissionStatus.isGranted) {
+    //var permissionStatus = await Permission.photos.status;
+    if (true) {
+      //permissionStatus.isGranted) {
       image = await _picker.getImage(source: ImageSource.gallery);
       var file = File(image.path);
       if (image != null) {
