@@ -14,7 +14,7 @@ class StorageService {
       image = await _picker.getImage(source: ImageSource.gallery);
       var file = File(image.path);
       if (image != null) {
-        var snapshot = await _storage.ref().child("profile_picture/imageName").putFile(file).onComplete;
+        var snapshot = await _storage.ref().child("profile_picture/imageName").putFile(file);
         var downloadURL = snapshot.ref.getDownloadURL();
         print(downloadURL.toString());
       } else {
