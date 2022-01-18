@@ -217,7 +217,7 @@ class _MyHomePageState extends State<MyHomePage> {
       padding: const EdgeInsets.all(10.0),
       child: AspectRatioVideo(_controller),
     );
-  }*/
+  }
 
   Widget _previewImages() {
     final Text retrieveError = _getRetrieveErrorWidget();
