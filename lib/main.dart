@@ -76,18 +76,18 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key? key, this.title}) : super(key: key);
+  MyHomePage({Key key, this.title}) : super(key: key);
 
-  final String? title;
+  final String title;
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  List<XFile>? _imageFileList;
+  List<XFile> _imageFileList;
 
-  set _imageFile(XFile? value) {
+  set _imageFile(XFile value) {
     _imageFileList = value == null
         ? null
         : [
@@ -98,16 +98,16 @@ class _MyHomePageState extends State<MyHomePage> {
   dynamic _pickImageError;
   bool isVideo = false;
 
-  VideoPlayerController? _controller;
-  VideoPlayerController? _toBeDisposed;
-  String? _retrieveDataError;
+  VideoPlayerController _controller;
+  VideoPlayerController _toBeDisposed;
+  String _retrieveDataError;
 
   final ImagePicker _picker = ImagePicker();
   final TextEditingController maxWidthController = TextEditingController();
   final TextEditingController maxHeightController = TextEditingController();
   final TextEditingController qualityController = TextEditingController();
 
-  Future<void> _playVideo(XFile? file) async {
+  Future<void> _playVideo(XFile file) async {
     if (file != null && mounted) {
       await _disposeVideoController();
       late VideoPlayerController controller;
@@ -131,7 +131,7 @@ class _MyHomePageState extends State<MyHomePage> {
     }
   }
 
-  void _onImageButtonPressed(ImageSource source, {BuildContext? context, bool isMultiImage = false}) async {
+  void _onImageButtonPressed(ImageSource source, {BuildContext context, bool isMultiImage = false}) async {
     if (_controller != null) {
       await _controller!.setVolume(0.0);
     }
@@ -392,7 +392,7 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  Text? _getRetrieveErrorWidget() {
+  Text _getRetrieveErrorWidget() {
     if (_retrieveDataError != null) {
       final Text result = Text(_retrieveDataError!);
       _retrieveDataError = null;
@@ -448,19 +448,19 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-typedef void OnPickImageCallback(double? maxWidth, double? maxHeight, int? quality);
+typedef void OnPickImageCallback(double maxWidth, double maxHeight, int quality);
 
 class AspectRatioVideo extends StatefulWidget {
   AspectRatioVideo(this.controller);
 
-  final VideoPlayerController? controller;
+  final VideoPlayerController controller;
 
   @override
   AspectRatioVideoState createState() => AspectRatioVideoState();
 }
 
 class AspectRatioVideoState extends State<AspectRatioVideo> {
-  VideoPlayerController? get controller => widget.controller;
+  VideoPlayerController get controller => widget.controller;
   bool initialized = false;
 
   void _onVideoControllerUpdate() {
