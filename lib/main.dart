@@ -202,7 +202,7 @@ class _MyHomePageState extends State<MyHomePage> {
     _controller = null;
   }
 
-  /*Widget _previewVideo() {
+  Widget _previewVideo() {
     final Text retrieveError = _getRetrieveErrorWidget();
     if (retrieveError != null) {
       return retrieveError;
@@ -361,7 +361,7 @@ class _MyHomePageState extends State<MyHomePage> {
               child: const Icon(Icons.camera_alt),
             ),
           ),
-          Padding(
+          /*Padding(
             padding: const EdgeInsets.only(top: 16.0),
             child: FloatingActionButton(
               backgroundColor: Colors.red,
@@ -373,7 +373,7 @@ class _MyHomePageState extends State<MyHomePage> {
               tooltip: 'Pick Video from gallery',
               child: const Icon(Icons.video_library),
             ),
-          ),
+          ),*/
           Padding(
             padding: const EdgeInsets.only(top: 16.0),
             child: FloatingActionButton(
