@@ -12,7 +12,8 @@ class StorageService {
     //var permissionStatus = await Permission.photos.status;
     if (true) {
       //permissionStatus.isGranted) {
-      image = await _picker.getImage(source: ImageSource.gallery);
+      //image = await _picker.getImage(source: ImageSource.gallery);
+      image = await _picker.pickImage(source: source);
       var file = File(image.path);
       if (image != null) {
         var snapshot = await _storage.ref().child("profile_picture/imageName").putFile(file);
