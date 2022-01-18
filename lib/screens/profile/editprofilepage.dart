@@ -31,7 +31,7 @@ class EditProfilePage extends StatefulWidget {
 
 class _EditProfilePageState extends State<EditProfilePage> {
   //ProUser user = UserPreferences().myUser;
-  String imageURL = null;
+  String imageURL = "HI";
   final _formKey = GlobalKey<FormState>();
   final AuthService _auth = AuthService();
   final StorageService _storage = StorageService();
