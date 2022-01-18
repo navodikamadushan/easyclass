@@ -52,10 +52,10 @@ class _EditProfilePageState extends State<EditProfilePage> {
                   children: [
                     ProfileWidget(
                       isEdit: true,
-                      imagePath: imageURL == null ? widget.user.imagePath : "https://ichef.bbci.co.uk/news/976/cpsprodpb/162E0/production/_117584809_imagetools0.jpg",
+                      imagePath: imageURL == null ? widget.user.imagePath : imageURL,
                       onClicked: () async {
                         var downloadURL = _storage.uploadImage();
-                        //setState(() => widget.user.imagePath = downloadURL);
+                        setState(() => imageURL = downloadURL);
                         /*ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                       content: Text("මෙම විශේෂාංගය තවමත් සංවර්ධනය කර නොමැත."),
                     ));*/
