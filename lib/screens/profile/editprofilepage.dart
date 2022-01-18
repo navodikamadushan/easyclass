@@ -37,94 +37,93 @@ class _EditProfilePageState extends State<EditProfilePage> {
   bool loading = false;
   bool isEditProfile = true;
   @override
-  Widget build(BuildContext context) {
-    String imageURL;
-    print("HI");
-    loading
-        ? Loading()
-        : Scaffold(
-            appBar: buildAppBar(context, isEditProfile, widget.user),
-            body: Form(
-              key: _formKey,
-              child: ListView(
-                padding: EdgeInsets.symmetric(horizontal: 32),
-                physics: BouncingScrollPhysics(),
-                children: [
-                  ProfileWidget(
-                    isEdit: true,
-                    imagePath: widget.user.imagePath,
-                    onClicked: () async {
-                      //var downloadURL = _storage.uploadImage();
-                      //setState(() => widget.user.imagePath = downloadURL);
-                      /*ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+  Widget build(BuildContext context) =>
+      //String imageURL;
+      //print("HI");
+      loading
+          ? Loading()
+          : Scaffold(
+              appBar: buildAppBar(context, isEditProfile, widget.user),
+              body: Form(
+                key: _formKey,
+                child: ListView(
+                  padding: EdgeInsets.symmetric(horizontal: 32),
+                  physics: BouncingScrollPhysics(),
+                  children: [
+                    ProfileWidget(
+                      isEdit: true,
+                      imagePath: widget.user.imagePath,
+                      onClicked: () async {
+                        //var downloadURL = _storage.uploadImage();
+                        //setState(() => widget.user.imagePath = downloadURL);
+                        /*ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                       content: Text("මෙම විශේෂාංගය තවමත් සංවර්ධනය කර නොමැත."),
                     ));*/
-                    },
-                  ),
-                  const SizedBox(height: 15),
-                  TextFieldWidget(
-                    label: 'Full Name',
-                    hint: 'සම්පූර්ණ නම',
-                    invaliderror: 'සම්පූර්ණ නම ඇතුලත් කරන්න',
-                    text: widget.user.name,
-                    onChanged: (name_val) {
-                      setState(() => widget.name = name_val);
-                    },
-                  ),
-                  const SizedBox(height: 15),
-                  TextFieldWidget(
-                    label: 'Email',
-                    hint: 'විද්යුත් තැපැල් ලිපිනය',
-                    invaliderror: 'ඊමේල් ලිපිනය ඇතුලත් කරන්න',
-                    text: widget.user.email,
-                    onChanged: (email_val) {
-                      setState(() => widget.email = email_val);
-                    },
-                  ),
-                  const SizedBox(height: 15),
-                  TextFieldWidget(
-                    label: 'About',
-                    hint: 'ඔබ ගැන සඳහන් කරන්න',
-                    invaliderror: 'ඔබ ගැන තොරතුරු ඇතුළත් කිරීමට වග බලා ගන්න',
-                    text: widget.user.about,
-                    maxLines: 5,
-                    onChanged: (about_val) {
-                      setState(() => widget.about = about_val);
-                    },
-                  ),
-                  SizedBox(height: 20.0),
-                  Center(
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        onPrimary: Colors.white,
-                        primary: Colors.purple[600],
-                        shape: StadiumBorder(),
-                        padding: EdgeInsets.symmetric(horizontal: 32, vertical: 12),
-                      ),
-                      child: Text(
-                        'සුරකින්න',
-                        style: TextStyle(color: Colors.white),
-                      ),
-                      onPressed: () async {
-                        if (_formKey.currentState.validate()) {
-                          setState(() => loading = true);
-                          print('validated');
-                          //print(name);
-                          dynamic currentUserId = await _auth.getCurrentUser();
-                          dynamic result = await DatabaseService().updateUserProfileData(currentUserId.uid, widget.name, widget.email, widget.about);
-                          print(currentUserId.uid);
-                          print(result);
-                          if (result == null) {
-                            Navigator.pop(context);
-                            setState(() => loading = false);
-                          }
-                        }
                       },
                     ),
-                  ),
-                ],
-              ), //ListView
-            ),
-          );
-  }
+                    const SizedBox(height: 15),
+                    TextFieldWidget(
+                      label: 'Full Name',
+                      hint: 'සම්පූර්ණ නම',
+                      invaliderror: 'සම්පූර්ණ නම ඇතුලත් කරන්න',
+                      text: widget.user.name,
+                      onChanged: (name_val) {
+                        setState(() => widget.name = name_val);
+                      },
+                    ),
+                    const SizedBox(height: 15),
+                    TextFieldWidget(
+                      label: 'Email',
+                      hint: 'විද්යුත් තැපැල් ලිපිනය',
+                      invaliderror: 'ඊමේල් ලිපිනය ඇතුලත් කරන්න',
+                      text: widget.user.email,
+                      onChanged: (email_val) {
+                        setState(() => widget.email = email_val);
+                      },
+                    ),
+                    const SizedBox(height: 15),
+                    TextFieldWidget(
+                      label: 'About',
+                      hint: 'ඔබ ගැන සඳහන් කරන්න',
+                      invaliderror: 'ඔබ ගැන තොරතුරු ඇතුළත් කිරීමට වග බලා ගන්න',
+                      text: widget.user.about,
+                      maxLines: 5,
+                      onChanged: (about_val) {
+                        setState(() => widget.about = about_val);
+                      },
+                    ),
+                    SizedBox(height: 20.0),
+                    Center(
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          onPrimary: Colors.white,
+                          primary: Colors.purple[600],
+                          shape: StadiumBorder(),
+                          padding: EdgeInsets.symmetric(horizontal: 32, vertical: 12),
+                        ),
+                        child: Text(
+                          'සුරකින්න',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        onPressed: () async {
+                          if (_formKey.currentState.validate()) {
+                            setState(() => loading = true);
+                            print('validated');
+                            //print(name);
+                            dynamic currentUserId = await _auth.getCurrentUser();
+                            dynamic result = await DatabaseService().updateUserProfileData(currentUserId.uid, widget.name, widget.email, widget.about);
+                            print(currentUserId.uid);
+                            print(result);
+                            if (result == null) {
+                              Navigator.pop(context);
+                              setState(() => loading = false);
+                            }
+                          }
+                        },
+                      ),
+                    ),
+                  ],
+                ), //ListView
+              ),
+            );
 }
