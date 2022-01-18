@@ -36,7 +36,7 @@ class _ProfilePageState extends State<ProfilePage> {
           if (!snapshot.hasData) return Loading();
 
           final myuser = ProUser(
-            imagePath: 'https://media.istockphoto.com/photos/portrait-of-a-happy-latin-american-boy-smiling-picture-id1271410473',
+            imagePath: 'https://i.imgur.com/qkIXmbk.jpg',
             name: snapshot.data['name'],
             email: snapshot.data['email'],
             about: snapshot.data['about'],
