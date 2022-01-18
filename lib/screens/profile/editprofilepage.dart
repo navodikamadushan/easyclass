@@ -12,6 +12,7 @@ import "package:easyclass/shared/loading.dart";
 import "package:easyclass/models/profileuser.dart";
 import "package:easyclass/services/auth.dart";
 import "package:easyclass/services/database.dart";
+import "package:easyclass/services/storage.dart";
 
 class EditProfilePage extends StatefulWidget {
   ProUser user;
@@ -48,9 +49,9 @@ class _EditProfilePageState extends State<EditProfilePage> {
                   isEdit: true,
                   imagePath: widget.user.imagePath,
                   onClicked: () async {
-                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                    /*ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                       content: Text("මෙම විශේෂාංගය තවමත් සංවර්ධනය කර නොමැත."),
-                    ));
+                    ));*/
                   },
                 ),
                 const SizedBox(height: 15),
