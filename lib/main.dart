@@ -373,7 +373,7 @@ class _MyHomePageState extends State<MyHomePage> {
               tooltip: 'Pick Video from gallery',
               child: const Icon(Icons.video_library),
             ),
-          ),*/
+          ),
           Padding(
             padding: const EdgeInsets.only(top: 16.0),
             child: FloatingActionButton(
@@ -386,7 +386,7 @@ class _MyHomePageState extends State<MyHomePage> {
               tooltip: 'Take a Video',
               child: const Icon(Icons.videocam),
             ),
-          ),
+          ),*/
         ],
       ),
     );
