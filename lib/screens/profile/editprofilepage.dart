@@ -32,6 +32,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
   //ProUser user = UserPreferences().myUser;
   final _formKey = GlobalKey<FormState>();
   final AuthService _auth = AuthService();
+  final StorageService _storage = StorageService();
   bool loading = false;
   bool isEditProfile = true;
   @override
@@ -49,6 +50,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
                   isEdit: true,
                   imagePath: widget.user.imagePath,
                   onClicked: () async {
+                    _storage.uploadImage();
                     /*ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                       content: Text("මෙම විශේෂාංගය තවමත් සංවර්ධනය කර නොමැත."),
                     ));*/
