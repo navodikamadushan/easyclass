@@ -110,7 +110,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Future<void> _playVideo(XFile file) async {
     if (file != null && mounted) {
       await _disposeVideoController();
-      late VideoPlayerController controller;
+      VideoPlayerController controller;
       if (kIsWeb) {
         controller = VideoPlayerController.network(file.path);
       } else {
@@ -133,13 +133,13 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _onImageButtonPressed(ImageSource source, {BuildContext context, bool isMultiImage = false}) async {
     if (_controller != null) {
-      await _controller!.setVolume(0.0);
+      await _controller.setVolume(0.0);
     }
     if (isVideo) {
-      final XFile? file = await _picker.pickVideo(source: source, maxDuration: const Duration(seconds: 10));
+      final XFile file = await _picker.pickVideo(source: source, maxDuration: const Duration(seconds: 10));
       await _playVideo(file);
     } else if (isMultiImage) {
-      await _displayPickImageDialog(context!, (double? maxWidth, double? maxHeight, int? quality) async {
+      await _displayPickImageDialog(context, (double maxWidth, double maxHeight, int quality) async {
         try {
           final pickedFileList = await _picker.pickMultiImage(
             maxWidth: maxWidth,
@@ -156,7 +156,7 @@ class _MyHomePageState extends State<MyHomePage> {
         }
       });
     } else {
-      await _displayPickImageDialog(context!, (double? maxWidth, double? maxHeight, int? quality) async {
+      await _displayPickImageDialog(context, (double maxWidth, double maxHeight, int quality) async {
         try {
           final pickedFile = await _picker.pickImage(
             source: source,
@@ -179,8 +179,8 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void deactivate() {
     if (_controller != null) {
-      _controller!.setVolume(0.0);
-      _controller!.pause();
+      _controller.setVolume(0.0);
+      _controller.pause();
     }
     super.deactivate();
   }
@@ -196,14 +196,14 @@ class _MyHomePageState extends State<MyHomePage> {
 
   Future<void> _disposeVideoController() async {
     if (_toBeDisposed != null) {
-      await _toBeDisposed!.dispose();
+      await _toBeDisposed.dispose();
     }
     _toBeDisposed = _controller;
     _controller = null;
   }
 
   Widget _previewVideo() {
-    final Text? retrieveError = _getRetrieveErrorWidget();
+    final Text retrieveError = _getRetrieveErrorWidget();
     if (retrieveError != null) {
       return retrieveError;
     }
@@ -220,7 +220,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Widget _previewImages() {
-    final Text? retrieveError = _getRetrieveErrorWidget();
+    final Text retrieveError = _getRetrieveErrorWidget();
     if (retrieveError != null) {
       return retrieveError;
     }
@@ -233,10 +233,10 @@ class _MyHomePageState extends State<MyHomePage> {
               // See https://pub.dev/packages/image_picker#getting-ready-for-the-web-platform
               return Semantics(
                 label: 'image_picker_example_picked_image',
-                child: kIsWeb ? Image.network(_imageFileList![index].path) : Image.file(File(_imageFileList![index].path)),
+                child: kIsWeb ? Image.network(_imageFileList[index].path) : Image.file(File(_imageFileList[index].path)),
               );
             },
-            itemCount: _imageFileList!.length,
+            itemCount: _imageFileList.length,
           ),
           label: 'image_picker_example_picked_images');
     } else if (_pickImageError != null) {
@@ -277,7 +277,7 @@ class _MyHomePageState extends State<MyHomePage> {
         });
       }
     } else {
-      _retrieveDataError = response.exception!.code;
+      _retrieveDataError = response.exception.code;
     }
   }
 
@@ -285,7 +285,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title!),
+        title: Text(widget.title),
       ),
       body: Center(
         child: !kIsWeb && defaultTargetPlatform == TargetPlatform.android
@@ -394,7 +394,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   Text _getRetrieveErrorWidget() {
     if (_retrieveDataError != null) {
-      final Text result = Text(_retrieveDataError!);
+      final Text result = Text(_retrieveDataError);
       _retrieveDataError = null;
       return result;
     }
@@ -436,9 +436,9 @@ class _MyHomePageState extends State<MyHomePage> {
               TextButton(
                   child: const Text('PICK'),
                   onPressed: () {
-                    double? width = maxWidthController.text.isNotEmpty ? double.parse(maxWidthController.text) : null;
-                    double? height = maxHeightController.text.isNotEmpty ? double.parse(maxHeightController.text) : null;
-                    int? quality = qualityController.text.isNotEmpty ? int.parse(qualityController.text) : null;
+                    double width = maxWidthController.text.isNotEmpty ? double.parse(maxWidthController.text) : null;
+                    double height = maxHeightController.text.isNotEmpty ? double.parse(maxHeightController.text) : null;
+                    int quality = qualityController.text.isNotEmpty ? int.parse(qualityController.text) : null;
                     onPick(width, height, quality);
                     Navigator.of(context).pop();
                   }),
@@ -467,8 +467,8 @@ class AspectRatioVideoState extends State<AspectRatioVideo> {
     if (!mounted) {
       return;
     }
-    if (initialized != controller!.value.isInitialized) {
-      initialized = controller!.value.isInitialized;
+    if (initialized != controller.value.isInitialized) {
+      initialized = controller.value.isInitialized;
       setState(() {});
     }
   }
@@ -476,12 +476,12 @@ class AspectRatioVideoState extends State<AspectRatioVideo> {
   @override
   void initState() {
     super.initState();
-    controller!.addListener(_onVideoControllerUpdate);
+    controller.addListener(_onVideoControllerUpdate);
   }
 
   @override
   void dispose() {
-    controller!.removeListener(_onVideoControllerUpdate);
+    controller.removeListener(_onVideoControllerUpdate);
     super.dispose();
   }
 
@@ -490,8 +490,8 @@ class AspectRatioVideoState extends State<AspectRatioVideo> {
     if (initialized) {
       return Center(
         child: AspectRatio(
-          aspectRatio: controller!.value.aspectRatio,
-          child: VideoPlayer(controller!),
+          aspectRatio: controller.value.aspectRatio,
+          child: VideoPlayer(controller),
         ),
       );
     } else {
