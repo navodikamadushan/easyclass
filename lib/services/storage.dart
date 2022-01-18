@@ -17,6 +17,7 @@ class StorageService {
       var file = File(image.path);
       print(file.path);
       if (image != null) {
+        print("HI3");
         var snapshot = await _storage.ref().child("profile_picture/imageName").putFile(file);
         var downloadURL = snapshot.ref.getDownloadURL();
         return downloadURL.toString();
