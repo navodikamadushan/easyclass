@@ -5,7 +5,8 @@ import 'package:image_picker/image_picker.dart';
 
 class StorageService {
   Future uploadImage() async {
-    final _picker = ImagePicker();
+    //final _picker = ImagePicker();
+    final ImagePicker _picker = ImagePicker();
     final _storage = FirebaseStorage.instance;
     PickedFile image;
     //await Permission.photos.request();
