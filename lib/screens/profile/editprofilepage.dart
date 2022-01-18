@@ -13,6 +13,7 @@ import "package:easyclass/models/profileuser.dart";
 import "package:easyclass/services/auth.dart";
 import "package:easyclass/services/database.dart";
 import "package:easyclass/services/storage.dart";
+import 'package:image_picker/image_picker.dart';
 
 class EditProfilePage extends StatefulWidget {
   ProUser user;
@@ -50,7 +51,8 @@ class _EditProfilePageState extends State<EditProfilePage> {
                   isEdit: true,
                   imagePath: widget.user.imagePath,
                   onClicked: () async {
-                    _storage.uploadImage();
+                    var downloadURL = _storage.uploadImage();
+                    setState(() => widget.user.imagePath = downloadURL);
                     /*ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                       content: Text("මෙම විශේෂාංගය තවමත් සංවර්ධනය කර නොමැත."),
                     ));*/
