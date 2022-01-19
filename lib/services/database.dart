@@ -32,7 +32,7 @@ class DatabaseService {
       'phoneno': phoneno,
       'about': about,
       'role': role,
-      'profileimg': null,
+      'profileimg': "",
       'subscribed_class': subscribedclass,
     });
   }
