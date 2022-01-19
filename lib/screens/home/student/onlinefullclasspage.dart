@@ -34,7 +34,7 @@ class OnlineFullClassStudentPage extends StatelessWidget {
         centerTitle: true,
         actions: <Widget>[
           ProfileImageWidget(
-            imagePath: 'https://media.istockphoto.com/photos/portrait-of-a-happy-latin-american-boy-smiling-picture-id1271410473',
+            imagePath: userInfo['profileimg'] == "" ? 'https://firebasestorage.googleapis.com/v0/b/easyclass-4306f.appspot.com/o/profile_picture%2Fdefault.png?alt=media&token=1f96742e-9e8c-4203-b0e7-bfb8872f11b7' : userInfo['profileimg'],
             onClicked: () async {
               //_showUserPannel();
               Navigator.pop(context);
