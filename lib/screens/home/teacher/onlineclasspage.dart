@@ -34,7 +34,7 @@ class OnlineClassTeacherPage extends StatelessWidget {
         centerTitle: true,
         actions: <Widget>[
           ProfileImageWidget(
-            imagePath: 'https://firebasestorage.googleapis.com/v0/b/easyclass-4306f.appspot.com/o/profile_picture%2Fdefault.png?alt=media&token=1f96742e-9e8c-4203-b0e7-bfb8872f11b7',
+            imagePath: userInfo['profileimg'] == null ? 'https://firebasestorage.googleapis.com/v0/b/easyclass-4306f.appspot.com/o/profile_picture%2Fdefault.png?alt=media&token=1f96742e-9e8c-4203-b0e7-bfb8872f11b7' : userInfo['profileimg'],
             onClicked: () async {
               //_showUserPannel();
               Navigator.of(context).push(
