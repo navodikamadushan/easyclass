@@ -33,7 +33,7 @@ class OnlineClassStudentPage extends StatelessWidget {
         centerTitle: true,
         actions: <Widget>[
           ProfileImageWidget(
-            imagePath: 'https://media.istockphoto.com/photos/portrait-of-a-happy-latin-american-boy-smiling-picture-id1271410473',
+            imagePath: 'shorturl.at/bqxKP',
             onClicked: () async {
               //_showUserPannel();
               //Navigator.pop(context);
