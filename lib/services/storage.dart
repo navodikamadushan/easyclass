@@ -16,10 +16,7 @@ class StorageService {
       if (image != null) {
         var snapshot = await _storage.ref().child("profile_picture/${currentUserId}").putFile(file);
         var downloadURL = snapshot.ref.getDownloadURL();
-        return [
-          image.path,
-          downloadURL.toString()
-        ];
+        return downloadURL.toString();
       } else {
         print("No path received!");
       }
