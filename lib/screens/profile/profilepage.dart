@@ -36,7 +36,7 @@ class _ProfilePageState extends State<ProfilePage> {
           if (!snapshot.hasData) return Loading();
 
           final myuser = ProUser(
-            imagePath: snapshot.data['profileimg'] == null ? 'shorturl.at/bqxKP' : snapshot.data['profileimg'],
+            imagePath: snapshot.data['profileimg'] == null ? 'https://firebasestorage.googleapis.com/v0/b/easyclass-4306f.appspot.com/o/profile_picture%2Fdefault.png?alt=media&token=1f96742e-9e8c-4203-b0e7-bfb8872f11b7' : snapshot.data['profileimg'],
             name: snapshot.data['name'],
             email: snapshot.data['email'],
             about: snapshot.data['about'],
