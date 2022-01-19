@@ -55,7 +55,8 @@ class _EditProfilePageState extends State<EditProfilePage> {
                       isEdit: true,
                       imagePath: widget.imagePath,
                       onClicked: () async {
-                        var downloadURL = await _storage.uploadImage();
+                        dynamic currentUserId = await _auth.getCurrentUser();
+                        var downloadURL = await _storage.uploadImage(currentUserId.uid);
                         setState(() => widget.imagePath = downloadURL[0]);
                         ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                           content: Text(downloadURL),
