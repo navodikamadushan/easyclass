@@ -20,18 +20,19 @@ class EditProfilePage extends StatefulWidget {
   String name;
   String email;
   String about;
+  String imagePath;
   EditProfilePage(ProUser user) {
     this.user = user;
     this.name = user.name;
     this.email = user.email;
     this.about = user.about;
+    this.imagePath = user.imagePath;
   }
   _EditProfilePageState createState() => _EditProfilePageState();
 }
 
 class _EditProfilePageState extends State<EditProfilePage> {
   //ProUser user = UserPreferences().myUser;
-  String imageURL = null;
   final _formKey = GlobalKey<FormState>();
   final AuthService _auth = AuthService();
   final StorageService _storage = StorageService();
@@ -52,10 +53,10 @@ class _EditProfilePageState extends State<EditProfilePage> {
                   children: [
                     ProfileWidget(
                       isEdit: true,
-                      imagePath: imageURL == null ? widget.user.imagePath : imageURL,
+                      imagePath: widget.imagePath,
                       onClicked: () async {
                         var downloadURL = await _storage.uploadImage();
-                        setState(() => imageURL = downloadURL[0]);
+                        setState(() => widget.imagePath = downloadURL[0]);
                         ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                           content: Text(downloadURL),
                         ));
@@ -114,7 +115,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
                             print('validated');
                             //print(name);
                             dynamic currentUserId = await _auth.getCurrentUser();
-                            dynamic result = await DatabaseService().updateUserProfileData(currentUserId.uid, widget.name, widget.email, widget.about);
+                            dynamic result = await DatabaseService().updateUserProfileData(currentUserId.uid, widget.name, widget.email, widget.about, widget.imagePath);
                             print(currentUserId.uid);
                             print(result);
                             if (result == null) {

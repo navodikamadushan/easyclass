@@ -38,11 +38,12 @@ class DatabaseService {
   }
 
   // update to user document
-  Future updateUserProfileData(String currentUserId, String name, String email, String about) async {
+  Future updateUserProfileData(String currentUserId, String name, String email, String about, String imagepath) async {
     return await users.doc(currentUserId).update({
       'name': name,
       'email': email,
       'about': about,
+      'profileimg': imagepath,
     });
   }
 
