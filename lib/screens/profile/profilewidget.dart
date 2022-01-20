@@ -57,7 +57,7 @@ class ProfileWidget extends StatelessWidget {
             icon: Icon(
               isEdit ? Icons.add_a_photo : Icons.edit,
               color: Colors.white,
-              size: 10,
+              size: 20,
             ),
           ),
         ),
