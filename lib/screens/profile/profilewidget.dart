@@ -65,7 +65,6 @@ class ProfileWidget extends StatelessWidget {
               //onClicked;
             },
           ),
-          onClicked: onClicked,
         ),
       );
   Widget buildCircle({
