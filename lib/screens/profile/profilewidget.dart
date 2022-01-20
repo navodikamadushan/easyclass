@@ -61,7 +61,7 @@ class ProfileWidget extends StatelessWidget {
             ),
             highlightColor: Colors.pink,
             onPressed: () {
-              !isEdit ? print("profile") : print("Edit pro");
+              !isEdit ? onClicked : print("Edit pro");
               //onClicked;
             },
           ),
