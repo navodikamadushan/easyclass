@@ -56,7 +56,7 @@ class ProfileWidget extends StatelessWidget {
           child: IconButton(
             icon: Icon(
               isEdit ? Icons.add_a_photo : Icons.edit,
-              color: Colors.purple,
+              color: Colors.pink,
               size: 20,
             ),
             highlightColor: Colors.pink,
