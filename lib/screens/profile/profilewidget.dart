@@ -24,7 +24,7 @@ class ProfileWidget extends StatelessWidget {
           Positioned(
             bottom: 0,
             right: 4,
-            child: buildEditIcon(color),
+            child: buildEditIcon(color, onClicked),
           ),
         ],
       ),
