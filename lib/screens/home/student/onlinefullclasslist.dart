@@ -82,7 +82,7 @@ class _FullLessonList extends State<FullLessonList> {
             ),
             subtitle: Column(
               children: [
-                Text(record.subject),
+                "hi" + Text(record.subject),
                 Text(record.subject),
               ],
             ),
