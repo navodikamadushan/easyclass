@@ -83,7 +83,9 @@ class _LessonList extends State<LessonList> {
               style: TextButton.styleFrom(
                 textStyle: const TextStyle(fontSize: 10),
               ),
-              onPressed: null,
+              onPressed: () {
+                print("Edit!");
+              },
               child: const Text('Disabled'),
             ),
             onExpansionChanged: (value) {
