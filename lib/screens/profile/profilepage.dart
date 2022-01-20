@@ -1,3 +1,6 @@
+// All right reserved by EasyClass
+// Auther Information :- Navodika Karunasingha (eng.navodika@gmail.com)
+
 import 'package:flutter/material.dart';
 import "package:easyclass/screens/profile/profileappbar.dart";
 import "package:easyclass/screens/profile/userpreferences.dart";
@@ -29,14 +32,16 @@ class _ProfilePageState extends State<ProfilePage> {
         stream: FirebaseFirestore.instance.collection('users').doc(userforid.uid).snapshots(),
         builder: (context, snapshot) {
           // final docs = snapshot.data.data(userforid.uid);
+
           if (!snapshot.hasData) return Loading();
 
           final myuser = ProUser(
-            imagePath: 'https://media.istockphoto.com/photos/portrait-of-a-happy-latin-american-boy-smiling-picture-id1271410473',
+            imagePath: snapshot.data['profileimg'] == "" ? 'https://firebasestorage.googleapis.com/v0/b/easyclass-4306f.appspot.com/o/profile_picture%2Fdefault.png?alt=media&token=1f96742e-9e8c-4203-b0e7-bfb8872f11b7' : snapshot.data['profileimg'],
             name: snapshot.data['name'],
             email: snapshot.data['email'],
             about: snapshot.data['about'],
             phoneno: snapshot.data['phoneno'],
+            role: snapshot.data['role'],
             isDarkMode: false,
           );
           return Scaffold(
@@ -52,6 +57,7 @@ class _ProfilePageState extends State<ProfilePage> {
                       MaterialPageRoute(builder: (context) => EditProfilePage(myuser)),
                     );
                   },
+                  myuser: myuser,
                 ),
                 const SizedBox(height: 24),
                 buildName(myuser),
@@ -106,7 +112,14 @@ class _ProfilePageState extends State<ProfilePage> {
         ],
       );
   Widget buildUpgradeButton(ProUser user) => ButtonWidget(
-        text: 'Upgrade To PRO',
-        onClicked: () {},
+        text: user.role.toString(),
+        onClicked: () {
+          print(user.role);
+          String roleSinhala;
+          roleSinhala = user.role == 'student' ? 'ශිෂ්‍යයයෙක්' : 'ගුරුවරයෙක්';
+          /*ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+            content: Text("ඔබ ${roleSinhala}. ඔබගේ ගිණුම ප්‍රවර්ධනය කිරීමට හෝ පහත් කිරීමට කරුණාකර පරිපාලක අමතන්න."),
+          ));*/
+        },
       );
 }

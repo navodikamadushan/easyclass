@@ -1,3 +1,6 @@
+// All right reserved by EasyClass
+// Auther Information :- Navodika Karunasingha (eng.navodika@gmail.com)
+
 import 'package:flutter/material.dart';
 import "package:easyclass/services/auth.dart";
 import "package:easyclass/services/email.dart";
@@ -182,7 +185,11 @@ class _SettingPage extends State<SettingPage> {
                       'ගිණුම මකන්න',
                       style: TextStyle(color: Colors.red),
                     ),
-                    onTap: () {},
+                    onTap: () {
+                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                        content: Text("මෙම විශේෂාංගය තවමත් සංවර්ධනය කර නොමැත."),
+                      ));
+                    },
                   ),
                 ),
                 Card(
@@ -219,7 +226,11 @@ class _SettingPage extends State<SettingPage> {
                   child: ListTile(
                     leading: Icon(Icons.update),
                     title: Text('යාවත්කාලීන කරන්න'),
-                    onTap: () {},
+                    onTap: () {
+                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                        content: Text("මෙම විශේෂාංගය තවමත් සංවර්ධනය කර නොමැත."),
+                      ));
+                    },
                   ),
                 ),
                 Card(
@@ -227,7 +238,11 @@ class _SettingPage extends State<SettingPage> {
                     leading: Icon(Icons.language),
                     title: Text('භාෂාව'),
                     subtitle: Text('සිංහල'),
-                    onTap: () {},
+                    onTap: () {
+                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                        content: Text("මෙම විශේෂාංගය තවමත් සංවර්ධනය කර නොමැත."),
+                      ));
+                    },
                   ),
                 ),
               ],

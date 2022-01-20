@@ -1,0 +1,70 @@
+// All right reserved by EasyClass
+// Auther Information :- Navodika Karunasingha (eng.navodika@gmail.com)
+
+import 'package:flutter/material.dart';
+import "package:easyclass/services/auth.dart";
+import "package:easyclass/services/database.dart";
+import 'package:provider/provider.dart';
+import "package:easyclass/screens/home/student/onlinefullclasslist.dart";
+import "package:easyclass/screens/home/setting.dart";
+//import "package:easyclass/screens/home/teacher/addclassbuttonwidget.dart";
+import "package:easyclass/screens/profile/profilepage.dart";
+import "package:easyclass/screens/profile/editprofilepage.dart";
+import "package:easyclass/screens/home/profileimagewidget.dart";
+import 'package:cached_network_image/cached_network_image.dart';
+import 'package:top_modal_sheet/top_modal_sheet.dart';
+import "package:easyclass/screens/home/student/menu.dart";
+//import 'package:easyclass/shared/custom_page_route.dart';
+import 'package:top_modal_sheet/top_modal_sheet.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+
+class OnlineFullClassStudentPage extends StatelessWidget {
+  DocumentSnapshot userInfo;
+  BuildContext precontext;
+  OnlineFullClassStudentPage(DocumentSnapshot userInfo, BuildContext precontext) {
+    this.userInfo = userInfo;
+    this.precontext = precontext;
+  }
+  final AuthService _auth = AuthService();
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('නව පන්ති'),
+        centerTitle: true,
+        actions: <Widget>[
+          ProfileImageWidget(
+            imagePath: userInfo['profileimg'] == "" ? 'https://firebasestorage.googleapis.com/v0/b/easyclass-4306f.appspot.com/o/profile_picture%2Fdefault.png?alt=media&token=1f96742e-9e8c-4203-b0e7-bfb8872f11b7' : userInfo['profileimg'],
+            onClicked: () async {
+              //_showUserPannel();
+              Navigator.pop(context);
+              Navigator.of(this.precontext).push(
+                MaterialPageRoute(builder: (context) => ProfilePage()),
+              );
+            },
+          ),
+        ],
+        flexibleSpace: Image.asset(
+          "assets/appbar_image.png",
+          fit: BoxFit.cover,
+        ),
+        backgroundColor: Colors.transparent,
+        elevation: 10,
+      ),
+      drawer: Drawer(
+        child: MenuPage(this.userInfo, context),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          //Navigator.pop(context);
+          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+            content: Text("මෙම විශේෂාංගය තවමත් සංවර්ධනය කර නොමැත."),
+          ));
+        },
+        backgroundColor: Colors.blue,
+        child: const Icon(Icons.add_reaction_rounded),
+      ),
+      body: FullLessonList(userInfo, context),
+    );
+  }
+}

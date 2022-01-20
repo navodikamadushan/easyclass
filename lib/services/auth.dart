@@ -1,3 +1,6 @@
+// All right reserved by EasyClass
+// Auther Information :- Navodika Karunasingha (eng.navodika@gmail.com)
+
 import 'package:firebase_auth/firebase_auth.dart';
 import "package:translator/translator.dart";
 import 'package:easyclass/models/user.dart';
@@ -61,7 +64,7 @@ class AuthService {
     try {
       UserCredential result = await _auth.createUserWithEmailAndPassword(email: email, password: password);
       User user = result.user;
-      await DatabaseService().addUserProfileData(user.uid, '', email, '', '');
+      await DatabaseService().addUserProfileData(user.uid, '', email, '', '', 'student', []);
       return [
         _userFromFirebaseUser(user),
         null

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1018324109199",
+    "project_id": "easyclass-4306f",
+    "storage_bucket": "easyclass-4306f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1018324109199:android:1e397efe9bcc922492adfa",
+        "android_client_info": {
+          "package_name": "com.example.easyclass"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1018324109199-bp4rom5tdf5bshsjaopi21l8bftkjaba.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdjuBPd_iVfKigtBRLGC7Y-9-KpmVTJME"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1018324109199-bp4rom5tdf5bshsjaopi21l8bftkjaba.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

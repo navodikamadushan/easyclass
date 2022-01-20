@@ -1,3 +1,6 @@
+// All right reserved by EasyClass
+// Auther Information :- Navodika Karunasingha (eng.navodika@gmail.com)
+
 import 'package:flutter/material.dart';
 import "package:easyclass/services/auth.dart";
 import "package:easyclass/shared/constant.dart";
@@ -68,10 +71,10 @@ class _RegisterState extends State<Register> {
                     SizedBox(height: 50.0),
                     Container(
                       child: Transform.scale(
-                        scale: 3.5,
+                        scale: 4,
                         child: IconButton(
                           onPressed: () {},
-                          icon: new Image.asset("assets/school_icon.png"),
+                          icon: new Image.asset("assets/official_easy_class_logo__short__purple.png"),
                         ),
                       ),
                     ),

@@ -1,14 +1,21 @@
+// All right reserved by EasyClass
+// Auther Information :- Navodika Karunasingha (eng.navodika@gmail.com)
+
 import 'package:flutter/material.dart';
+import "package:easyclass/models/profileuser.dart";
+import "package:easyclass/screens/profile/editprofilepage.dart";
 
 class ProfileWidget extends StatelessWidget {
   final String imagePath;
   final VoidCallback onClicked;
   final bool isEdit;
+  final ProUser myuser;
 
   const ProfileWidget({
     this.isEdit = false,
     this.imagePath,
     this.onClicked,
+    this.myuser,
   });
   @override
   Widget build(BuildContext context) {
@@ -21,7 +28,7 @@ class ProfileWidget extends StatelessWidget {
           Positioned(
             bottom: 0,
             right: 4,
-            child: buildEditIcon(color),
+            child: buildEditIcon(context, color),
           ),
         ],
       ),
@@ -44,16 +51,27 @@ class ProfileWidget extends StatelessWidget {
     );
   }
 
-  Widget buildEditIcon(Color color) => buildCircle(
+  Widget buildEditIcon(BuildContext context, Color color) => buildCircle(
         color: Colors.white,
         all: 3,
         child: buildCircle(
           color: color,
-          all: 8,
-          child: Icon(
-            isEdit ? Icons.add_a_photo : Icons.edit,
-            color: Colors.white,
-            size: 20,
+          all: 1,
+          child: IconButton(
+            icon: Icon(
+              isEdit ? Icons.add_a_photo : Icons.edit,
+              color: Colors.white,
+              size: 20,
+            ),
+            highlightColor: Colors.pink,
+            onPressed: () {
+              !isEdit
+                  ? Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => EditProfilePage(myuser)),
+                    )
+                  : print("Edit pro");
+              //onClicked;
+            },
           ),
         ),
       );

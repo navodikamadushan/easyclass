@@ -1,3 +1,6 @@
+// All right reserved by EasyClass
+// Auther Information :- Navodika Karunasingha (eng.navodika@gmail.com)
+
 import 'package:platform_device_id/platform_device_id.dart';
 
 class DeviceInfoService {

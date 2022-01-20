@@ -1,3 +1,6 @@
+// All right reserved by EasyClass
+// Auther Information :- Navodika Karunasingha (eng.navodika@gmail.com)
+
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:easyclass/screens/home/setting.dart';
@@ -27,7 +30,11 @@ AppBar buildAppBar(BuildContext prof_context, bool isEditProfile, ProUser myuser
             ),
       IconButton(
         icon: Icon(icon, color: Colors.black),
-        onPressed: () {},
+        onPressed: () {
+          ScaffoldMessenger.of(prof_context).showSnackBar(SnackBar(
+            content: Text("මෙම විශේෂාංගය තවමත් සංවර්ධනය කර නොමැත."),
+          ));
+        },
       ),
     ],
   );
