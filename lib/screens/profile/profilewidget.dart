@@ -24,7 +24,7 @@ class ProfileWidget extends StatelessWidget {
           Positioned(
             bottom: 0,
             right: 4,
-            child: buildEditIcon(color, onClicked),
+            child: buildEditIcon(color),
           ),
         ],
       ),
@@ -47,7 +47,7 @@ class ProfileWidget extends StatelessWidget {
     );
   }
 
-  Widget buildEditIcon(Color color, VoidCallback onClicked) => buildCircle(
+  Widget buildEditIcon(Color color) => buildCircle(
         color: Colors.white,
         all: 3,
         child: buildCircle(
