@@ -141,7 +141,10 @@ class _LessonList extends State<LessonList> {
                       padding: EdgeInsets.only(left: 5.0),
                       child: Text(
                         "පන්ති කාලසටහන",
-                        style: TextStyle(fontWeight: FontWeight.bold),
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          decoration: TextDecoration.underline,
+                        ),
                       ),
                     ),
                     TimeSlot(record.timeslot),
