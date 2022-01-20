@@ -3,6 +3,7 @@
 
 import 'package:flutter/material.dart';
 import "package:easyclass/models/profileuser.dart";
+import "package:easyclass/screens/profile/editprofilepage.dart";
 
 class ProfileWidget extends StatelessWidget {
   final String imagePath;
