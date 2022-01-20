@@ -83,6 +83,7 @@ class _FullLessonList extends State<FullLessonList> {
             subtitle: Column(
               children: [
                 Text(record.subject),
+                Text(record.subject),
               ],
             ),
             enabled: widget.userInfo['subscribed_class'].contains(record.online_class_id) ? false : true,
