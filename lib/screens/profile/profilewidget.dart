@@ -61,7 +61,8 @@ class ProfileWidget extends StatelessWidget {
             ),
             highlightColor: Colors.pink,
             onPressed: () {
-              onClicked;
+              print("HI");
+              //onClicked;
             },
           ),
         ),
