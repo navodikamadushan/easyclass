@@ -72,7 +72,6 @@ class ProfileWidget extends StatelessWidget {
     Widget child,
     double all,
     Color color,
-    VoidCallback onClicked,
   }) =>
       ClipOval(
         child: Container(
