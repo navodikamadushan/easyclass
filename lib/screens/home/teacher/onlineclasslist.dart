@@ -81,7 +81,7 @@ class _LessonList extends State<LessonList> {
             subtitle: Text(record.subject),
             trailing: TextButton(
               style: TextButton.styleFrom(
-                textStyle: const TextStyle(fontSize: 20),
+                textStyle: const TextStyle(fontSize: 10),
               ),
               onPressed: null,
               child: const Text('Disabled'),
