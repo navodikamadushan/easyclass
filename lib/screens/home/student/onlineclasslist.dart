@@ -99,14 +99,6 @@ class _LessonList extends State<LessonList> {
                     padding: EdgeInsets.only(left: 5.0),
                     child: Text(record.subject),
                   ),
-                  Text(
-                    "ගුරුවරයාගේ නම: ",
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(left: 5.0),
-                    child: Text("Navodika Karunasingha"),
-                  ),
                 ],
               ),
             ),
@@ -135,6 +127,14 @@ class _LessonList extends State<LessonList> {
               Card(
                 child: Column(
                   children: [
+                    Text(
+                      "ගුරුවරයාගේ නම: ",
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(left: 5.0),
+                      child: Text("Navodika Karunasingha"),
+                    ),
                     TimeSlot(record.timeslot),
                   ],
                 ),
