@@ -135,6 +135,7 @@ class _LessonList extends State<LessonList> {
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
                     ),
+                    SizedBox(height: 50.0),
                     Padding(
                       padding: EdgeInsets.only(left: 5.0),
                       child: Text(
