@@ -82,7 +82,7 @@ class _FullLessonList extends State<FullLessonList> {
             ),
             subtitle: Column(
               children: [
-                Text("විෂය" + record.subject),
+                Text("විෂය: " + record.subject),
               ],
             ),
             enabled: widget.userInfo['subscribed_class'].contains(record.online_class_id) ? false : true,
