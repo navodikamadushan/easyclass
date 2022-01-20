@@ -59,7 +59,7 @@ class ProfileWidget extends StatelessWidget {
               color: Colors.white,
               size: 20,
             ),
-            highlightColor: Colors.white,
+            highlightColor: Colors.pink,
           ),
         ),
       );
