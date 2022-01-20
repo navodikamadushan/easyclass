@@ -81,7 +81,7 @@ class DatabaseService {
   }
 
   // update online classes
-  Future addNewOnlineClass(String class_name, String subject, String teacherid, var timeslot) async {
+  Future addNewOnlineClass(String class_name, String subject, String teacherid, String teachername, var timeslot) async {
     var onlineclassRef = onlineclass.doc();
     return await onlineclassRef.set({
       'class_name': class_name,
@@ -91,6 +91,7 @@ class DatabaseService {
       'isstart': false,
       'timeslot': timeslot,
       'online_class_id': onlineclassRef.id,
+      'teachername': teachername,
     });
   }
 

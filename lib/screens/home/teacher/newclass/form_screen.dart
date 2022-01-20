@@ -12,8 +12,13 @@ import "package:easyclass/services/database.dart"; // import database package
 import "package:easyclass/services/auth.dart"; // import auth package
 import "package:easyclass/models/user.dart"; // import user model for MyUser class
 import "package:easyclass/shared/loading.dart"; // import loading page
+import 'package:cloud_firestore/cloud_firestore.dart'; //import cloud firestore for DocumentSnapshot class
 
 class FormScreen extends StatefulWidget {
+  /*DocumentSnapshot userInfo;
+  FormScreen(DocumentSnapshot userInfo) {
+    this.userInfo = userInfo;
+  }*/
   @override
   _FormScreenState createState() {
     return _FormScreenState();
