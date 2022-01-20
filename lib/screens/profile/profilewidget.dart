@@ -61,7 +61,7 @@ class ProfileWidget extends StatelessWidget {
             ),
             highlightColor: Colors.pink,
             onPressed: () {
-              isEdit ? onClicked : null;
+              !isEdit ? onClicked : null;
             },
           ),
         ),
