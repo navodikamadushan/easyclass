@@ -91,7 +91,7 @@ class _LessonList extends State<LessonList> {
                 Text("විෂය" + record.subject),
                 Text(record.subject),
               ],
-            ),,
+            ),
             trailing: _buildButton('Join', () async {
               print(record.online_class_id);
               _alertService.joinToExistingClass(context, record.class_name).then((onValue) async {
