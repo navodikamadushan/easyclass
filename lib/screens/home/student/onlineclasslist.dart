@@ -127,7 +127,7 @@ class _LessonList extends State<LessonList> {
               Card(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
+                  children: <Widget>[
                     SizedBox(height: 5.0),
                     Padding(
                       padding: EdgeInsets.only(left: 5.0),
