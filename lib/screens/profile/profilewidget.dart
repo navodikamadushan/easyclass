@@ -65,12 +65,14 @@ class ProfileWidget extends StatelessWidget {
               //onClicked;
             },
           ),
+          onClicked: onClicked,
         ),
       );
   Widget buildCircle({
     Widget child,
     double all,
     Color color,
+    VoidCallback onClicked,
   }) =>
       ClipOval(
         child: Container(
