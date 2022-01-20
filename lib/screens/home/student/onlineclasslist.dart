@@ -93,6 +93,8 @@ class _LessonList extends State<LessonList> {
                 children: <Widget>[
                   Text("විෂය: "),
                   Text(" " + record.subject),
+                  Text("ගුරුවරයාගේ නම: "),
+                  Text(" " + record.subject),
                 ],
               ),
             ),
