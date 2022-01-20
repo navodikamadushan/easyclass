@@ -79,16 +79,19 @@ class _LessonList extends State<LessonList> {
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
             subtitle: Text(record.subject),
-            trailing: TextButton(
-              style: TextButton.styleFrom(
-                textStyle: const TextStyle(fontSize: 12),
+            trailing: Tooltip(
+              message: 'Edit your class',
+              child: TextButton(
+                style: TextButton.styleFrom(
+                  textStyle: const TextStyle(fontSize: 12),
+                ),
+                onPressed: () {
+                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                    content: Text("මෙම විශේෂාංගය තවමත් සංවර්ධනය කර නොමැත."),
+                  ));
+                },
+                child: const Text('සංස්කරණය'),
               ),
-              onPressed: () {
-                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                  content: Text("මෙම විශේෂාංගය තවමත් සංවර්ධනය කර නොමැත."),
-                ));
-              },
-              child: const Text('සංස්කරණය'),
             ),
             onExpansionChanged: (value) {
               //print(expansionTileKey.hashCode.toString());
