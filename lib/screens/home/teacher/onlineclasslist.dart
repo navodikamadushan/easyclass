@@ -86,7 +86,7 @@ class _LessonList extends State<LessonList> {
               onPressed: () {
                 print("Edit!");
               },
-              child: const Text('Edit'),
+              child: const Text('සංස්කරණය'),
             ),
             onExpansionChanged: (value) {
               //print(expansionTileKey.hashCode.toString());
