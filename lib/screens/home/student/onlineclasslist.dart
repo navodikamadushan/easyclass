@@ -132,7 +132,7 @@ class _LessonList extends State<LessonList> {
                     Padding(
                       padding: EdgeInsets.only(left: 5.0),
                       child: Text(
-                        "ගුරුවරයාගේ නම: Navodika Karunasingha",
+                        "ගුරුවරයාගේ නම: ${record.teachername}",
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
                     ),
