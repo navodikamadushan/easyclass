@@ -64,7 +64,11 @@ class ProfileWidget extends StatelessWidget {
             ),
             highlightColor: Colors.pink,
             onPressed: () {
-              !isEdit ? Navigator.pop(context) : print("Edit pro");
+              !isEdit
+                  ? Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => EditProfilePage(myuser)),
+                    )
+                  : print("Edit pro");
               //onClicked;
             },
           ),
