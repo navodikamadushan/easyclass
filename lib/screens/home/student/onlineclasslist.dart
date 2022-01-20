@@ -128,6 +128,7 @@ class _LessonList extends State<LessonList> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    SizedBox(height: 5.0),
                     Padding(
                       padding: EdgeInsets.only(left: 5.0),
                       child: Text(
