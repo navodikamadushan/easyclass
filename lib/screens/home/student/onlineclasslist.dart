@@ -133,7 +133,11 @@ class _LessonList extends State<LessonList> {
             },
             children: <Widget>[
               Card(
-                child: TimeSlot(record.timeslot),
+                child: Column(
+                  children: [
+                    TimeSlot(record.timeslot),
+                  ],
+                ),
               ),
             ],
           ),
