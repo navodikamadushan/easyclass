@@ -132,6 +132,10 @@ class _LessonList extends State<LessonList> {
                       "ගුරුවරයාගේ නම: Navodika Karunasingha",
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
+                    Text(
+                      "පන්ති කාලසටහන",
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
                     TimeSlot(record.timeslot),
                   ],
                 ),
