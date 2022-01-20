@@ -94,7 +94,7 @@ class _LessonList extends State<LessonList> {
                   Text("විෂය: "),
                   Text(" " + record.subject),
                   Text("ගුරුවරයාගේ නම: "),
-                  Text(" " + record.subject),
+                  Text(" " + "Navodika Karunasingha"),
                 ],
               ),
             ),
