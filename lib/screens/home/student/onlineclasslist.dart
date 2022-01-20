@@ -126,6 +126,7 @@ class _LessonList extends State<LessonList> {
             children: <Widget>[
               Card(
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       "ගුරුවරයාගේ නම: Navodika Karunasingha",
