@@ -84,7 +84,7 @@ class _FullLessonList extends State<FullLessonList> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text("විෂය: " + record.subject),
-                Text("විෂය: kljkjljlkjkjlkjkjjlkjkkjkjlklkl;kllklklkklklllklkl"),
+                Text("විෂය: kljkjljlkjkjlkjkjjlkjkkjkjlklkl"),
               ],
             ),
             enabled: widget.userInfo['subscribed_class'].contains(record.online_class_id) ? false : true,
