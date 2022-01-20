@@ -80,7 +80,11 @@ class _FullLessonList extends State<FullLessonList> {
               record.class_name,
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
-            subtitle: Text(record.subject),
+            subtitle: Column(
+              children: [
+                Text(record.subject),
+              ],
+            ),
             enabled: widget.userInfo['subscribed_class'].contains(record.online_class_id) ? false : true,
             onTap: () async {
               _alertService.subscribeToNewClass(context).then((onValue) async {
