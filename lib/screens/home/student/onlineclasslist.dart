@@ -91,12 +91,18 @@ class _LessonList extends State<LessonList> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Text("විෂය: "),
+                  Text(
+                    "විෂය: ",
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
                   Padding(
                     padding: EdgeInsets.only(left: 5.0),
                     child: Text(record.subject),
                   ),
-                  Text("ගුරුවරයාගේ නම: "),
+                  Text(
+                    "ගුරුවරයාගේ නම: ",
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
                   Padding(
                     padding: EdgeInsets.only(left: 5.0),
                     child: Text("Navodika Karunasingha"),
