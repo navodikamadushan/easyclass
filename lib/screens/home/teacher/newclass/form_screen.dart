@@ -161,7 +161,7 @@ class _FormScreenState extends State<FormScreen> {
                           print(user.uid.toString());
                           // add a new online class to database
                           setState(() => loading = true);
-                          dynamic result = await _database.addNewOnlineClass(_className, _subject, user.uid.toString(), userInfo['name'], context.read<ListProvider>().getAllItems(index));
+                          dynamic result = await _database.addNewOnlineClass(_className, _subject, user.uid.toString(), widget.userInfo['name'], context.read<ListProvider>().getAllItems(index));
                           if (result == null) {
                             setState(() => loading = false);
                             //_formKey.currentState.save();
