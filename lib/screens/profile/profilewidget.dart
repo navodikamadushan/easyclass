@@ -53,13 +53,12 @@ class ProfileWidget extends StatelessWidget {
         child: buildCircle(
           color: color,
           all: 8,
-          child: //IconButton(
-              //icon:
-              Icon(
-            isEdit ? Icons.add_a_photo : Icons.edit,
-            color: Colors.white,
-            size: 10,
-            //),
+          child: IconButton(
+            icon: Icon(
+              isEdit ? Icons.add_a_photo : Icons.edit,
+              color: Colors.white,
+              size: 10,
+            ),
           ),
         ),
       );
