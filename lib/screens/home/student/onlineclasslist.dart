@@ -92,7 +92,10 @@ class _LessonList extends State<LessonList> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text("විෂය: "),
-                  Text(" " + record.subject),
+                  Padding(
+                    padding: EdgeInsets.only(left: 5.0),
+                    child: Text(record.subject),
+                  ),
                   Text("ගුරුවරයාගේ නම: "),
                   Padding(
                     padding: EdgeInsets.only(left: 5.0),
