@@ -89,7 +89,7 @@ class _LessonList extends State<LessonList> {
             subtitle: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                Text("විෂය" + record.subject),
+                Text("විෂය: " + record.subject),
                 Text(record.subject),
               ],
             ),
