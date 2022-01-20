@@ -81,6 +81,7 @@ class _LessonList extends State<LessonList> {
             subtitle: Text(record.subject),
             trailing: Tooltip(
               message: 'ඔබේ පන්ති විස්තර සංස්කරණය කරන්න.',
+              height: 12,
               child: TextButton(
                 style: TextButton.styleFrom(
                   textStyle: const TextStyle(fontSize: 12),
