@@ -128,9 +128,12 @@ class _LessonList extends State<LessonList> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      "ගුරුවරයාගේ නම: Navodika Karunasingha",
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                    Padding(
+                      padding: EdgeInsets.only(left: 5.0),
+                      child: Text(
+                        "ගුරුවරයාගේ නම: Navodika Karunasingha",
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
                     ),
                     Text(
                       "පන්ති කාලසටහන",
