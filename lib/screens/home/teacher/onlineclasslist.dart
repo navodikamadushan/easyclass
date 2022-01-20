@@ -84,7 +84,9 @@ class _LessonList extends State<LessonList> {
                 textStyle: const TextStyle(fontSize: 12),
               ),
               onPressed: () {
-                print("Edit!");
+                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                  content: Text("මෙම විශේෂාංගය තවමත් සංවර්ධනය කර නොමැත."),
+                ));
               },
               child: const Text('සංස්කරණය'),
             ),
