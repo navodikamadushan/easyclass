@@ -2,16 +2,19 @@
 // Auther Information :- Navodika Karunasingha (eng.navodika@gmail.com)
 
 import 'package:flutter/material.dart';
+import "package:easyclass/models/profileuser.dart";
 
 class ProfileWidget extends StatelessWidget {
   final String imagePath;
   final VoidCallback onClicked;
   final bool isEdit;
+  final ProUser myuser;
 
   const ProfileWidget({
     this.isEdit = false,
     this.imagePath,
     this.onClicked,
+    this.myuser,
   });
   @override
   Widget build(BuildContext context) {
