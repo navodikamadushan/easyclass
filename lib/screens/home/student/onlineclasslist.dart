@@ -86,12 +86,14 @@ class _LessonList extends State<LessonList> {
               record.class_name,
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
-            subtitle: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Text("විෂය: " + record.subject + "විෂය: "),
-                Text(record.subject),
-              ],
+            subtitle: Padding(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text("විෂය: " + record.subject + "විෂය: "),
+                  Text(record.subject),
+                ],
+              ),
             ),
             trailing: _buildButton('Join', () async {
               print(record.online_class_id);
