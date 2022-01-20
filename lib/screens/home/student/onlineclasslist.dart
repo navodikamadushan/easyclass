@@ -128,12 +128,8 @@ class _LessonList extends State<LessonList> {
                 child: Column(
                   children: [
                     Text(
-                      "ගුරුවරයාගේ නම: ",
+                      "ගුරුවරයාගේ නම: Navodika Karunasingha",
                       style: TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(left: 5.0),
-                      child: Text("Navodika Karunasingha"),
                     ),
                     TimeSlot(record.timeslot),
                   ],
