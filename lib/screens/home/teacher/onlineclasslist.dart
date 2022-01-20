@@ -81,7 +81,7 @@ class _LessonList extends State<LessonList> {
             subtitle: Text(record.subject),
             trailing: TextButton(
               style: TextButton.styleFrom(
-                textStyle: const TextStyle(fontSize: 10),
+                textStyle: const TextStyle(fontSize: 12),
               ),
               onPressed: () {
                 print("Edit!");
