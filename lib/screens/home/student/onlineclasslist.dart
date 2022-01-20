@@ -91,7 +91,7 @@ class _LessonList extends State<LessonList> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Text("විෂය: " + record.subject + "විෂය: "),
+                  Text("විෂය: " + record.subject + "kkjkjdsfjksdkfjksjdf"),
                   Text(record.subject),
                 ],
               ),
