@@ -81,6 +81,7 @@ class _FullLessonList extends State<FullLessonList> {
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
             subtitle: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text("විෂය: " + record.subject),
               ],
