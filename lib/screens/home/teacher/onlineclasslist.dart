@@ -90,10 +90,10 @@ class _LessonList extends State<LessonList> {
                     onTap: () {
                       print("Tap Event");
                     },
-                    //totalRepeatCount: 4,
-                    repeatForever: true,
+                    totalRepeatCount: 4,
+                    //repeatForever: true,
                     pause: const Duration(milliseconds: 2),
-                    displayFullTextOnTap: true,
+                    displayFullTextOnTap: false,
                     stopPauseOnTap: true),
               ),
             ),
