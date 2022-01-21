@@ -76,7 +76,7 @@ class _LessonList extends State<LessonList> {
             leading: FlutterLogo(),
             title: AnimatedTextKit(
               animatedTexts: [
-                TypewriterAnimatedText(
+                ScaleAnimatedText(
                   "${record.class_name}",
                   textStyle: const TextStyle(
                     fontSize: 14.0,
