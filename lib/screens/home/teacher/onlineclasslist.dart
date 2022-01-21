@@ -84,7 +84,7 @@ class _LessonList extends State<LessonList> {
                   fontSize: 15.0,
                   fontWeight: FontWeight.bold,
                 ),
-                boxHeight: 300.0,
+                boxHeight: 15.0,
               ),
             ),
             /*Text(
