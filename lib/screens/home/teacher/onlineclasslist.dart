@@ -81,7 +81,7 @@ class _LessonList extends State<LessonList> {
                 waveColor: Colors.blueAccent,
                 boxBackgroundColor: Colors.redAccent,
                 textStyle: TextStyle(
-                  fontSize: 80.0,
+                  fontSize: 15.0,
                   fontWeight: FontWeight.bold,
                 ),
                 boxHeight: 300.0,
