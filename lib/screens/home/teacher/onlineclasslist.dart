@@ -147,8 +147,8 @@ class _LessonList extends State<LessonList> {
                                 print(record.online_class_id);
                               }, record.isstart)
                             : _buildButton(context, "නවතන්න", Colors.red[600], () async {
-                                print("Start!");
-                                dynamic result = await _databaseService.updateIsStart(record.online_class_id, true);
+                                print("Stop!");
+                                dynamic result = await _databaseService.updateIsStart(record.online_class_id, false);
                                 if (result == null) {
                                   print("Null");
                                 } else {
@@ -191,10 +191,6 @@ class _LessonList extends State<LessonList> {
           onSurface: buttonColor,
         ),
         child: Text(label),
-        onPressed: isEnable
-            ? () {
-                print("Cancel");
-              }
-            : onClicked,
+        onPressed: onClicked,
       );
 }
