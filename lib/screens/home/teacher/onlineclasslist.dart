@@ -74,25 +74,32 @@ class _LessonList extends State<LessonList> {
           child: ExpansionTile(
             key: expansionTileKey,
             leading: FlutterLogo(),
-            title: SizedBox(
-              width: 250.0,
-              child: DefaultTextStyle(
-                style: const TextStyle(
-                  fontSize: 30.0,
-                  fontFamily: 'Agne',
+            title: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                const SizedBox(width: 20.0, height: 100.0),
+                const Text(
+                  'Be',
+                  style: TextStyle(fontSize: 43.0),
                 ),
-                child: AnimatedTextKit(
-                  animatedTexts: [
-                    TypewriterAnimatedText('Discipline is the best tool'),
-                    TypewriterAnimatedText('Design first, then code'),
-                    TypewriterAnimatedText('Do not patch bugs out, rewrite them'),
-                    TypewriterAnimatedText('Do not test bugs out, design them out'),
-                  ],
-                  onTap: () {
-                    print("Tap Event");
-                  },
+                const SizedBox(width: 20.0, height: 100.0),
+                DefaultTextStyle(
+                  style: const TextStyle(
+                    fontSize: 40.0,
+                    fontFamily: 'Horizon',
+                  ),
+                  child: AnimatedTextKit(
+                    animatedTexts: [
+                      RotateAnimatedText('AWESOME'),
+                      RotateAnimatedText('OPTIMISTIC'),
+                      RotateAnimatedText('DIFFERENT'),
+                    ],
+                    onTap: () {
+                      print("Tap Event");
+                    },
+                  ),
                 ),
-              ),
+              ],
             ),
             /*Text(
               record.class_name,
