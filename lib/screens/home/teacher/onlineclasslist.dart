@@ -191,6 +191,10 @@ class _LessonList extends State<LessonList> {
           onSurface: buttonColor,
         ),
         child: Text(label),
-        onPressed: isEnable ? print("Cancel") : onClicked,
+        onPressed: isEnable
+            ? () {
+                print("Cancel");
+              }
+            : onClicked,
       );
 }
