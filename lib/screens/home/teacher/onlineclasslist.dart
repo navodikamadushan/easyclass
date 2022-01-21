@@ -83,10 +83,10 @@ class _LessonList extends State<LessonList> {
                 TypewriterAnimatedText(
                   'Hello world!',
                   textStyle: const TextStyle(
-                    fontSize: 32.0,
+                    fontSize: 12.0,
                     fontWeight: FontWeight.bold,
                   ),
-                  speed: const Duration(milliseconds: 2000),
+                  speed: const Duration(milliseconds: 500),
                 ),
               ],
               totalRepeatCount: 4,
