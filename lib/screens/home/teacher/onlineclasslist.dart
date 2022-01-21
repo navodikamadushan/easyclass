@@ -78,7 +78,7 @@ class _LessonList extends State<LessonList> {
               record.class_name,
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
-            subtitle: Text("විෂය: ${record.subject}"),
+            subtitle: Text("විෂය:   ${record.subject}"),
             trailing: Tooltip(
               message: 'ඔබේ පන්ති විස්තර සංස්කරණය කරන්න.',
               height: 12,
