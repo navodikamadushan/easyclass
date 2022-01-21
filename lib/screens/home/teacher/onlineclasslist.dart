@@ -74,31 +74,9 @@ class _LessonList extends State<LessonList> {
           child: ExpansionTile(
             key: expansionTileKey,
             leading: FlutterLogo(),
-            title: Row(
-              mainAxisSize: MainAxisSize.min,
-              children: <Widget>[
-                //const SizedBox(width: 20.0, height: 50.0),
-                const Text(
-                  'Be',
-                  style: TextStyle(fontSize: 15.0),
-                ),
-                const SizedBox(width: 5.0, height: 10.0),
-                DefaultTextStyle(
-                  style: const TextStyle(
-                    fontSize: 15.0,
-                    fontFamily: 'Horizon',
-                  ),
-                  child: AnimatedTextKit(
-                    animatedTexts: [
-                      RotateAnimatedText('AWESOME'),
-                      RotateAnimatedText('OPTIMISTIC'),
-                      RotateAnimatedText('DIFFERENT'),
-                    ],
-                    onTap: () {
-                      print("Tap Event");
-                    },
-                  ),
-                ),
+            title: AnimatedTextKit(
+              animatedTexts: [
+                FadeAnimatedText("${record.class_name}"),
               ],
             ),
             /*Text(
