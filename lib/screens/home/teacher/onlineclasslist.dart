@@ -83,7 +83,7 @@ class _LessonList extends State<LessonList> {
                 ),
                 child: AnimatedTextKit(
                   animatedTexts: [
-                    FadeAnimatedText('do IT!'),
+                    FadeAnimatedText("${record.class_name}"),
                   ],
                   onTap: () {
                     print("Tap Event");
