@@ -16,6 +16,8 @@ class JistiVideoConference {
   }
 
   joinMeeting(String roomName, String subject, String displayname, String useremail) async {
+    JitsiMeet.addListener(JitsiMeetingListener(onConferenceWillJoin: _onConferenceWillJoin, onConferenceJoined: _onConferenceJoined, onConferenceTerminated: _onConferenceTerminated, onError: _onError));
+
     String serverUrl = null;
 
     var isAudioOnly = true;
