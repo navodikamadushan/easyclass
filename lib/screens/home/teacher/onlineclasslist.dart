@@ -81,7 +81,7 @@ class _LessonList extends State<LessonList> {
             subtitle: AnimatedTextKit(
               animatedTexts: [
                 TypewriterAnimatedText(
-                  'Hello world!',
+                  "විෂය:   ${record.subject}",
                   textStyle: const TextStyle(
                     fontSize: 12.0,
                     fontWeight: FontWeight.bold,
