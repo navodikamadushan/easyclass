@@ -74,10 +74,22 @@ class _LessonList extends State<LessonList> {
           child: ExpansionTile(
             key: expansionTileKey,
             leading: FlutterLogo(),
-            title: AnimatedTextKit(
-              animatedTexts: [
-                FadeAnimatedText("${record.class_name}"),
-              ],
+            title: SizedBox(
+              width: 250.0,
+              child: DefaultTextStyle(
+                style: const TextStyle(
+                  fontSize: 32.0,
+                  fontWeight: FontWeight.bold,
+                ),
+                child: AnimatedTextKit(
+                  animatedTexts: [
+                    FadeAnimatedText('do IT!'),
+                  ],
+                  onTap: () {
+                    print("Tap Event");
+                  },
+                ),
+              ),
             ),
             /*Text(
               record.class_name,
