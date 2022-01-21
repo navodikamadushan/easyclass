@@ -162,16 +162,23 @@ class _LessonList extends State<LessonList> {
                       flex: 5,
                       child: Padding(
                         padding: EdgeInsets.all(8),
-                        child: _buildButton(context, "එක්වන්න", Colors.purple[600], () {
-                          _alertService.joinToExistingClass(context, record.class_name).then((onValue) async {
-                            if (onValue) {
-                              print("Accept!");
-                              jitsi.joinMeeting(record.online_class_id, record.subject, userInfo['name'], userInfo['email']);
-                            } else {
-                              print("Discard!");
-                            }
-                          });
-                        }, !record.isstart),
+                        child: _buildButton(
+                            context,
+                            "එක්වන්න",
+                            Colors.purple[600],
+                            record.isstart
+                                ? () {
+                                    _alertService.joinToExistingClass(context, record.class_name).then((onValue) async {
+                                      if (onValue) {
+                                        print("Accept!");
+                                        jitsi.joinMeeting(record.online_class_id, record.subject, userInfo['name'], userInfo['email']);
+                                      } else {
+                                        print("Discard!");
+                                      }
+                                    });
+                                  }
+                                : null,
+                            !record.isstart),
                       ),
                     )
                   ],
