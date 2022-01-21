@@ -110,8 +110,8 @@ class _LessonList extends State<LessonList> {
                     child: Text(
                       'සිසුන් සංඛ්‍යාව: ${record.no_student.toString()}',
                       style: TextStyle(
-                        fontSize: 20.0,
-                      ),
+                          // fontSize: 20.0,
+                          ),
                     ),
                   ),
                 ],
