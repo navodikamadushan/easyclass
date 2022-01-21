@@ -75,7 +75,7 @@ class _LessonList extends State<LessonList> {
             key: expansionTileKey,
             leading: FlutterLogo(),
             title: SizedBox(
-              //width: 250.0,
+              width: 50.0,
               child: TextLiquidFill(
                 text: 'LIQUIDY',
                 waveColor: Colors.blueAccent,
