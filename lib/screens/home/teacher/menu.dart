@@ -3,6 +3,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:easyclass/screens/home/teacher/newclass/form_screen.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class MenuPage extends StatelessWidget {
   DocumentSnapshot userInfo;
