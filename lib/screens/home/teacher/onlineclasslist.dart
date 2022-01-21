@@ -72,7 +72,6 @@ class _LessonList extends State<LessonList> {
           ),
           child: ExpansionTile(
             key: expansionTileKey,
-            initiallyExpanded: selected == expansionTileKey.hashCode,
             crossAxisAlignment: CrossAxisAlignment.start,
             leading: FlutterLogo(),
             title: Text(
