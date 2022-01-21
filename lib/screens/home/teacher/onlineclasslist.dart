@@ -74,21 +74,18 @@ class _LessonList extends State<LessonList> {
           child: ExpansionTile(
             key: expansionTileKey,
             leading: FlutterLogo(),
-            title: AnimatedTextKit(
-              animatedTexts: [
-                ScaleAnimatedText(
-                  "${record.class_name}",
-                  textStyle: const TextStyle(
-                    fontSize: 14.0,
-                    fontWeight: FontWeight.bold,
-                  ),
-                  // speed: const Duration(milliseconds: 200),
+            title: SizedBox(
+              width: 250.0,
+              child: TextLiquidFill(
+                text: 'LIQUIDY',
+                waveColor: Colors.blueAccent,
+                boxBackgroundColor: Colors.redAccent,
+                textStyle: TextStyle(
+                  fontSize: 80.0,
+                  fontWeight: FontWeight.bold,
                 ),
-              ],
-              totalRepeatCount: 4,
-              pause: const Duration(milliseconds: 200),
-              displayFullTextOnTap: true,
-              stopPauseOnTap: true,
+                boxHeight: 300.0,
+              ),
             ),
             /*Text(
               record.class_name,
