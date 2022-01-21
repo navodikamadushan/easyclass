@@ -135,7 +135,7 @@ class _LessonList extends State<LessonList> {
                       flex: 5,
                       child: Padding(
                           padding: EdgeInsets.all(8),
-                          child: record.online_class_id
+                          child: record.isstart
                               ? _buildButton(context, "අරඹන්න", Colors.green[600], () async {
                                   print("Start!");
                                   dynamic result = await _databaseService.updateIsStart(record.online_class_id, true);
