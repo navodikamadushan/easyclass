@@ -77,7 +77,7 @@ class _LessonList extends State<LessonList> {
             title: Row(
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
-                const SizedBox(width: 20.0, height: 50.0),
+                //const SizedBox(width: 20.0, height: 50.0),
                 const Text(
                   'Be',
                   style: TextStyle(fontSize: 15.0),
