@@ -82,7 +82,7 @@ class _LessonList extends State<LessonList> {
                     fontSize: 14.0,
                     fontWeight: FontWeight.bold,
                   ),
-                  speed: const Duration(milliseconds: 200),
+                  // speed: const Duration(milliseconds: 200),
                 ),
               ],
               totalRepeatCount: 4,
