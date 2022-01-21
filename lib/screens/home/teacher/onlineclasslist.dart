@@ -146,7 +146,7 @@ class _LessonList extends State<LessonList> {
                                 }
                                 print(record.online_class_id);
                               }, record.isstart)
-                            : _buildButton(context, "අරඹන්න", Colors.green[600], () async {
+                            : _buildButton(context, "අරඹන්න", Colors.red[600], () async {
                                 print("Start!");
                                 dynamic result = await _databaseService.updateIsStart(record.online_class_id, true);
                                 if (result == null) {
