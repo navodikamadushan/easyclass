@@ -82,13 +82,16 @@ class _LessonList extends State<LessonList> {
                   fontWeight: FontWeight.bold,
                 ),
                 child: AnimatedTextKit(
-                  animatedTexts: [
-                    FadeAnimatedText("${record.class_name}"),
-                  ],
-                  onTap: () {
-                    print("Tap Event");
-                  },
-                ),
+                    animatedTexts: [
+                      FadeAnimatedText("${record.class_name}"),
+                    ],
+                    onTap: () {
+                      print("Tap Event");
+                    },
+                    totalRepeatCount: 4,
+                    pause: const Duration(milliseconds: 1000),
+                    displayFullTextOnTap: true,
+                    stopPauseOnTap: true),
               ),
             ),
             /*Text(
