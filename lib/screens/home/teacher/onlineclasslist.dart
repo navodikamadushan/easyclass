@@ -103,11 +103,14 @@ class _LessonList extends State<LessonList> {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Text(
-                    "පන්ති කාලසටහන",
-                    style: TextStyle(
-                      decoration: TextDecoration.underline,
-                      // fontSize: 20.0,
+                  Padding(
+                    padding: EdgeInsets.all(8),
+                    child: Text(
+                      "පන්ති කාලසටහන",
+                      style: TextStyle(
+                        decoration: TextDecoration.underline,
+                        // fontSize: 20.0,
+                      ),
                     ),
                   ),
                   Card(
