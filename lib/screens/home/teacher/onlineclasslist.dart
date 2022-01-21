@@ -63,17 +63,6 @@ class _LessonList extends State<LessonList> {
     final record = Record.fromSnapshot(data);
     final DatabaseService _databaseService = DatabaseService();
     final AlertService _alertService = AlertService();
-    const colorizeColors = [
-      Colors.purple,
-      Colors.blue,
-      Colors.yellow,
-      Colors.red,
-    ];
-
-    const colorizeTextStyle = TextStyle(
-      fontSize: 15.0,
-      fontFamily: 'Horizon',
-    );
     return Padding(
         key: ValueKey(record.class_name),
         padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
@@ -86,29 +75,23 @@ class _LessonList extends State<LessonList> {
             key: expansionTileKey,
             leading: FlutterLogo(),
             title: SizedBox(
-              width: 50.0,
-              child: AnimatedTextKit(
-                animatedTexts: [
-                  ColorizeAnimatedText(
-                    'Larry Page',
-                    textStyle: colorizeTextStyle,
-                    colors: colorizeColors,
-                  ),
-                  ColorizeAnimatedText(
-                    'Bill Gates',
-                    textStyle: colorizeTextStyle,
-                    colors: colorizeColors,
-                  ),
-                  ColorizeAnimatedText(
-                    'Steve Jobs',
-                    textStyle: colorizeTextStyle,
-                    colors: colorizeColors,
-                  ),
-                ],
-                isRepeatingAnimation: true,
-                onTap: () {
-                  print("Tap Event");
-                },
+              width: 250.0,
+              child: DefaultTextStyle(
+                style: const TextStyle(
+                  fontSize: 30.0,
+                  fontFamily: 'Agne',
+                ),
+                child: AnimatedTextKit(
+                  animatedTexts: [
+                    TypewriterAnimatedText('Discipline is the best tool'),
+                    TypewriterAnimatedText('Design first, then code'),
+                    TypewriterAnimatedText('Do not patch bugs out, rewrite them'),
+                    TypewriterAnimatedText('Do not test bugs out, design them out'),
+                  ],
+                  onTap: () {
+                    print("Tap Event");
+                  },
+                ),
               ),
             ),
             /*Text(
