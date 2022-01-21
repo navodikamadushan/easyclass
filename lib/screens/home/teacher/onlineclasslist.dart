@@ -114,45 +114,45 @@ class _LessonList extends State<LessonList> {
                       ),
                     ),
                   ),
-                ],
-              ),
-              Padding(
-                padding: EdgeInsets.all(8),
-                child: Row(
-                  children: [
-                    Expanded(
-                      flex: 5,
-                      child: Padding(
-                          padding: EdgeInsets.all(8),
-                          child: _buildButton(context, "අරඹන්න", Colors.green[600], () async {
-                            print("Start!");
-                            dynamic result = await _databaseService.updateIsStart(record.online_class_id, true);
-                            if (result == null) {
-                              print("Null");
-                            } else {
-                              print("Not null");
-                            }
-                            print(record.online_class_id);
-                          }, record.isstart)),
+                  Padding(
+                    padding: EdgeInsets.all(8),
+                    child: Row(
+                      children: [
+                        Expanded(
+                          flex: 5,
+                          child: Padding(
+                              padding: EdgeInsets.all(8),
+                              child: _buildButton(context, "අරඹන්න", Colors.green[600], () async {
+                                print("Start!");
+                                dynamic result = await _databaseService.updateIsStart(record.online_class_id, true);
+                                if (result == null) {
+                                  print("Null");
+                                } else {
+                                  print("Not null");
+                                }
+                                print(record.online_class_id);
+                              }, record.isstart)),
+                        ),
+                        Expanded(
+                          flex: 5,
+                          child: Padding(
+                            padding: EdgeInsets.all(8),
+                            child: _buildButton(context, "එක්වන්න", Colors.purple[600], () {
+                              _alertService.joinToExistingClass(context, record.class_name).then((onValue) async {
+                                if (onValue) {
+                                  print("Accept!");
+                                  jitsi.joinMeeting(record.online_class_id, record.subject, userInfo['name'], userInfo['email']);
+                                } else {
+                                  print("Discard!");
+                                }
+                              });
+                            }, !record.isstart),
+                          ),
+                        )
+                      ],
                     ),
-                    Expanded(
-                      flex: 5,
-                      child: Padding(
-                        padding: EdgeInsets.all(8),
-                        child: _buildButton(context, "එක්වන්න", Colors.purple[600], () {
-                          _alertService.joinToExistingClass(context, record.class_name).then((onValue) async {
-                            if (onValue) {
-                              print("Accept!");
-                              jitsi.joinMeeting(record.online_class_id, record.subject, userInfo['name'], userInfo['email']);
-                            } else {
-                              print("Discard!");
-                            }
-                          });
-                        }, !record.isstart),
-                      ),
-                    )
-                  ],
-                ),
+                  ),
+                ],
               ),
             ],
           ),
