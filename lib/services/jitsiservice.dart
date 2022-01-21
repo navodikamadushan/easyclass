@@ -7,13 +7,7 @@ import 'package:jitsi_meet/feature_flag/feature_flag_enum.dart';
 import 'package:jitsi_meet/room_name_constraint.dart';
 import 'package:jitsi_meet/room_name_constraint_type.dart';
 
-class JistiVideoConference extends State {
-  @override
-  void initState() {
-    super.initState();
-    JitsiMeet.addListener(JitsiMeetingListener(onConferenceWillJoin: _onConferenceWillJoin, onConferenceJoined: _onConferenceJoined, onConferenceTerminated: _onConferenceTerminated, onError: _onError));
-  }
-
+class JistiVideoConference {
   testconstructor(String roomName, String subject, String displayname, String useremail) {
     print("roomName:" + roomName);
     print("subject:" + subject);
