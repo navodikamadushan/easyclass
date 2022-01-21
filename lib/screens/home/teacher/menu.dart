@@ -2,8 +2,15 @@
 // Auther Information :- Navodika Karunasingha (eng.navodika@gmail.com)
 
 import 'package:flutter/material.dart';
+import 'package:easyclass/screens/home/teacher/newclass/form_screen.dart';
 
 class MenuPage extends StatelessWidget {
+  DocumentSnapshot userInfo;
+  BuildContext precontext;
+  MenuPage(DocumentSnapshot userInfo, BuildContext precontext) {
+    this.userInfo = userInfo;
+    this.precontext = precontext;
+  }
   @override
   Widget build(BuildContext context) {
     return ListView(
@@ -38,7 +45,13 @@ class MenuPage extends StatelessWidget {
                 size: 30.0,
               ),
               onTap: () {
-                print('hi');
+                print('New Classes');
+                Navigator.pop(context);
+                if (this.precontext == null) {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => FormScreen(userInfo)),
+                  );
+                }
               },
             ),
           ),
