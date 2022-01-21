@@ -102,7 +102,12 @@ class _LessonList extends State<LessonList> {
             children: <Widget>[
               Column(
                 children: <Widget>[
-                  Text("පන්ති කාලසටහන"),
+                  Text(
+                    "පන්ති කාලසටහන",
+                    style: TextStyle(
+                        // fontSize: 20.0,
+                        ),
+                  ),
                   Card(
                     child: TimeSlot(record.timeslot),
                   ),
