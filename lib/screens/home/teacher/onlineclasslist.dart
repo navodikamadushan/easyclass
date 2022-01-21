@@ -90,7 +90,7 @@ class _LessonList extends State<LessonList> {
                     },
                     //totalRepeatCount: 4,
                     repeatForever: true,
-                    pause: const Duration(milliseconds: 1000),
+                    pause: const Duration(milliseconds: 50),
                     displayFullTextOnTap: true,
                     stopPauseOnTap: true),
               ),
