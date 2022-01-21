@@ -134,19 +134,29 @@ class _LessonList extends State<LessonList> {
                     Expanded(
                       flex: 5,
                       child: Padding(
-                          padding: EdgeInsets.all(8),
-                          child: !record.isstart
-                              ? _buildButton(context, "අරඹන්න", Colors.green[600], () async {
-                                  print("Start!");
-                                  dynamic result = await _databaseService.updateIsStart(record.online_class_id, true);
-                                  if (result == null) {
-                                    print("Null");
-                                  } else {
-                                    print("Not null");
-                                  }
-                                  print(record.online_class_id);
-                                }, record.isstart)
-                              : Container()),
+                        padding: EdgeInsets.all(8),
+                        child: !record.isstart
+                            ? _buildButton(context, "අරඹන්න", Colors.green[600], () async {
+                                print("Start!");
+                                dynamic result = await _databaseService.updateIsStart(record.online_class_id, true);
+                                if (result == null) {
+                                  print("Null");
+                                } else {
+                                  print("Not null");
+                                }
+                                print(record.online_class_id);
+                              }, record.isstart)
+                            : _buildButton(context, "අරඹන්න", Colors.green[600], () async {
+                                print("Start!");
+                                dynamic result = await _databaseService.updateIsStart(record.online_class_id, true);
+                                if (result == null) {
+                                  print("Null");
+                                } else {
+                                  print("Not null");
+                                }
+                                print(record.online_class_id);
+                              }, record.isstart),
+                      ),
                     ),
                     Expanded(
                       flex: 5,
