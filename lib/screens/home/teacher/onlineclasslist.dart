@@ -116,14 +116,12 @@ class _LessonList extends State<LessonList> {
                   Card(
                     child: TimeSlot(record.timeslot),
                   ),
-                  
-                    child: Text(
-                      'සිසුන් සංඛ්‍යාව: ${record.no_student.toString()}',
-                      style: TextStyle(
-                          // fontSize: 20.0,
-                          ),
-                    ),
-                  
+                  Text(
+                    'සිසුන් සංඛ්‍යාව: ${record.no_student.toString()}',
+                    style: TextStyle(
+                        // fontSize: 20.0,
+                        ),
+                  ),
                 ],
               ),
               Padding(
