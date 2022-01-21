@@ -49,7 +49,7 @@ class MenuPage extends StatelessWidget {
             child: ListTile(
               //tileColor: Colors.red,
               title: Text(
-                'නව පන්තිය',
+                'මගේ පන්ති',
                 style: TextStyle(
                   fontSize: 15.0,
                 ),
