@@ -78,7 +78,22 @@ class _LessonList extends State<LessonList> {
               record.class_name,
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
-            subtitle: Text("විෂය:   ${record.subject}"),
+            subtitle: AnimatedTextKit(
+              animatedTexts: [
+                TypewriterAnimatedText(
+                  'Hello world!',
+                  textStyle: const TextStyle(
+                    fontSize: 32.0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  speed: const Duration(milliseconds: 2000),
+                ),
+              ],
+              totalRepeatCount: 4,
+              pause: const Duration(milliseconds: 1000),
+              displayFullTextOnTap: true,
+              stopPauseOnTap: true,
+            ), //Text("විෂය:   ${record.subject}"),
             trailing: Tooltip(
               message: 'ඔබේ පන්ති විස්තර සංස්කරණය කරන්න.',
               height: 12,
