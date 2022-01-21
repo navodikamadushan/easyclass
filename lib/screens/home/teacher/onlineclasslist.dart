@@ -82,7 +82,7 @@ class _LessonList extends State<LessonList> {
                   'Be',
                   style: TextStyle(fontSize: 15.0),
                 ),
-                //const SizedBox(width: 20.0, height: 15.0),
+                const SizedBox(width: 5.0, height: 15.0),
                 DefaultTextStyle(
                   style: const TextStyle(
                     fontSize: 15.0,
