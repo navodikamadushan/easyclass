@@ -73,7 +73,8 @@ class MenuPage extends StatelessWidget {
                 size: 30.0,
               ),
               onTap: () {
-                print('hi');
+                print('My Class');
+                Navigator.pop(context);
               },
             ),
           ),
