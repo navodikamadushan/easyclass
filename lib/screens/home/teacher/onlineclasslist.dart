@@ -103,10 +103,10 @@ class _LessonList extends State<LessonList> {
               Column(
                 children: <Widget>[
                   Text("පන්ති කාලසටහන"),
+                  Card(
+                    child: TimeSlot(record.timeslot),
+                  ),
                 ],
-              ),
-              Card(
-                child: TimeSlot(record.timeslot),
               ),
               Card(
                 child: Text(
