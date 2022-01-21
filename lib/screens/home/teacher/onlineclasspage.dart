@@ -30,7 +30,7 @@ class OnlineClassTeacherPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('පන්ති'),
+        title: Text('මගේ පන්ති'),
         centerTitle: true,
         actions: <Widget>[
           ProfileImageWidget(
