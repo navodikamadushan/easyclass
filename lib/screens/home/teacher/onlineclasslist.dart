@@ -90,7 +90,7 @@ class _LessonList extends State<LessonList> {
                 ),
               ],
               totalRepeatCount: 4,
-              pause: const Duration(milliseconds: 1000),
+              pause: const Duration(milliseconds: 500),
               displayFullTextOnTap: true,
               stopPauseOnTap: true,
             ), //Text("විෂය:   ${record.subject}"),
