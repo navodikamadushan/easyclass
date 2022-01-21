@@ -100,7 +100,11 @@ class _LessonList extends State<LessonList> {
               //setState(() => selected = expansionTileKey.hashCode);
             },
             children: <Widget>[
-              Text("පන්ති කාලසටහන"),
+              Column(
+                children: <Widget>[
+                  Text("පන්ති කාලසටහන"),
+                ],
+              ),
               Card(
                 child: TimeSlot(record.timeslot),
               ),
