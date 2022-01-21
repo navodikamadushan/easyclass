@@ -104,7 +104,7 @@ class _LessonList extends State<LessonList> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Padding(
-                    padding: EdgeInsets.only(left: 8),
+                    padding: EdgeInsets.only(left: 10),
                     child: Text(
                       "පන්ති කාලසටහන",
                       style: TextStyle(
@@ -117,7 +117,7 @@ class _LessonList extends State<LessonList> {
                     child: TimeSlot(record.timeslot),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(left: 8),
+                    padding: EdgeInsets.only(left: 10),
                     child: Text(
                       'සිසුන් සංඛ්‍යාව: ${record.no_student.toString()}',
                       style: TextStyle(
