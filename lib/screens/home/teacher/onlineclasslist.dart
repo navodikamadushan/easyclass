@@ -105,8 +105,9 @@ class _LessonList extends State<LessonList> {
                   Text(
                     "පන්ති කාලසටහන",
                     style: TextStyle(
-                        // fontSize: 20.0,
-                        ),
+                      decoration: TextDecoration.underline,
+                      // fontSize: 20.0,
+                    ),
                   ),
                   Card(
                     child: TimeSlot(record.timeslot),
