@@ -104,7 +104,7 @@ class _LessonList extends State<LessonList> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Padding(
-                    padding: EdgeInsets.all(8),
+                    padding: EdgeInsets.only(left: 8),
                     child: Text(
                       "පන්ති කාලසටහන",
                       style: TextStyle(
