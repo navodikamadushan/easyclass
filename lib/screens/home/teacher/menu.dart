@@ -42,25 +42,6 @@ class MenuPage extends StatelessWidget {
               },
             ),
           ),
-
-          Card(
-            child: ListTile(
-              //tileColor: Colors.red,
-              title: Text(
-                'නව පන්තිය',
-                style: TextStyle(
-                  fontSize: 15.0,
-                ),
-              ),
-              leading: Icon(
-                Icons.add_circle_outline_sharp,
-                size: 30.0,
-              ),
-              onTap: () {
-                print('hi');
-              },
-            ),
-          ),
         ),
       ],
     );
