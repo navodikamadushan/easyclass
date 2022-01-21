@@ -63,6 +63,17 @@ class _LessonList extends State<LessonList> {
     final record = Record.fromSnapshot(data);
     final DatabaseService _databaseService = DatabaseService();
     final AlertService _alertService = AlertService();
+    const colorizeColors = [
+      Colors.purple,
+      Colors.blue,
+      Colors.yellow,
+      Colors.red,
+    ];
+
+    const colorizeTextStyle = TextStyle(
+      fontSize: 15.0,
+      fontFamily: 'Horizon',
+    );
     return Padding(
         key: ValueKey(record.class_name),
         padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
