@@ -85,7 +85,7 @@ class _LessonList extends State<LessonList> {
                 const SizedBox(width: 20.0, height: 15.0),
                 DefaultTextStyle(
                   style: const TextStyle(
-                    fontSize: 40.0,
+                    fontSize: 15.0,
                     fontFamily: 'Horizon',
                   ),
                   child: AnimatedTextKit(
