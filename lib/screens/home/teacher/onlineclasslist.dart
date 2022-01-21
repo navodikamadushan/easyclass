@@ -78,7 +78,7 @@ class _LessonList extends State<LessonList> {
               width: 250.0,
               child: DefaultTextStyle(
                 style: const TextStyle(
-                  fontSize: 20.0,
+                  fontSize: 18.0,
                   fontWeight: FontWeight.bold,
                 ),
                 child: AnimatedTextKit(
