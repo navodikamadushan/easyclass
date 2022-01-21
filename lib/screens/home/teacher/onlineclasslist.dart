@@ -63,18 +63,6 @@ class _LessonList extends State<LessonList> {
     final record = Record.fromSnapshot(data);
     final DatabaseService _databaseService = DatabaseService();
     final AlertService _alertService = AlertService();
-    const colorizeColors = [
-      Colors.purple,
-      Colors.blue,
-      Colors.yellow,
-      Colors.red,
-    ];
-
-    const colorizeTextStyle = TextStyle(
-      fontSize: 14.0,
-      fontFamily: 'Horizon',
-      fontWeight: FontWeight.bold,
-    );
     return Padding(
         key: ValueKey(record.class_name),
         padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
@@ -88,20 +76,19 @@ class _LessonList extends State<LessonList> {
             leading: FlutterLogo(),
             title: AnimatedTextKit(
               animatedTexts: [
-                ColorizeAnimatedText(
+                ScaleAnimatedText(
                   "${record.class_name}",
-                  textStyle: colorizeTextStyle,
-                  colors: colorizeColors,
+                  textStyle: const TextStyle(
+                    fontSize: 14.0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  // speed: const Duration(milliseconds: 200),
                 ),
               ],
-              isRepeatingAnimation: true,
-              onTap: () {
-                print("Tap Event");
-              },
-              /*totalRepeatCount: 4,
+              totalRepeatCount: 4,
               pause: const Duration(milliseconds: 200),
               displayFullTextOnTap: true,
-              stopPauseOnTap: true,*/
+              stopPauseOnTap: true,
             ),
             /*Text(
               record.class_name,
