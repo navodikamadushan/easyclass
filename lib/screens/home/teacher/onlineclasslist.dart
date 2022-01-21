@@ -89,7 +89,7 @@ class _LessonList extends State<LessonList> {
                   speed: const Duration(milliseconds: 200),
                 ),
               ],
-              totalRepeatCount: 4,
+              totalRepeatCount: 1,
               pause: const Duration(milliseconds: 200),
               displayFullTextOnTap: true,
               stopPauseOnTap: true,
