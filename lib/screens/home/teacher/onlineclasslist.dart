@@ -85,7 +85,6 @@ class _LessonList extends State<LessonList> {
                     animatedTexts: [
                       FadeAnimatedText(
                         "${record.class_name}",
-                        speed: const Duration(milliseconds: 100),
                       ),
                     ],
                     onTap: () {
