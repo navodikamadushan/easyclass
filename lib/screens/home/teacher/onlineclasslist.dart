@@ -101,6 +101,7 @@ class _LessonList extends State<LessonList> {
             },
             children: <Widget>[
               Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text(
                     "පන්ති කාලසටහන",
