@@ -94,10 +94,14 @@ class _LessonList extends State<LessonList> {
                   colors: colorizeColors,
                 ),
               ],
-              totalRepeatCount: 4,
+              isRepeatingAnimation: true,
+              onTap: () {
+                print("Tap Event");
+              },
+              /*totalRepeatCount: 4,
               pause: const Duration(milliseconds: 200),
               displayFullTextOnTap: true,
-              stopPauseOnTap: true,
+              stopPauseOnTap: true,*/
             ),
             /*Text(
               record.class_name,
