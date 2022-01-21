@@ -83,7 +83,10 @@ class _LessonList extends State<LessonList> {
                 ),
                 child: AnimatedTextKit(
                     animatedTexts: [
-                      FadeAnimatedText("${record.class_name}"),
+                      FadeAnimatedText(
+                        "${record.class_name}",
+                        speed: const Duration(milliseconds: 100),
+                      ),
                     ],
                     onTap: () {
                       print("Tap Event");
