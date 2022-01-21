@@ -74,18 +74,15 @@ class _LessonList extends State<LessonList> {
           child: ExpansionTile(
             key: expansionTileKey,
             leading: FlutterLogo(),
-            title: SizedBox(
-              width: 50.0,
-              child: TextLiquidFill(
-                text: 'LIQUIDY',
-                waveColor: Colors.blueAccent,
-                boxBackgroundColor: Colors.redAccent,
-                textStyle: TextStyle(
-                  fontSize: 15.0,
-                  fontWeight: FontWeight.bold,
-                ),
-                boxHeight: 15.0,
+            title: TextLiquidFill(
+              text: 'LIQUIDY',
+              waveColor: Colors.blueAccent,
+              boxBackgroundColor: Colors.redAccent,
+              textStyle: TextStyle(
+                fontSize: 15.0,
+                fontWeight: FontWeight.bold,
               ),
+              boxHeight: 15.0,
             ),
             /*Text(
               record.class_name,
