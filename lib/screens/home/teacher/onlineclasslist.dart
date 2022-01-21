@@ -135,16 +135,18 @@ class _LessonList extends State<LessonList> {
                       flex: 5,
                       child: Padding(
                           padding: EdgeInsets.all(8),
-                          child: _buildButton(context, "අරඹන්න", Colors.green[600], () async {
-                            print("Start!");
-                            dynamic result = await _databaseService.updateIsStart(record.online_class_id, true);
-                            if (result == null) {
-                              print("Null");
-                            } else {
-                              print("Not null");
-                            }
-                            print(record.online_class_id);
-                          }, record.isstart)),
+                          child: record.online_class_id
+                              ? _buildButton(context, "අරඹන්න", Colors.green[600], () async {
+                                  print("Start!");
+                                  dynamic result = await _databaseService.updateIsStart(record.online_class_id, true);
+                                  if (result == null) {
+                                    print("Null");
+                                  } else {
+                                    print("Not null");
+                                  }
+                                  print(record.online_class_id);
+                                }, record.isstart)
+                              : Container()),
                     ),
                     Expanded(
                       flex: 5,
