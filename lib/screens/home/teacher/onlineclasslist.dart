@@ -74,15 +74,31 @@ class _LessonList extends State<LessonList> {
           child: ExpansionTile(
             key: expansionTileKey,
             leading: FlutterLogo(),
-            title: TextLiquidFill(
-              text: 'LIQUIDY',
-              waveColor: Colors.blueAccent,
-              boxBackgroundColor: Colors.redAccent,
-              textStyle: TextStyle(
-                fontSize: 15.0,
-                fontWeight: FontWeight.bold,
+            title: SizedBox(
+              width: 50.0,
+              child: AnimatedTextKit(
+                animatedTexts: [
+                  ColorizeAnimatedText(
+                    'Larry Page',
+                    textStyle: colorizeTextStyle,
+                    colors: colorizeColors,
+                  ),
+                  ColorizeAnimatedText(
+                    'Bill Gates',
+                    textStyle: colorizeTextStyle,
+                    colors: colorizeColors,
+                  ),
+                  ColorizeAnimatedText(
+                    'Steve Jobs',
+                    textStyle: colorizeTextStyle,
+                    colors: colorizeColors,
+                  ),
+                ],
+                isRepeatingAnimation: true,
+                onTap: () {
+                  print("Tap Event");
+                },
               ),
-              boxHeight: 15.0,
             ),
             /*Text(
               record.class_name,
