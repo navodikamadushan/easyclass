@@ -79,7 +79,7 @@ class _LessonList extends State<LessonList> {
                 TypewriterAnimatedText(
                   "${record.class_name}",
                   textStyle: const TextStyle(
-                    fontSize: 12.0,
+                    fontSize: 14.0,
                     fontWeight: FontWeight.bold,
                   ),
                   speed: const Duration(milliseconds: 200),
