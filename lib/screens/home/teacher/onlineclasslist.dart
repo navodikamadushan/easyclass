@@ -10,6 +10,7 @@ import "package:easyclass/models/user.dart";
 import "package:easyclass/screens/home/teacher/timeslot.dart";
 import "package:easyclass/services/alert.dart";
 import "package:easyclass/services/jitsiservice.dart";
+import 'package:animated_text_kit/animated_text_kit.dart';
 
 class LessonList extends StatefulWidget {
   DocumentSnapshot userInfo;
